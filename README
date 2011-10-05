@@ -4,3 +4,7 @@ NOTE THAT YOU CAN NOT USE THIS AS A PACKAGE VIA LIBRARY() OR REQUIRE() AS OF YET
 This set of functions/package will access DataCite metadata using their OAI-PMH harvester. 
 
 This is a public service, so no need for an API key or anything like that. 
+
+Documentation for the DataCite OAI-PMH: http://oai.datacite.org/
+
+Documentation for OAI-PMH in general: http://www.openarchives.org/OAI/openarchivesprotocol.html
