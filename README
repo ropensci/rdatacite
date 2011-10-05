@@ -1,0 +1,6 @@
+NOTE THAT YOU CAN NOT USE THIS AS A PACKAGE VIA LIBRARY() OR REQUIRE() AS OF YET, BUT WE ARE WORKING ON GETTING THERE. 
+
+
+This set of functions/package will access DataCite metadata using their OAI-PMH harvester. 
+
+This is a public service, so no need for an API key or anything like that. 
