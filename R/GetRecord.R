@@ -1,4 +1,4 @@
-# DataCite code
+# GetRecord.R
 
 # require(RCurl)
 # require(XML)
@@ -21,4 +21,3 @@ datacite <- function(id, transform) {
 		prefix = "oai_dc", 
 		transform = transform)
 }
-

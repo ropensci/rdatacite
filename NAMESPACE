@@ -1,0 +1,5 @@
+import(RCurl)
+import(XML)
+import(OAIHarvester)
+
+export(GetRecord, Identify, ListIdentifiers)
