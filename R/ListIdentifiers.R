@@ -1,23 +1,26 @@
-# ListIdentifiers.R
-
-ListIdentifiers <- function(from = NULL, until = NULL, set = NULL, 
+#' listidentifiers
+#'
+#' Function used to retrieve record headers from the DataCite repository
+#' @import OAIHarvester
+#' @param from specifies that records returned must have been created/update/deleted 
+#'     on or after this date.
+#' @param until specifies that records returned must have been created/update/deleted 
+#'     on or before this date.
+#' @param set specifies the set that returned records must belong to.
+#' @param prefix specifies the metadata format that the records will be 
+#'     returned in. 
+#' @param token a token previously provided by the server to resume a request
+#'     where it last left off.
+#' @param transform: transform metadata to list (TRUE/FALSE)
+#' @export
+#' @examples \dontrun{
+#' temp <- listidentifiers()
+#' listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
+#' }
+listidentifiers <- function(from = NULL, until = NULL, set = NULL, 
   prefix = 'oai_dc', token = NULL, transform = TRUE,
-  baseurl = "http://oai.datacite.org/oai") {
-# Function used to retrieve record headers from the DataCite repository
-# Args: 
-#   from: specifies that records returned must have been created/update/deleted 
-#     on or after this date.
-#   until: specifies that records returned must have been created/update/deleted 
-#     on or before this date.
-#   set: specifies the set that returned records must belong to.
-#   prefix: specifies the metadata format that the records will be 
-#     returned in. 
-#   token: a token previously provided by the server to resume a request
-#     where it last left off.
-#   transform: transform metadata to list (TRUE/FALSE)
-# Examples: 
-#   temp <- ListIdentifiers()
-#   ListIdentifiers(from = '2011-06-01T', until = '2011-07-01T')
+  baseurl = "http://oai.datacite.org/oai")
+{
   oaih_list_identifiers(
     baseurl, 
     prefix = prefix,
