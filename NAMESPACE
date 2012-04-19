@@ -1,0 +1,7 @@
+export(getrecord)
+export(identify)
+export(listidentifiers)
+export(listmetadataformats)
+export(listrecords)
+export(listsets)
+import(OAIHarvester)
