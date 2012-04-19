@@ -1,5 +1,7 @@
-import(RCurl)
-import(XML)
+export(getrecord)
+export(identify)
+export(listidentifiers)
+export(listmetadataformats)
+export(listrecords)
+export(listsets)
 import(OAIHarvester)
-
-export(GetRecord, Identify, ListIdentifiers, ListMetadataFormats, ListRecords, ListSets)

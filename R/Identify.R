@@ -1,14 +1,13 @@
 #' identify
 #'
-#' Function Identify used to learn about the Dryad OAI-PMH service
+#' Learn about the Dryad OAI-PMH service
 #' @import OAIHarvester
-#' @param transform transform metadata to list (TRUE/FALSE)
+#' @inheritParams listmetadataformats
 #' @export
 #' @examples \dontrun{
 #' identify()
 #' }
-identify <- function(transform = TRUE) 
-{  
-  url <- "http://oai.datacite.org/oai"
-  oaih_identify("http://oai.datacite.org/oai", transform = transform)
+identify <- function(transform = TRUE, url = "http://oai.datacite.org/oai") 
+{ 
+  oaih_identify(url, transform = transform)
 }

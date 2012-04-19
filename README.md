@@ -11,7 +11,7 @@ Documentation for OAI-PMH in general [here](http://www.openarchives.org/OAI/open
 
 DataCite code dev on Github [here](https://github.com/datacite/OAIP).
 
-`taxize` is part of the rOpenSci project, visit http://ropensci.org to learn more.
+`rdatacite` is part of the rOpenSci project, visit http://ropensci.org to learn more.
 
 # Install `rdatacite` from GitHub:
 

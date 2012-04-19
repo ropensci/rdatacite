@@ -1,6 +1,6 @@
 #' listidentifiers
 #'
-#' Function used to retrieve record headers from the DataCite repository
+#' Retrieve record headers from the DataCite repository
 #' @import OAIHarvester
 #' @param from specifies that records returned must have been created/update/deleted 
 #'     on or after this date.
@@ -11,7 +11,7 @@
 #'     returned in. 
 #' @param token a token previously provided by the server to resume a request
 #'     where it last left off.
-#' @param transform: transform metadata to list (TRUE/FALSE)
+#' @inheritParams listmetadataformats
 #' @export
 #' @examples \dontrun{
 #' temp <- listidentifiers()
@@ -19,10 +19,10 @@
 #' }
 listidentifiers <- function(from = NULL, until = NULL, set = NULL, 
   prefix = 'oai_dc', token = NULL, transform = TRUE,
-  baseurl = "http://oai.datacite.org/oai")
+  url = "http://oai.datacite.org/oai")
 {
   oaih_list_identifiers(
-    baseurl, 
+    url, 
     prefix = prefix,
     from = from,
     until = until,

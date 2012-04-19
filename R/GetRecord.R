@@ -1,9 +1,8 @@
 #' getrecord
 #'
-#' Function to retrieve an individual record from the DataCite repository
+#' Retrieve an individual record from the DataCite repository
 #' @import OAIHarvester
-#' @param id DataCite id, i.e. "56225"
-#' @param transform transform metadata to list (TRUE/FALSE)
+#' @inheritParams listmetadataformats
 #' @export
 #' @examples \dontrun{
 #' out <- getrecord("56225", T)
