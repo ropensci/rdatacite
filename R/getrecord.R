@@ -3,12 +3,16 @@
 #' Retrieve an individual record from the DataCite repository
 #' @import OAIHarvester
 #' @inheritParams listmetadataformats
-#' @export
 #' @examples \dontrun{
 #' out <- getrecord("56225", T)
 #' out$metadata # get $identifier, $datestamp, $setSpec, or $metadata
 #' oaih_transform(out$metadata) # transform only metadata to a list
+#' 
+#' temp <- listidentifiers(from = '2012-07-27') # get some identifiers
+#' temp[[1,"identifier"]] # gets the identifier
+#' getrecord(temp[[1,"identifier"]]) # get the record
 #' }
+#' @export
 getrecord <- function(id = NULL, transform = TRUE, 
   url = "http://oai.datacite.org/oai") 
 {

@@ -1,6 +1,6 @@
 \name{listrecords}
 \alias{listrecords}
-\title{listrecords}
+\title{List the records in the DataCite metadata repository.}
 \usage{
   listrecords(from = NULL, until = NULL, set = NULL,
     prefix = "oai_dc", token = NULL, transform = TRUE,
@@ -32,6 +32,7 @@
 \examples{
 \dontrun{
 listrecords(from = '2011-06-01T', until = '2011-07-01T')
+out <- listrecords()
 }
 }
 

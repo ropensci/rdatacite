@@ -1,13 +1,10 @@
 \name{listsets}
 \alias{listsets}
-\title{listsets}
+\title{List the sets in the DataCite metadata repository.}
 \usage{
-  listsets(transform = TRUE,
-    url = "http://oai.datacite.org/oai")
+  listsets(url = "http://oai.datacite.org/oai")
 }
 \arguments{
-  \item{transform}{transform metadata to list (TRUE/FALSE)}
-
   \item{url}{the base url for DataCite (leave to default)}
 }
 \description{

@@ -14,7 +14,7 @@
 #' @inheritParams listmetadataformats
 #' @export
 #' @examples \dontrun{
-#' temp <- listidentifiers()
+#' temp <- listidentifiers(from = '2010-06-01T')
 #' listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
 #' }
 listidentifiers <- function(from = NULL, until = NULL, set = NULL, 
