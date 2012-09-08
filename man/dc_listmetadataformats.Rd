@@ -1,8 +1,8 @@
-\name{listmetadataformats}
-\alias{listmetadataformats}
+\name{dc_listmetadataformats}
+\alias{dc_listmetadataformats}
 \title{listmetadataformats}
 \usage{
-  listmetadataformats(id = NULL, transform = TRUE,
+  dc_listmetadataformats(id = NULL, transform = TRUE,
     url = "http://oai.datacite.org/oai")
 }
 \arguments{
@@ -18,8 +18,8 @@
 }
 \examples{
 \dontrun{
-listmetadataformats()
-listmetadataformats("56225")
+dc_listmetadataformats()
+dc_listmetadataformats("56225")
 }
 }
 

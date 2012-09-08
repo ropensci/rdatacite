@@ -2,13 +2,13 @@
 #'
 #' Harvest full records from the DataCite repository
 #' @import OAIHarvester
-#' @inheritParams listidentifiers
+#' @inheritParams dc_listidentifiers
 #' @examples \dontrun{
-#' listrecords(from = '2011-06-01T', until = '2011-07-01T')
-#' out <- listrecords()
+#' dc_listrecords(from = '2011-06-01T', until = '2011-07-01T')
+#' out <- dc_listrecords()
 #' }
 #' @export
-listrecords <- function(from = NULL, until = NULL, set = NULL, prefix = 'oai_dc', 
+dc_listrecords <- function(from = NULL, until = NULL, set = NULL, prefix = 'oai_dc', 
   token = NULL, transform = TRUE,
   url = "http://oai.datacite.org/oai") 
 {

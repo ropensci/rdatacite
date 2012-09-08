@@ -1,8 +1,8 @@
-\name{listsets}
-\alias{listsets}
+\name{dc_listsets}
+\alias{dc_listsets}
 \title{List the sets in the DataCite metadata repository.}
 \usage{
-  listsets(url = "http://oai.datacite.org/oai")
+  dc_listsets(url = "http://oai.datacite.org/oai")
 }
 \arguments{
   \item{url}{the base url for DataCite (leave to default)}
@@ -13,7 +13,7 @@
 }
 \examples{
 \dontrun{
-listsets()
+dc_listsets()
 }
 }
 

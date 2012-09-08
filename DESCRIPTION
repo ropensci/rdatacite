@@ -12,9 +12,9 @@ URL: https://github.com/ropensci/rdatacite
 Imports:
     OAIHarvester
 Collate:
-    'getrecord.R'
-    'identify.R'
-    'listidentifiers.R'
-    'listmetadataformats.R'
-    'listrecords.R'
-    'listsets.R'
+    'dc_getrecord.R'
+    'dc_identify.R'
+    'dc_listidentifiers.R'
+    'dc_listmetadataformats.R'
+    'dc_listrecords.R'
+    'dc_listsets.R'

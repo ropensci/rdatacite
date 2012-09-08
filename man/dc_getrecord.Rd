@@ -1,8 +1,8 @@
-\name{getrecord}
-\alias{getrecord}
+\name{dc_getrecord}
+\alias{dc_getrecord}
 \title{getrecord}
 \usage{
-  getrecord(id = NULL, transform = TRUE,
+  dc_getrecord(id = NULL, transform = TRUE,
     url = "http://oai.datacite.org/oai")
 }
 \arguments{
@@ -18,13 +18,13 @@
 }
 \examples{
 \dontrun{
-out <- getrecord("56225", T)
+out <- dc_getrecord("56225", T)
 out$metadata # get $identifier, $datestamp, $setSpec, or $metadata
 oaih_transform(out$metadata) # transform only metadata to a list
 
-temp <- listidentifiers(from = '2012-07-27') # get some identifiers
+temp <- dc_listidentifiers(from = '2012-07-27') # get some identifiers
 temp[[1,"identifier"]] # gets the identifier
-getrecord(temp[[1,"identifier"]]) # get the record
+dc_getrecord(temp[[1,"identifier"]]) # get the record
 }
 }
 

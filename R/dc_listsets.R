@@ -2,12 +2,12 @@
 #'
 #' Retrieve the set structure of DataCite, useful for selective harvesting
 #' @import OAIHarvester
-#' @inheritParams listmetadataformats
+#' @inheritParams dc_listmetadataformats
 #' @examples \dontrun{
-#' listsets()
+#' dc_listsets()
 #' }
 #' @export
-listsets <- function(url = "http://oai.datacite.org/oai") 
+dc_listsets <- function(url = "http://oai.datacite.org/oai") 
 { 
 	out <- oaih_list_sets(url, transform = FALSE)
 	data.frame(

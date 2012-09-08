@@ -1,8 +1,8 @@
-\name{identify}
-\alias{identify}
+\name{dc_identify}
+\alias{dc_identify}
 \title{identify}
 \usage{
-  identify(transform = TRUE,
+  dc_identify(transform = TRUE,
     url = "http://oai.datacite.org/oai")
 }
 \arguments{
@@ -15,7 +15,7 @@
 }
 \examples{
 \dontrun{
-identify()
+dc_identify()
 }
 }
 

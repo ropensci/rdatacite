@@ -1,8 +1,8 @@
-\name{listidentifiers}
-\alias{listidentifiers}
-\title{listidentifiers}
+\name{dc_listrecords}
+\alias{dc_listrecords}
+\title{List the records in the DataCite metadata repository.}
 \usage{
-  listidentifiers(from = NULL, until = NULL, set = NULL,
+  dc_listrecords(from = NULL, until = NULL, set = NULL,
     prefix = "oai_dc", token = NULL, transform = TRUE,
     url = "http://oai.datacite.org/oai")
 }
@@ -27,12 +27,12 @@
   \item{url}{the base url for DataCite (leave to default)}
 }
 \description{
-  Retrieve record headers from the DataCite repository
+  Harvest full records from the DataCite repository
 }
 \examples{
 \dontrun{
-temp <- listidentifiers(from = '2010-06-01T')
-listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
+dc_listrecords(from = '2011-06-01T', until = '2011-07-01T')
+out <- dc_listrecords()
 }
 }
 

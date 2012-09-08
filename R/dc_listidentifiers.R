@@ -11,13 +11,13 @@
 #'     returned in. 
 #' @param token a token previously provided by the server to resume a request
 #'     where it last left off.
-#' @inheritParams listmetadataformats
+#' @inheritParams dc_listmetadataformats
 #' @export
 #' @examples \dontrun{
-#' temp <- listidentifiers(from = '2010-06-01T')
-#' listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
+#' temp <- dc_listidentifiers(from = '2010-06-01T')
+#' dc_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
 #' }
-listidentifiers <- function(from = NULL, until = NULL, set = NULL, 
+dc_listidentifiers <- function(from = NULL, until = NULL, set = NULL, 
   prefix = 'oai_dc', token = NULL, transform = TRUE,
   url = "http://oai.datacite.org/oai")
 {
