@@ -8,15 +8,11 @@
 #' out <- dc_listrecords()
 #' }
 #' @export
-dc_listrecords <- function(from = NULL, until = NULL, set = NULL, prefix = 'oai_dc', 
+dc_listrecords <- function(from = NULL, until = NULL, set = NULL, prefix = 'oai_dc',
   token = NULL, transform = TRUE,
-  url = "http://oai.datacite.org/oai") 
+  url = "http://oai.datacite.org/oai")
 {
-	oaih_list_records(
-    url, 
-    prefix = prefix,
-    from = from,
-    until = until,
-    set = set,
-		transform = transform)
+	oaih_list_records(url, prefix = prefix, from = from, until = until, set = set, transform = transform)
 }
+
+# Notes: Not sure about the point behind the examples
