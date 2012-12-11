@@ -11,12 +11,12 @@
 #' dc_listmetadataformats("56225")
 #' }
 dc_listmetadataformats <- function(id = NULL, transform = TRUE,
-  url = "http://oai.datacite.org/oai") 
+  url = "http://oai.datacite.org/oai")
 {
-  if(!is.null(id) == T) {oaiid <- paste("oai:oai.datacite.org:", id, sep="")} else
-     {oaiid <- NULL}
-	oaih_list_metadata_formats(
-	  url, 
-		oaiid, 
-		transform = transform)
+  if(is(id, "NULL")) {
+  	 oaiid <- paste("oai:oai.datacite.org:", id, sep="")
+  	 } else {
+  	 	oaiid <- NULL
+  	 }
+	oaih_list_metadata_formats(url, oaiid, transform = transform)
 }
