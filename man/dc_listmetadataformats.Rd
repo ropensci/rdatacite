@@ -2,8 +2,8 @@
 \alias{dc_listmetadataformats}
 \title{listmetadataformats}
 \usage{
-  dc_listmetadataformats(id = NULL, transform = TRUE,
-    url = "http://oai.datacite.org/oai")
+dc_listmetadataformats(id = NULL, transform = TRUE,
+  url = "http://oai.datacite.org/oai")
 }
 \arguments{
   \item{id}{DataCite identifier, e.g., "56225"}
@@ -13,8 +13,8 @@
   \item{url}{the base url for DataCite (leave to default)}
 }
 \description{
-  List available metadata formats that the DataCite
-  repository can disseminate
+List available metadata formats that the DataCite
+repository can disseminate
 }
 \examples{
 \dontrun{

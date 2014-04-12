@@ -2,9 +2,8 @@
 \alias{dc_listrecords}
 \title{List the records in the DataCite metadata repository.}
 \usage{
-  dc_listrecords(from = NULL, until = NULL, set = NULL,
-    prefix = "oai_dc", token = NULL, transform = TRUE,
-    url = "http://oai.datacite.org/oai")
+dc_listrecords(from = NULL, until = NULL, set = NULL, prefix = "oai_dc",
+  token = NULL, transform = TRUE, url = "http://oai.datacite.org/oai")
 }
 \arguments{
   \item{from}{specifies that records returned must have
@@ -27,7 +26,7 @@
   \item{url}{the base url for DataCite (leave to default)}
 }
 \description{
-  Harvest full records from the DataCite repository
+Harvest full records from the DataCite repository
 }
 \examples{
 \dontrun{

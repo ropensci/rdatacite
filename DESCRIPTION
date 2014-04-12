@@ -11,10 +11,3 @@ Description: A programmatic interface to the
 URL: https://github.com/ropensci/rdatacite
 Imports:
     OAIHarvester
-Collate:
-    'dc_getrecord.R'
-    'dc_identify.R'
-    'dc_listidentifiers.R'
-    'dc_listmetadataformats.R'
-    'dc_listrecords.R'
-    'dc_listsets.R'

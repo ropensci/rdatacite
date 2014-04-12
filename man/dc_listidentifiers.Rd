@@ -2,9 +2,9 @@
 \alias{dc_listidentifiers}
 \title{listidentifiers}
 \usage{
-  dc_listidentifiers(from = NULL, until = NULL, set = NULL,
-    prefix = "oai_dc", token = NULL, transform = TRUE,
-    url = "http://oai.datacite.org/oai")
+dc_listidentifiers(from = NULL, until = NULL, set = NULL,
+  prefix = "oai_dc", token = NULL, transform = TRUE,
+  url = "http://oai.datacite.org/oai")
 }
 \arguments{
   \item{from}{specifies that records returned must have
@@ -27,12 +27,13 @@
   \item{url}{the base url for DataCite (leave to default)}
 }
 \description{
-  Retrieve record headers from the DataCite repository
+Retrieve record headers from the DataCite repository
 }
 \examples{
 \dontrun{
 temp <- dc_listidentifiers(from = '2010-06-01T')
 dc_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
+dc_listidentifiers(set = "REFQUALITY")
 }
 }
 

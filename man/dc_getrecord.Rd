@@ -2,8 +2,8 @@
 \alias{dc_getrecord}
 \title{getrecord}
 \usage{
-  dc_getrecord(id = NULL, transform = TRUE,
-    url = "http://oai.datacite.org/oai")
+dc_getrecord(id = NULL, transform = TRUE,
+  url = "http://oai.datacite.org/oai")
 }
 \arguments{
   \item{id}{DataCite identifier, e.g., "56225"}
@@ -13,8 +13,7 @@
   \item{url}{the base url for DataCite (leave to default)}
 }
 \description{
-  Retrieve an individual record from the DataCite
-  repository
+Retrieve an individual record from the DataCite repository
 }
 \examples{
 \dontrun{
