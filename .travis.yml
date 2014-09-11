@@ -1,11 +1,12 @@
 language: c
-script: ./travis-tool.sh run_tests
+script: "./travis-tool.sh run_tests"
 before_script:
 - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
 - chmod 755 ./travis-tool.sh
 - sudo apt-get update
-- ./travis-tool.sh bootstrap
-- ./travis-tool.sh install_deps
-- ./travis-tool.sh github_package assertthat
+- "./travis-tool.sh bootstrap"
+- "./travis-tool.sh install_deps"
+- "./travis-tool.sh github_package assertthat"
 notifications:
- slack: ropensci:wh30e1MP9Am3wXb2wJx1ZRFi
+  slack:
+    secure: J33bN8jgnG4X7KserEewpPZ2rFAKiivnMlc8FOaQ/VUdlQQBJ7fNHsAIbEzchZUyxnXARnJyqP+D7nNoKQfBe7oCBuqjolgtq3VwHHT11Wwdr+B9y5sCBtYSbv2ATACWfdSjjCxFTi29HpH0jt3bSmOfs6hwlylgc7UHF0SKkNo=
