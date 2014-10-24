@@ -4,7 +4,7 @@ Title: Interface to DataCite OAI-PMH Methods.
 Description: A programmatic interface to the
     Web Service methods provided by DataCite.
 Version: 0.0.2.99
-License: C00
+License: MIT
 Date: 2014-10-23
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
