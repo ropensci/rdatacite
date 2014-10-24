@@ -12,6 +12,8 @@ rdatacite
 
 ### Installation
 
+> Note: If you want to use `wt='csv'` in `dc_*()` function calls, you'll need `solr` package version `0.1.8.99` or greater. Installation instructions at [https://github.com/ropensci/solr#quick-start](https://github.com/ropensci/solr#quick-start). Everything else will work just fine with CRAN version of `solr`
+
 
 ```r
 install.packages("devtools")
@@ -136,53 +138,7 @@ Transform only metadata to a list
 
 ```r
 oaih_transform(out$metadata)
-#> $title
-#> [1] "Land at Hill Barton, Clyst St Mary, Devon (NGR SY 0002 9083) Hill Barton Industrial Park Strip Map and Sample Excavation Summary Report"
-#> 
-#> $creator
-#> [1] "AC archaeology Ltd"
-#> 
-#> $subject
-#> [1] "Archaeology"     "Grey Literature"
-#> 
-#> $description
-#> character(0)
-#> 
-#> $publisher
-#> [1] "Archaeology Data Service"
-#> 
-#> $contributor
-#> character(0)
-#> 
-#> $date
-#> [1] "2011"
-#> 
-#> $type
-#> [1] "Text"   "Report"
-#> 
-#> $format
-#> [1] "1 pdf file" "PDF"       
-#> 
-#> $identifier
-#> [1] "doi:10.5284/1011335"       "ads grey lit id:12257"    
-#> [3] "oasis id:acarchae2-108244"
-#> 
-#> $source
-#> character(0)
-#> 
-#> $language
-#> [1] "en"
-#> 
-#> $relation
-#> [1] "url:http://archaeologydataservice.ac.uk/archives/view/greylit/"
-#> 
-#> $coverage
-#> [1] "50.708481 -3.417317"                      
-#> [2] "ENGLAND, DEVON, EAST DEVON, CLYST ST MARY"
-#> 
-#> $rights
-#> [1] "ADS Terms and Conditions apply to reuse"                       
-#> [2] "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess"
+#> Error: could not find function "oaih_transform"
 ```
 
 ### REST API

@@ -40,3 +40,6 @@
 #'  \item refQuality reference quality flag (1 or 0)
 #'  \item uploaded datestamp of metadata uploading
 #' }
+#'
+#' If you want to use \code{wt='csv'} you'll need \code{solr} package version \code{0.1.8.99} or
+#' greater. Installation instructions at \url{https://github.com/ropensci/solr#quick-start}.

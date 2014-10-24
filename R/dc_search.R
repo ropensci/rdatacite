@@ -35,6 +35,7 @@
 #' dc_search(q = "uploaded:[NOW-5DAYS TO NOW]", fl=c('doi','uploaded'), rows=5)
 #'
 #' ## search with csv output
+#' ### If you want to use wt=csv, install development version of solr package, see Details
 #' dc_search(q = 'wind', fl=c('doi','title'), wt='csv')
 #'
 #' # Faceting
