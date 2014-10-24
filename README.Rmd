@@ -1,7 +1,7 @@
 rdatacite
 =========
 
-```{r}
+```{r echo=FALSE}
 knitr::opts_chunk$set(
   comment = "#>", 
   collapse = TRUE,
@@ -19,23 +19,90 @@ knitr::opts_chunk$set(
 
 ### Installation
 
-```{r}
+```{r eval=FALSE}
 install.packages("devtools")
 devtools::install_github("ropensci/rdatacite")
+```
+
+```{r}
 library('rdatacite')
 ```
 
 ### OAI-PMH
 
-```{r}
+#### Ping the service
 
+```{r}
+dc_oai_identify()
+```
+
+#### List metadata formats
+
+```{r}
+dc_oai_listmetadataformats(id = "56225")
+```
+
+#### List identifiers
+
+```{r}
+dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
+```
+
+#### Get records
+
+```{r}
+out <- dc_oai_getrecord(id = "56225", transform = TRUE)
+```
+
+Get $identifier, $datestamp, $setSpec, or $metadata
+
+```{r}
+out$metadata
+```
+
+Transform only metadata to a list
+
+```{r}
+oaih_transform(out$metadata)
 ```
 
 ### REST API
 
-```{r}
+This is the API for the same query interface you'd use on the DataCite website.
 
+#### Search
+
+Search for the term _laser_
+
+```{r}
+dc_search(q = "laser", fl=c('doi','publicationYear'), rows=5)
 ```
+
+Another search: published between 2000 and 2005
+
+```{r}
+dc_search(q = "publicationYear:[2000 TO 2005]", fl=c('doi','publicationYear'), rows=5)
+```
+
+#### Facet
+
+```{r}
+dc_facet(q = "wind", facet.field='publisher', facet.limit=5)
+```
+
+#### Stats
+
+
+```{r}
+dc_stats(q = "ecology", stats.field='date')
+```
+
+#### More-like-this
+
+```{r}
+dc_mlt(q = "ecology", mlt.fl='title', mlt.count=2, fl='doi')
+```
+
 
 ## Meta
 
