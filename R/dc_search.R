@@ -19,8 +19,11 @@
 #'
 #' @examples \donttest{
 #' # Search
-#' res <- dc_search(q = "wind")
-#' res[,c(1:6,8:20)]
+#' ## search for wind, retrieve only doi and title, and return (at max.) 5 results
+#' dc_search(q = "wind", fl=c('doi','title'), rows=5)
+#'
+#' ## search with csv output
+#' dc_search(q = 'wind', fl=c('doi','title'), wt='csv')
 #'
 #' # Faceting
 #' dc_facet(q = "wind", facet.field='publisher')
@@ -29,7 +32,7 @@
 #' dc_stats(q = "ecology", stats.field='date')
 #'
 #' # More like this (aka mlt)
-#' dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5, fl=c('id','title'))
+#' dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5, fl=c('doi','title'))
 #' }
 
 dc_search <- function(..., callopts=list()) solr_search(..., base = dc_base(), callopts = callopts)
