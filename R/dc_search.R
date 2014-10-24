@@ -2,20 +2,7 @@
 #'
 #' @export
 #' @import solr
-#'
-#' @param ... Solr parameters passed on to the respective \code{solr} package
-#' function.
-#' @param callopts Further args passed on to \code{\link[httr]{GET}}
-#'
-#' @details See the \code{solr} package documentation for available parameters. For each
-#' \code{dc_*} function see the equivalently named function in \code{solr}:
-#'
-#' \itemize{
-#'  \item dc_search - solr_search
-#'  \item dc_facet - solr_facet
-#'  \item dc_stats - solr_stats
-#'  \item dc_mlt - solr_mlt
-#' }
+#' @template search
 #'
 #' @examples \donttest{
 #' # Search
