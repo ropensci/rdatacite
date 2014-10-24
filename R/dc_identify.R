@@ -1,13 +1,12 @@
-#' identify
-#'
 #' Learn about the Dryad OAI-PMH service
-#' @import OAIHarvester
-#' @inheritParams dc_listmetadataformats
+#'
 #' @export
+#'
+#' @inheritParams dc_oai_listmetadataformats
 #' @examples \dontrun{
-#' dc_identify()
+#' dc_oai_identify()
 #' }
-dc_identify <- function(transform = TRUE, url = "http://oai.datacite.org/oai") 
-{ 
-  oaih_identify(url, transform = transform)
+dc_oai_identify <- function(transform = TRUE)
+{
+  oaih_identify("http://oai.datacite.org/oai", transform = transform)
 }

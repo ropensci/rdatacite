@@ -1,16 +1,16 @@
-#' List the sets in the DataCite metadata repository.
-#'
 #' Retrieve the set structure of DataCite, useful for selective harvesting
-#' @import OAIHarvester XML
-#' @inheritParams dc_listmetadataformats
+#'
+#' @export
+#'
+#' @inheritParams dc_oai_listmetadataformats
 #' @examples \dontrun{
-#' datacite_sets <- dc_listsets()
+#' datacite_sets <- dc_oai_listsets()
 #' head(datacite_sets)
 #' }
-#' @export
-dc_listsets <- function(url = "http://oai.datacite.org/oai") 
-{ 
-	out <- oaih_list_sets(url, transform = FALSE)
+
+dc_oai_listsets <- function()
+{
+	out <- oaih_list_sets("http://oai.datacite.org/oai", transform = FALSE)
 	data.frame(
 		setSpec = sapply(xpathApply(out, "//setSpec"), xmlValue),
 		setName = sapply(xpathApply(out, "//setName"), xmlValue)
