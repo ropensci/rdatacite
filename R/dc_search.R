@@ -19,8 +19,33 @@
 #'
 #' @examples \donttest{
 #' # Search
-#' ## search for wind, retrieve only doi and title, and return (at max.) 5 results
-#' dc_search(q = "wind", fl=c('doi','title'), rows=5)
+#' ## various searches
+#' ### containing laser
+#' dc_search(q = "laser", fl=c('doi','publicationYear'), rows=5)
+#'
+#' ### containing laser and safety
+#' dc_search(q = "laser safety", fl=c('doi','publicationYear'), rows=5)
+#'
+#' ### containing laser and not medicine
+#' dc_search(q = "laser -medicine", fl=c('doi','publicationYear'), rows=5)
+#'
+#' ### containing laser and red or green
+#' dc_search(q = "laser AND (red OR green)", fl=c('doi','publicationYear'), rows=5)
+#'
+#' ### containing wind turbine as a phrase in the title
+#' dc_search(q = 'title:"wind turbine"', fl=c('doi','title'), rows=5)
+#'
+#' ### containing geology in metadata field subject
+#' dc_search(q = "subject:geology", fl=c('doi','subject'), rows=5)
+#'
+#' ### belonging to DataCite members BL or TIB
+#' dc_search(q = "allocator:(BL OR TIB)", fl=c('doi','allocator'), rows=5)
+#'
+#' ### published between 2000 and 2005
+#' dc_search(q = "publicationYear:[2000 TO 2005]", fl=c('doi','publicationYear'), rows=5)
+#'
+#' ### uploaded to DataCite in the last 5 days
+#' dc_search(q = "uploaded:[NOW-5DAYS TO NOW]", fl=c('doi','uploaded'), rows=5)
 #'
 #' ## search with csv output
 #' dc_search(q = 'wind', fl=c('doi','title'), wt='csv')
