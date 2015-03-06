@@ -10,6 +10,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
+
 `rdatacite` is an R package that provides programmatic accesses to [DataCite](http://datacite.org/) metadata via via 
 
 * OAI-PMH. Documentation for the DataCite OAI-PMH is available [here](http://oai.datacite.org/). [Documentation for OAI-PMH](http://www.openarchives.org/OAI/openarchivesprotocol.html)
@@ -65,6 +67,7 @@ out$metadata
 Transform only metadata to a list
 
 ```{r}
+library("OAIHarvester")
 oaih_transform(out$metadata)
 ```
 

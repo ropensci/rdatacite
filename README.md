@@ -3,6 +3,8 @@ rdatacite
 
 
 
+[![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
+
 `rdatacite` is an R package that provides programmatic accesses to [DataCite](http://datacite.org/) metadata via via 
 
 * OAI-PMH. Documentation for the DataCite OAI-PMH is available [here](http://oai.datacite.org/). [Documentation for OAI-PMH](http://www.openarchives.org/OAI/openarchivesprotocol.html)
@@ -137,8 +139,55 @@ Transform only metadata to a list
 
 
 ```r
+library("OAIHarvester")
 oaih_transform(out$metadata)
-#> Error: could not find function "oaih_transform"
+#> $title
+#> [1] "Land at Hill Barton, Clyst St Mary, Devon (NGR SY 0002 9083) Hill Barton Industrial Park Strip Map and Sample Excavation Summary Report"
+#> 
+#> $creator
+#> [1] "AC archaeology Ltd"
+#> 
+#> $subject
+#> [1] "Archaeology"     "Grey Literature"
+#> 
+#> $description
+#> character(0)
+#> 
+#> $publisher
+#> [1] "Archaeology Data Service"
+#> 
+#> $contributor
+#> character(0)
+#> 
+#> $date
+#> [1] "2011"
+#> 
+#> $type
+#> [1] "Text"   "Report"
+#> 
+#> $format
+#> [1] "1 pdf file" "PDF"       
+#> 
+#> $identifier
+#> [1] "doi:10.5284/1011335"       "ads grey lit id:12257"    
+#> [3] "oasis id:acarchae2-108244"
+#> 
+#> $source
+#> character(0)
+#> 
+#> $language
+#> [1] "en"
+#> 
+#> $relation
+#> [1] "url:http://archaeologydataservice.ac.uk/archives/view/greylit/"
+#> 
+#> $coverage
+#> [1] "50.708481 -3.417317"                      
+#> [2] "ENGLAND, DEVON, EAST DEVON, CLYST ST MARY"
+#> 
+#> $rights
+#> [1] "ADS Terms and Conditions apply to reuse"                       
+#> [2] "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess"
 ```
 
 ### REST API
@@ -152,12 +201,12 @@ Search for the term _laser_
 
 ```r
 dc_search(q = "laser", fl=c('doi','publicationYear'), rows=5)
-#>                        doi publicationYear
-#> 1      10.5169/SEALS-52668            1982
-#> 2 10.3929/ETHZ-A-004302350            2001
-#> 3    10.2314/GBV:684907488            2011
-#> 4    10.2314/GBV:493109919            2005
-#> 5    10.2314/GBV:493105263            2005
+#>                     doi publicationYear
+#> 1   10.5169/SEALS-52668            1982
+#> 2 10.2314/GBV:493109919            2005
+#> 3 10.2314/GBV:493105263            2005
+#> 4 10.2314/GBV:487077911            2004
+#> 5 10.2314/GBV:607866403            2008
 ```
 
 Another search: published between 2000 and 2005
@@ -165,12 +214,12 @@ Another search: published between 2000 and 2005
 
 ```r
 dc_search(q = "publicationYear:[2000 TO 2005]", fl=c('doi','publicationYear'), rows=5)
-#>               doi publicationYear
-#> 1 10.5284/1011852            2003
-#> 2 10.5284/1011853            2003
-#> 3 10.5284/1011854            2002
-#> 4 10.5284/1011855            2002
-#> 5 10.5284/1011856            2003
+#>                        doi publicationYear
+#> 1    10.4126/38M-004600344            2005
+#> 2    10.4126/38M-004600340            2004
+#> 3    10.4126/38M-004600357            2005
+#> 4          10.5284/1017091            2002
+#> 5 10.3929/ETHZ-A-001561087            2002
 ```
 
 #### Facet
@@ -184,11 +233,11 @@ dc_facet(q = "wind", facet.field='publisher', facet.limit=5)
 #> $facet_fields
 #> $facet_fields$publisher
 #>          X1    X2
-#> 1       for 29998
-#> 2      data 29980
-#> 3   science 29753
-#> 4 publisher 29741
-#> 5     earth 29733
+#> 1      data 31609
+#> 2       for 30493
+#> 3 publisher 30262
+#> 4   science 30260
+#> 5     earth 30237
 #> 
 #> 
 #> $facet_dates
@@ -205,7 +254,7 @@ dc_facet(q = "wind", facet.field='publisher', facet.limit=5)
 ```r
 dc_stats(q = "ecology", stats.field='date')
 #>                       min        max count missing
-#> 1 01-Jan-2007/29-Nov-2010 22.07.2014  3156    1502
+#> 1 01-Jan-2007/29-Nov-2010 22.07.2014  4418    2279
 ```
 
 #### More-like-this
@@ -215,37 +264,37 @@ dc_stats(q = "ecology", stats.field='date')
 dc_mlt(q = "ecology", mlt.fl='title', mlt.count=2, fl='doi')
 #> $docs
 #>                  doi
-#> 1    10.5167/UZH-503
-#> 2    10.5167/UZH-584
-#> 3  10.5167/UZH-61344
+#> 1  10.5167/UZH-30455
+#> 2  10.5167/UZH-49216
+#> 3    10.5167/UZH-503
 #> 4  10.5167/UZH-38402
 #> 5  10.5167/UZH-41217
 #> 6    10.5167/UZH-402
-#> 7  10.5167/UZH-49216
-#> 8  10.5167/UZH-30455
-#> 9   10.5167/UZH-3488
-#> 10   10.5167/UZH-714
+#> 7  10.5167/UZH-76182
+#> 8  10.5167/UZH-76892
+#> 9    10.5167/UZH-584
+#> 10 10.5167/UZH-61344
 #> 
 #> $mlt
-#> $mlt$`1695042`
-#>                    doi
-#> 1 10.5169/SEALS-108177
-#> 2 10.5169/SEALS-131654
-#> 
 #> $mlt$`1699696`
 #>                         doi
 #> 1 10.6084/M9.FIGSHARE.15727
-#> 2    10.5287/BODLEIAN8QYR.2
+#> 2  10.6084/M9.FIGSHARE.4171
 #> 
-#> $mlt$`1693786`
+#> $mlt$`1695042`
 #>                         doi
-#> 1 10.6084/M9.FIGSHARE.27441
-#> 2          10.14469/CH/2142
+#> 1        10.5169/SEALS-1649
+#> 2 10.6084/M9.FIGSHARE.28839
 #> 
-#> $mlt$`1710865`
-#>                        doi
-#> 1 10.3932/ETHZ-A-000206807
-#> 2 10.3932/ETHZ-A-000164604
+#> $mlt$`1712859`
+#>                         doi
+#> 1 10.6084/M9.FIGSHARE.14529
+#> 2 10.6084/M9.FIGSHARE.15901
+#> 
+#> $mlt$`1712990`
+#>                         doi
+#> 1 10.6084/M9.FIGSHARE.15727
+#> 2  10.6084/M9.FIGSHARE.4171
 ```
 
 
