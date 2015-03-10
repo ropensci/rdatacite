@@ -3,13 +3,14 @@
 #' @param callopts Further args passed on to \code{\link[httr]{GET}}
 #'
 #' @details See the \code{solr} package documentation for available parameters. For each
-#' \code{dc_*} function see the equivalently named function in \code{solr}:
+#' of \code{dc_search}, \code{dc_facet}, \code{dc_stats}, and \code{dc_mlt} see the
+#' equivalently named function in \code{solr}:
 #'
 #' \itemize{
-#'  \item dc_search - solr_search
-#'  \item dc_facet - solr_facet
-#'  \item dc_stats - solr_stats
-#'  \item dc_mlt - solr_mlt
+#'  \item \code{dc_search} - \code{\link[solr]{solr_search}}
+#'  \item \code{dc_facet} - \code{\link[solr]{solr_facet}}
+#'  \item \code{dc_stats} - \code{\link[solr]{solr_stats}}
+#'  \item \code{dc_mlt} - \code{\link[solr]{solr_mlt}}
 #' }
 #'
 #' Fields you can search on and retrieve back are:

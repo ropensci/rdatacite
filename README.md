@@ -236,7 +236,7 @@ dc_facet(q = "wind", facet.field='publisher', facet.limit=5)
 #> 1      data 31609
 #> 2       for 30493
 #> 3 publisher 30262
-#> 4   science 30260
+#> 4   science 30261
 #> 5     earth 30237
 #> 
 #> 
@@ -254,7 +254,7 @@ dc_facet(q = "wind", facet.field='publisher', facet.limit=5)
 ```r
 dc_stats(q = "ecology", stats.field='date')
 #>                       min        max count missing
-#> 1 01-Jan-2007/29-Nov-2010 22.07.2014  4418    2279
+#> 1 01-Jan-2007/29-Nov-2010 22.07.2014  4493    2269
 ```
 
 #### More-like-this
