@@ -16,11 +16,11 @@ Retrieve an individual record from the DataCite repository
 }
 \examples{
 \dontrun{
-out <- dc_oai_getrecord("56225", T)
+out <- dc_oai_getrecord("56225", TRUE)
 out$metadata # get $identifier, $datestamp, $setSpec, or $metadata
 oaih_transform(out$metadata) # transform only metadata to a list
 
-temp <- dc_listidentifiers(from = '2012-07-27') # get some identifiers
+temp <- dc_oai_listidentifiers(from = '2012-07-27') # get some identifiers
 temp[[1,"identifier"]] # gets the identifier
 dc_oai_getrecord(temp[[1,"identifier"]]) # get the record
 }

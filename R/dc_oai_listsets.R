@@ -8,8 +8,7 @@
 #' head(datacite_sets)
 #' }
 
-dc_oai_listsets <- function()
-{
+dc_oai_listsets <- function() {
 	out <- oaih_list_sets("http://oai.datacite.org/oai", transform = FALSE)
 	data.frame(
 		setSpec = sapply(xpathApply(out, "//setSpec"), xmlValue),
