@@ -18,8 +18,8 @@
 #' dc_oai_listidentifiers(set = "REFQUALITY")
 #' }
 dc_oai_listidentifiers <- function(from = NULL, until = NULL, set = NULL,
-  prefix = 'oai_dc', token = NULL, transform = TRUE)
-{
+                                   prefix = 'oai_dc', token = NULL, transform = TRUE) {
+
   message('Retrieving headers...')
   oaih_list_identifiers(
     "http://oai.datacite.org/oai",

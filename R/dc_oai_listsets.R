@@ -9,11 +9,11 @@
 #' }
 
 dc_oai_listsets <- function() {
-	out <- oaih_list_sets("http://oai.datacite.org/oai", transform = FALSE)
-	data.frame(
-		setSpec = sapply(xpathApply(out, "//setSpec"), xmlValue),
-		setName = sapply(xpathApply(out, "//setName"), xmlValue)
-		)
+  out <- oaih_list_sets("http://oai.datacite.org/oai", transform = FALSE)
+  data.frame(
+    setSpec = sapply(xpathApply(out, "//setSpec"), xmlValue),
+    setName = sapply(xpathApply(out, "//setName"), xmlValue)
+  )
 }
 
 # library(httr)

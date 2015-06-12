@@ -20,9 +20,9 @@ dc_oai_getrecord <- function(id = NULL, transform = TRUE) {
     oaiid <- NULL
   }
 
-	oaih_get_record(
-	  "http://oai.datacite.org/oai",
-		oaiid,
-		prefix = "oai_dc",
-		transform = transform)
+  oaih_get_record(
+    "http://oai.datacite.org/oai",
+    oaiid,
+    prefix = "oai_dc",
+    transform = transform)
 }
