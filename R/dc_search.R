@@ -4,7 +4,7 @@
 #' @import solr
 #' @template search
 #'
-#' @examples \donttest{
+#' @examples \dontrun{
 #' # Search
 #' ## various searches
 #' ### containing laser
@@ -47,7 +47,6 @@
 #' # More like this (aka mlt)
 #' dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5, fl=c('doi','title'))
 #' }
-
 dc_search <- function(..., callopts=list()) solr_search(..., base = dc_base(), callopts = callopts)
 
 #' @export

@@ -69,7 +69,7 @@ If you want to use \code{wt='csv'} you'll need \code{solr} package version \code
 greater. Installation instructions at \url{https://github.com/ropensci/solr#quick-start}.
 }
 \examples{
-\donttest{
+\dontrun{
 # Search
 ## various searches
 ### containing laser
