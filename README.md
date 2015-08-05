@@ -4,6 +4,7 @@ rdatacite
 
 
 [![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
+[![codecov.io](https://codecov.io/github/ropensci/rdatacite/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdatacite?branch=master)
 
 `rdatacite` is an R package that provides programmatic accesses to [DataCite](http://datacite.org/) metadata via via 
 

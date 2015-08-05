@@ -3,16 +3,17 @@ rdatacite
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
-  comment = "#>", 
+  comment = "#>",
   collapse = TRUE,
-  warning = FALSE, 
+  warning = FALSE,
   message = FALSE
 )
 ```
 
 [![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
+[![codecov.io](https://codecov.io/github/ropensci/rdatacite/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdatacite?branch=master)
 
-`rdatacite` is an R package that provides programmatic accesses to [DataCite](http://datacite.org/) metadata via via 
+`rdatacite` is an R package that provides programmatic accesses to [DataCite](http://datacite.org/) metadata via via
 
 * OAI-PMH. Documentation for the DataCite OAI-PMH is available [here](http://oai.datacite.org/). [Documentation for OAI-PMH](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 * REST API. [Docs](http://search.datacite.org/help.html). [Metadata schema](http://schema.datacite.org/). [Solr config file](https://github.com/datacite/search/blob/master/src/main/resources/solrconfig.xml)
