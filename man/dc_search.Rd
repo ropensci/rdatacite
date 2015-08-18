@@ -104,7 +104,7 @@ dc_search(q = "uploaded:[NOW-5DAYS TO NOW]", fl=c('doi','uploaded'), rows=5)
 dc_search(q = 'wind', fl=c('doi','title'), wt='csv')
 
 # Faceting
-dc_facet(q = "wind", facet.field='publisher')
+dc_facet(q = "wind", facet.field='publisher_facet')
 
 # Stats
 dc_stats(q = "ecology", stats.field='date')

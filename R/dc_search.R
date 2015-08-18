@@ -38,7 +38,7 @@
 #' dc_search(q = 'wind', fl=c('doi','title'), wt='csv')
 #'
 #' # Faceting
-#' dc_facet(q = "wind", facet.field='publisher')
+#' dc_facet(q = "wind", facet.field='publisher_facet')
 #'
 #' # Stats
 #' dc_stats(q = "ecology", stats.field='date')
