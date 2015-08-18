@@ -151,18 +151,18 @@ dc_search(q = "publicationYear:[2000 TO 2005]", fl = c('doi', 'publicationYear')
 
 
 ```r
-dc_facet(q = "wind", facet.field = 'publisher', facet.limit = 5)
+dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 #> $facet_queries
 #> NULL
 #> 
 #> $facet_fields
-#> $facet_fields$publisher
-#>          X1    X2
-#> 1      data 32281
-#> 2       for 31070
-#> 3 publisher 30853
-#> 4   science 30848
-#> 5     earth 30823
+#> $facet_fields$publisher_facet
+#>                                                                   X1    X2
+#> 1         PANGAEA - Data Publisher for Earth & Environmental Science 30806
+#> 2 Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  1102
+#> 3                                                        Unpublished   570
+#> 4                                           Archaeology Data Service   233
+#> 5                          Knowledge Network for Biocomplexity (KNB)   206
 #> 
 #> 
 #> $facet_dates

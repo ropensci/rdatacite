@@ -93,7 +93,7 @@ dc_search(q = "publicationYear:[2000 TO 2005]", fl = c('doi', 'publicationYear')
 ### Facet
 
 ```{r}
-dc_facet(q = "wind", facet.field = 'publisher', facet.limit = 5)
+dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 ```
 
 ### Stats
