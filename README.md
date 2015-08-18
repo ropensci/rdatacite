@@ -13,8 +13,6 @@ rdatacite
 
 ## Installation
 
-> Note: If you want to use `wt='csv'` in `dc_*()` function calls, you'll need `solr` package version `0.1.8.99` or greater. Installation instructions at [https://github.com/ropensci/solr#quick-start](https://github.com/ropensci/solr#quick-start). Everything else will work just fine with CRAN version of `solr`
-
 Install `oai`, it's not on CRAN yet:
 
 
@@ -22,7 +20,9 @@ Install `oai`, it's not on CRAN yet:
 devtools::install_github("sckott/oai")
 ```
 
-And install a newer version of `solr` (`>= v0.2.4`), not yet on CRAN:
+And install a newer version of `solr` (`>= v0.2.4`), not yet on CRAN.
+
+> Note: If you want to use `wt='csv'` in `dc_*()` function calls, you'll need `solr` package version `0.1.8.99` or greater.
 
 
 ```r
