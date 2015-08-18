@@ -22,7 +22,7 @@ Install `oai`, it's not on CRAN yet:
 devtools::install_github("sckott/oai")
 ```
 
-And install a newer version of `solr`, not yet on CRAN:
+And install a newer version of `solr` (`>= v0.2.4`), not yet on CRAN:
 
 
 ```r
