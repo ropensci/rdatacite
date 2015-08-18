@@ -5,7 +5,7 @@
 \title{List the records in the DataCite metadata repository.}
 \usage{
 dc_oai_listrecords(from = NULL, until = NULL, set = NULL,
-  prefix = "oai_dc", token = NULL, transform = TRUE)
+  prefix = "oai_dc", token = NULL, ...)
 }
 \arguments{
 \item{from}{specifies that records returned must have been created/update/deleted
@@ -17,12 +17,13 @@ on or before this date.}
 \item{set}{specifies the set that returned records must belong to.}
 
 \item{prefix}{specifies the metadata format that the records will be
-returned in.}
+returned in. One of: oai_dc (default), oai_datacite, or datacite. See
+\code{Prefixes} for more info.}
 
 \item{token}{a token previously provided by the server to resume a request
 where it last left off.}
 
-\item{transform}{transform metadata to list (TRUE/FALSE)}
+\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \description{
 List the records in the DataCite metadata repository.
@@ -30,7 +31,7 @@ List the records in the DataCite metadata repository.
 \examples{
 \dontrun{
 dc_oai_listrecords(from = '2011-06-01T', until = '2011-07-01T')
-out <- dc_oai_listrecords()
+dc_oai_listrecords(from = '2011-06-01T', until = '2011-11-01T', set = "REFQUALITY")
 }
 }
 

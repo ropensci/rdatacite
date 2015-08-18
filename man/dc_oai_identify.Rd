@@ -4,10 +4,10 @@
 \alias{dc_oai_identify}
 \title{Learn about the Dryad OAI-PMH service}
 \usage{
-dc_oai_identify(transform = TRUE)
+dc_oai_identify(...)
 }
 \arguments{
-\item{transform}{transform metadata to list (TRUE/FALSE)}
+\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \description{
 Learn about the Dryad OAI-PMH service

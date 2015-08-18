@@ -1,6 +1,6 @@
 Package: rdatacite
 Type: Package
-Title: 'DataCite' Client for 'OAI-PMH' methods and their Search 'API'
+Title: 'DataCite' Client for 'Oai-PMH' Methods and their Search 'API'
 Description: Client for the web service methods provided
     by 'DataCite' (http://datacite.org/), including functions to interface with
     their 'OAI-PMH' 'metadata' service, and a 'RESTful' search 'API'. The 'API'

@@ -4,21 +4,17 @@
 \alias{dc_oai_getrecord}
 \title{Retrieve an individual record from the DataCite repository}
 \usage{
-dc_oai_getrecord(id = NULL, transform = TRUE)
+dc_oai_getrecord(id = NULL)
 }
 \arguments{
 \item{id}{DataCite identifier, e.g., "56225"}
-
-\item{transform}{transform metadata to list (TRUE/FALSE)}
 }
 \description{
 Retrieve an individual record from the DataCite repository
 }
 \examples{
 \dontrun{
-out <- dc_oai_getrecord("56225", TRUE)
-out$metadata # get $identifier, $datestamp, $setSpec, or $metadata
-oaih_transform(out$metadata) # transform only metadata to a list
+dc_oai_getrecord("56225")
 
 temp <- dc_oai_listidentifiers(from = '2012-07-27') # get some identifiers
 temp[[1,"identifier"]] # gets the identifier

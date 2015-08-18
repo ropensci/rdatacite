@@ -4,12 +4,12 @@
 \alias{dc_oai_listmetadataformats}
 \title{List available metadata formats that the DataCite repository can disseminate}
 \usage{
-dc_oai_listmetadataformats(id = NULL, transform = TRUE)
+dc_oai_listmetadataformats(id = NULL, ...)
 }
 \arguments{
 \item{id}{DataCite identifier, e.g., "56225"}
 
-\item{transform}{transform metadata to list (TRUE/FALSE)}
+\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \description{
 List available metadata formats that the DataCite repository can disseminate

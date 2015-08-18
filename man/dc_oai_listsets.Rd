@@ -2,17 +2,22 @@
 % Please edit documentation in R/dc_oai_listsets.R
 \name{dc_oai_listsets}
 \alias{dc_oai_listsets}
-\title{Retrieve the set structure of DataCite, useful for selective harvesting}
+\title{Retrieve the set structure of DataCite}
 \usage{
-dc_oai_listsets()
+dc_oai_listsets(token = NULL, ...)
+}
+\arguments{
+\item{token}{a token previously provided by the server to resume a request
+where it last left off.}
+
+\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \description{
-Retrieve the set structure of DataCite, useful for selective harvesting
+Useful for selective harvesting
 }
 \examples{
 \dontrun{
-datacite_sets <- dc_oai_listsets()
-head(datacite_sets)
+dc_oai_listsets()
 }
 }
 

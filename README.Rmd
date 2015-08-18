@@ -18,14 +18,25 @@ knitr::opts_chunk$set(
 * OAI-PMH. Documentation for the DataCite OAI-PMH is available [here](http://oai.datacite.org/). [Documentation for OAI-PMH](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 * REST API. [Docs](http://search.datacite.org/help.html). [Metadata schema](http://schema.datacite.org/). [Solr config file](https://github.com/datacite/search/blob/master/src/main/resources/solrconfig.xml)
 
-## Quickstart
-
-### Installation
+## Installation
 
 > Note: If you want to use `wt='csv'` in `dc_*()` function calls, you'll need `solr` package version `0.1.8.99` or greater. Installation instructions at [https://github.com/ropensci/solr#quick-start](https://github.com/ropensci/solr#quick-start). Everything else will work just fine with CRAN version of `solr`
 
+Install `oai`, it's not on CRAN yet:
+
 ```{r eval=FALSE}
-install.packages("devtools")
+devtools::install_github("sckott/oai")
+```
+
+And install a newer version of `solr`, not yet on CRAN:
+
+```{r eval=FALSE}
+devtools::install_github("ropensci/solr")
+```
+
+Now install `rdatacite`
+
+```{r eval=FALSE}
 devtools::install_github("ropensci/rdatacite")
 ```
 
@@ -33,80 +44,69 @@ devtools::install_github("ropensci/rdatacite")
 library('rdatacite')
 ```
 
-### OAI-PMH
+## OAI-PMH
 
-#### Ping the service
+### Ping the service
 
 ```{r}
 dc_oai_identify()
 ```
 
-#### List metadata formats
+### List metadata formats
 
 ```{r}
 dc_oai_listmetadataformats(id = "56225")
 ```
 
-#### List identifiers
+### List identifiers
 
 ```{r}
 dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
 ```
 
-#### Get records
+### Get records
 
 ```{r}
-out <- dc_oai_getrecord(id = "56225", transform = TRUE)
+dc_oai_getrecord(id = "56225")
 ```
 
-Get $identifier, $datestamp, $setSpec, or $metadata
+You can pass in more than one identifier to `id` parameter.
 
-```{r}
-out$metadata
-```
-
-Transform only metadata to a list
-
-```{r}
-library("OAIHarvester")
-oaih_transform(out$metadata)
-```
-
-### REST API
+## Search API
 
 This is the API for the same query interface you'd use on the DataCite website.
 
-#### Search
+### Search
 
 Search for the term _laser_
 
 ```{r}
-dc_search(q = "laser", fl=c('doi','publicationYear'), rows=5)
+dc_search(q = "laser", fl = c('doi','publicationYear'), rows = 5)
 ```
 
 Another search: published between 2000 and 2005
 
 ```{r}
-dc_search(q = "publicationYear:[2000 TO 2005]", fl=c('doi','publicationYear'), rows=5)
+dc_search(q = "publicationYear:[2000 TO 2005]", fl = c('doi', 'publicationYear'), rows = 5)
 ```
 
-#### Facet
+### Facet
 
 ```{r}
-dc_facet(q = "wind", facet.field='publisher', facet.limit=5)
+dc_facet(q = "wind", facet.field = 'publisher', facet.limit = 5)
 ```
 
-#### Stats
+### Stats
 
 
 ```{r}
-dc_stats(q = "ecology", stats.field='date')
+dc_stats(q = "ecology", stats.field = 'date')
 ```
 
-#### More-like-this
+### More-like-this
 
 ```{r}
-dc_mlt(q = "ecology", mlt.fl='title', mlt.count=2, fl='doi')
+dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 ```
 
 

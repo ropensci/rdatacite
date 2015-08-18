@@ -6,6 +6,6 @@
 #' @examples \dontrun{
 #' dc_oai_identify()
 #' }
-dc_oai_identify <- function(transform = TRUE) {
-  oaih_identify("http://oai.datacite.org/oai", transform = transform)
+dc_oai_identify <- function(...) {
+  oai::id(dc_oai_base(), ...)
 }
