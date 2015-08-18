@@ -14,11 +14,19 @@ Retrieve an individual record from the DataCite repository
 }
 \examples{
 \dontrun{
-dc_oai_getrecord("56225")
+# you can pass in just the numeric part of the ID
+dc_oai_getrecord(56225)
+dc_oai_getrecord(c(56225, 6667400))
 
-temp <- dc_oai_listidentifiers(from = '2012-07-27') # get some identifiers
-temp[[1,"identifier"]] # gets the identifier
-dc_oai_getrecord(temp[[1,"identifier"]]) # get the record
+# Or, the entire thing
+dc_oai_getrecord("oai:oai.datacite.org:56225")
+
+# Or, mixed
+dc_oai_getrecord(c("56225", "oai:oai.datacite.org:6667400"))
+
+today <- format(Sys.Date(), "\%Y-\%m-\%d")
+temp <- dc_oai_listidentifiers(from = today)
+dc_oai_getrecord(temp$identifier[1:2])
 }
 }
 

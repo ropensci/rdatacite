@@ -13,3 +13,6 @@ pluck <- function(x, name, type) {
 }
 
 last <- function(x) x[length(x)][[1]]
+
+strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
+
