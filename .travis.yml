@@ -1,5 +1,13 @@
 language: r
 
+r_github_packages:
+  - sckott/oai
+  - ropensci/solr
+  - jimhester/covr
+
+after_success:
+  - Rscript -e 'covr::codecov()'
+
 notifications:
   email:
     on_success: change
