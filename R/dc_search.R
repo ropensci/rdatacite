@@ -53,22 +53,22 @@ dc_search <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, call
 
 #' @export
 #' @rdname dc_search
-dc_facet <- function(..., callopts=list()) {
-  check_conn()
+dc_facet <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, callopts=list()) {
+  check_conn(verbose, errors, proxy)
   solr_facet(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname dc_search
-dc_stats <- function(..., callopts=list()) {
-  check_conn()
+dc_stats <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, callopts=list()) {
+  check_conn(verbose, errors, proxy)
   solr_stats(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname dc_search
-dc_mlt <- function(..., callopts=list()) {
-  check_conn()
+dc_mlt <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, callopts=list()) {
+  check_conn(verbose, errors, proxy)
   solr_mlt(..., callopts = callopts)
 }
 

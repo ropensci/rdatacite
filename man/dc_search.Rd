@@ -10,11 +10,14 @@
 dc_search(..., verbose = TRUE, errors = "simple", proxy = NULL,
   callopts = list())
 
-dc_facet(..., callopts = list())
+dc_facet(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 
-dc_stats(..., callopts = list())
+dc_stats(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 
-dc_mlt(..., callopts = list())
+dc_mlt(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 }
 \arguments{
 \item{...}{Solr parameters passed on to the respective \code{solr} package
