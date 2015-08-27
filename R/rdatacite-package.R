@@ -24,7 +24,7 @@
 #'
 #' Coming soon...
 #'
-#' @importFrom solr solr_search solr_facet solr_stats solr_mlt solr_connect solr_settings
+#' @importFrom solrium solr_search solr_facet solr_stats solr_mlt solr_connect solr_settings
 #' @importFrom oai get_records id list_metadataformats list_records list_sets
 #' @name rdatacite-package
 #' @aliases rdatacite

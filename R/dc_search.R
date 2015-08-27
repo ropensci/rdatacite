@@ -46,8 +46,8 @@
 #' # More like this (aka mlt)
 #' dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5, fl=c('doi','title'))
 #' }
-dc_search <- function(..., callopts=list()) {
-  check_conn()
+dc_search <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, callopts=list()) {
+  check_conn(verbose, errors, proxy)
   solr_search(..., callopts = callopts)
 }
 
@@ -72,8 +72,6 @@ dc_mlt <- function(..., callopts=list()) {
   solr_mlt(..., callopts = callopts)
 }
 
-check_conn <- function() {
-  if (nchar(solr_settings()$url) == 0) {
-    solr_connect(dc_base())
-  }
+check_conn <- function(verbose, errors, proxy) {
+  solr_connect(dc_base(), proxy = proxy, errors = errors, verbose = verbose)
 }
