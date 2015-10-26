@@ -7,5 +7,5 @@
 #' dc_oai_identify()
 #' }
 dc_oai_identify <- function(...) {
-  oai::id(dc_oai_base(), ...)
+  oai::id_entify(dc_oai_base(), ...)
 }

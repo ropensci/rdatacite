@@ -1,8 +1,7 @@
 language: r
 
 r_github_packages:
-  - sckott/oai
-  - ropensci/solr
+  - ropensci/solrium
   - jimhester/covr
 
 after_success:
