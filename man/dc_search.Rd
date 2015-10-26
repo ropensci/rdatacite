@@ -20,7 +20,7 @@ dc_mlt(..., verbose = TRUE, errors = "simple", proxy = NULL,
   callopts = list())
 }
 \arguments{
-\item{...}{Solr parameters passed on to the respective \code{solr} package
+\item{...}{Solr parameters passed on to the respective \code{solrium} package
 function.}
 
 \item{verbose}{(logical) Whether to print help messages or not. E.g., if
@@ -41,15 +41,15 @@ help, which is used to construct the proxy connection.}
 Use the DataCite RESTful API for search, facet, stats, and mlt queries.
 }
 \details{
-See the \code{solr} package documentation for available parameters. For each
+See the \code{solrium} package documentation for available parameters. For each
 of \code{dc_search}, \code{dc_facet}, \code{dc_stats}, and \code{dc_mlt} see the
-equivalently named function in \code{solr}:
+equivalently named function in \code{solrium}:
 
 \itemize{
- \item \code{dc_search} - \code{\link[solr]{solr_search}}
- \item \code{dc_facet} - \code{\link[solr]{solr_facet}}
- \item \code{dc_stats} - \code{\link[solr]{solr_stats}}
- \item \code{dc_mlt} - \code{\link[solr]{solr_mlt}}
+ \item \code{dc_search} - \code{\link[solrium]{solr_search}}
+ \item \code{dc_facet} - \code{\link[solrium]{solr_facet}}
+ \item \code{dc_stats} - \code{\link[solrium]{solr_stats}}
+ \item \code{dc_mlt} - \code{\link[solrium]{solr_mlt}}
 }
 
 Fields you can search on and retrieve back are:
@@ -81,8 +81,8 @@ Fields you can search on and retrieve back are:
  \item uploaded datestamp of metadata uploading
 }
 
-If you want to use \code{wt='csv'} you'll need \code{solr} package version \code{0.1.8.99} or
-greater. Installation instructions at \url{https://github.com/ropensci/solr#quick-start}.
+If you want to use \code{wt='csv'} you'll need \code{solrium} package version \code{0.1.8.99} or
+greater. Installation instructions at \url{https://github.com/ropensci/solrium#quick-start}.
 }
 \examples{
 \dontrun{

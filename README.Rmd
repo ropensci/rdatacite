@@ -20,18 +20,18 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-Install `oai`, it's not on CRAN yet:
+Install `oai` from GitHub
 
 ```{r eval=FALSE}
-devtools::install_github("sckott/oai")
+devtools::install_github("ropensci/oai")
 ```
 
-And install a newer version of `solr` (`>= v0.2.4`), not yet on CRAN.
+And install a newer version of `solrium` (`>= v0.2.4`), not yet on CRAN.
 
-> Note: If you want to use `wt='csv'` in `dc_*()` function calls, you'll need `solr` package version `0.1.8.99` or greater.
+> Note: If you want to use `wt='csv'` in `dc_*()` function calls, you'll need `solrium` package version `0.1.8.99` or greater.
 
 ```{r eval=FALSE}
-devtools::install_github("ropensci/solr")
+devtools::install_github("ropensci/solrium")
 ```
 
 Now install `rdatacite`

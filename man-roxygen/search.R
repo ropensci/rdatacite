@@ -1,4 +1,4 @@
-#' @param ... Solr parameters passed on to the respective \code{solr} package
+#' @param ... Solr parameters passed on to the respective \code{solrium} package
 #' function.
 #' @param proxy List of arguments for a proxy connection, including one or more of:
 #' url, port, username, password, and auth. See \code{\link[httr]{use_proxy}} for
@@ -11,15 +11,15 @@
 #' reference. Default: \code{TRUE}
 #' @param callopts Further args passed on to \code{\link[httr]{GET}}
 #'
-#' @details See the \code{solr} package documentation for available parameters. For each
+#' @details See the \code{solrium} package documentation for available parameters. For each
 #' of \code{dc_search}, \code{dc_facet}, \code{dc_stats}, and \code{dc_mlt} see the
-#' equivalently named function in \code{solr}:
+#' equivalently named function in \code{solrium}:
 #'
 #' \itemize{
-#'  \item \code{dc_search} - \code{\link[solr]{solr_search}}
-#'  \item \code{dc_facet} - \code{\link[solr]{solr_facet}}
-#'  \item \code{dc_stats} - \code{\link[solr]{solr_stats}}
-#'  \item \code{dc_mlt} - \code{\link[solr]{solr_mlt}}
+#'  \item \code{dc_search} - \code{\link[solrium]{solr_search}}
+#'  \item \code{dc_facet} - \code{\link[solrium]{solr_facet}}
+#'  \item \code{dc_stats} - \code{\link[solrium]{solr_stats}}
+#'  \item \code{dc_mlt} - \code{\link[solrium]{solr_mlt}}
 #' }
 #'
 #' Fields you can search on and retrieve back are:
@@ -51,5 +51,5 @@
 #'  \item uploaded datestamp of metadata uploading
 #' }
 #'
-#' If you want to use \code{wt='csv'} you'll need \code{solr} package version \code{0.1.8.99} or
-#' greater. Installation instructions at \url{https://github.com/ropensci/solr#quick-start}.
+#' If you want to use \code{wt='csv'} you'll need \code{solrium} package version \code{0.1.8.99} or
+#' greater. Installation instructions at \url{https://github.com/ropensci/solrium#quick-start}.
