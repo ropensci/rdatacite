@@ -2,6 +2,7 @@ language: r
 
 r_github_packages:
   - ropensci/solrium
+  - ropensci/oai
   - jimhester/covr
 
 after_success:
