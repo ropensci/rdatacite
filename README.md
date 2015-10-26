@@ -240,5 +240,6 @@ dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 * Please [report any issues or bugs](https://github.com/ropensci/rdatacite/issues).
 * License: MIT
 * Get citation information for `rdatacite` in R doing `citation(package = 'rdatacite')`
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 [![ropensci](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
