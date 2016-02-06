@@ -5,24 +5,23 @@ rdatacite
 
 [![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
 [![codecov.io](https://codecov.io/github/ropensci/rdatacite/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdatacite?branch=master)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdatacite)](https://github.com/metacran/cranlogs.app)
 
-`rdatacite` is an R package that provides programmatic accesses to [DataCite](http://datacite.org/) metadata via via
+`rdatacite` provides programmatic accesses to [DataCite](http://datacite.org/) metadata
 
 * OAI-PMH. Documentation for the DataCite OAI-PMH is available [here](http://oai.datacite.org/). [Documentation for OAI-PMH](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 * REST API. [Docs](http://search.datacite.org/help.html). [Metadata schema](http://schema.datacite.org/). [Solr config file](https://github.com/datacite/search/blob/master/src/main/resources/solrconfig.xml)
 
 ## Installation
 
-Install `oai` from GitHub
+Need `oai`  `> v0.2` from CRAN
 
 
 ```r
-devtools::install_github("ropensci/oai")
+install.packages("oai")
 ```
 
 And install a newer version of `solrium` (`>= v0.2.4`), not yet on CRAN.
-
-> Note: If you want to use `wt='csv'` in `dc_*()` function calls, you'll need `solrium` package version `0.1.8.99` or greater.
 
 
 ```r
@@ -30,6 +29,15 @@ devtools::install_github("ropensci/solrium")
 ```
 
 Now install `rdatacite`
+
+from CRAN
+
+
+```r
+install.packages("rdatacite")
+```
+
+development version from github
 
 
 ```r
@@ -127,10 +135,10 @@ dc_search(q = "laser", fl = c('doi','publicationYear'), rows = 5)
 #>                     doi publicationYear
 #>                   (chr)           (chr)
 #> 1   10.5169/SEALS-52668            1982
-#> 2 10.2314/GBV:667365621            2010
-#> 3 10.2314/GBV:569438993            2006
-#> 4 10.2314/GBV:772538778            2012
-#> 5 10.2314/GBV:72192168X            2012
+#> 2 10.2314/GBV:499941845            2004
+#> 3 10.2314/GBV:676509665            2011
+#> 4 10.2314/GBV:667365621            2010
+#> 5 10.2314/GBV:377452467            2002
 ```
 
 Another search: published between 2000 and 2005
@@ -140,13 +148,13 @@ Another search: published between 2000 and 2005
 dc_search(q = "publicationYear:[2000 TO 2005]", fl = c('doi', 'publicationYear'), rows = 5)
 #> Source: local data frame [5 x 2]
 #> 
-#>               doi publicationYear
-#>             (chr)           (chr)
-#> 1 10.5517/CC96RBK            2005
-#> 2 10.5517/CC7S7RZ            2004
-#> 3 10.5517/CC7S7S0            2004
-#> 4 10.5517/CC7S7T1            2004
-#> 5 10.5517/CC7WF1K            2004
+#>                   doi publicationYear
+#>                 (chr)           (chr)
+#> 1      10.13155/36809            2004
+#> 2      10.13155/36807            2003
+#> 3 10.7892/BORIS.75282            2004
+#> 4 10.7892/BORIS.75280            2002
+#> 5     10.15150/ATW122            2002
 ```
 
 ### Facet
@@ -160,11 +168,11 @@ dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 #> $facet_fields
 #> $facet_fields$publisher_facet
 #>                                                                   X1    X2
-#> 1         PANGAEA - Data Publisher for Earth & Environmental Science 30382
-#> 2 Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  1107
-#> 3                                                        Unpublished   665
-#> 4                                           Archaeology Data Service   243
-#> 5                          Knowledge Network for Biocomplexity (KNB)   206
+#> 1         PANGAEA - Data Publisher for Earth & Environmental Science 30661
+#> 2 Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  1119
+#> 3                                                        Unpublished   759
+#> 4                                                           Figshare   317
+#> 5                                           Archaeology Data Service   263
 #> 
 #> 
 #> $facet_pivot
@@ -184,8 +192,8 @@ dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 ```r
 dc_stats(q = "ecology", stats.field = 'date')
 #> $data
-#>                          min            max count missing
-#> date 01-Jan-2007/29-Nov-2010 September 2014 10973    2882
+#>                          min                max count missing
+#> date 01-Jan-2007/29-Nov-2010 September 30, 2015 13321    3967
 #> 
 #> $facet
 #> NULL
@@ -201,27 +209,27 @@ dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 #> 
 #>                    doi
 #>                  (chr)
-#> 1      10.5167/UZH-714
-#> 2    10.5167/UZH-76892
-#> 3    10.5167/UZH-49216
-#> 4      10.5167/UZH-503
-#> 5      10.5167/UZH-584
-#> 6    10.5167/UZH-61344
-#> 7    10.5167/UZH-38402
-#> 8    10.5167/UZH-41217
-#> 9      10.5167/UZH-402
+#> 1    10.5167/UZH-76892
+#> 2      10.5167/UZH-584
+#> 3    10.5167/UZH-61344
+#> 4      10.5167/UZH-714
+#> 5    10.5167/UZH-41217
+#> 6      10.5167/UZH-402
+#> 7    10.5167/UZH-49216
+#> 8      10.5167/UZH-503
+#> 9    10.5167/UZH-38402
 #> 10 10.7892/BORIS.16333
 #> 
 #> $mlt
-#> $mlt$`1710865`
-#>                        doi
-#> 1 10.3932/ETHZ-A-000164604
-#> 2 10.7890/ETHZ-A-000467066
-#> 
 #> $mlt$`1712990`
 #>                         doi
 #> 1 10.13140/RG.2.1.3868.5287
 #> 2 10.6084/M9.FIGSHARE.15727
+#> 
+#> $mlt$`1710865`
+#>                        doi
+#> 1 10.7890/ETHZ-A-000467066
+#> 2 10.7890/ETHZ-A-000467004
 #> 
 #> $mlt$`1699696`
 #>                         doi
@@ -229,9 +237,9 @@ dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 #> 2 10.6084/M9.FIGSHARE.15727
 #> 
 #> $mlt$`1695042`
-#>                      doi
-#> 1   10.5169/SEALS-421764
-#> 2 10.5287/BODLEIANDVAJ.2
+#>                    doi
+#> 1 10.5169/SEALS-511492
+#> 2 10.5169/SEALS-421764
 ```
 
 

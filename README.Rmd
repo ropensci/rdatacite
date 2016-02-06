@@ -12,29 +12,36 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
 [![codecov.io](https://codecov.io/github/ropensci/rdatacite/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdatacite?branch=master)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdatacite)](https://github.com/metacran/cranlogs.app)
 
-`rdatacite` is an R package that provides programmatic accesses to [DataCite](http://datacite.org/) metadata via via
+`rdatacite` provides programmatic accesses to [DataCite](http://datacite.org/) metadata
 
 * OAI-PMH. Documentation for the DataCite OAI-PMH is available [here](http://oai.datacite.org/). [Documentation for OAI-PMH](http://www.openarchives.org/OAI/openarchivesprotocol.html)
 * REST API. [Docs](http://search.datacite.org/help.html). [Metadata schema](http://schema.datacite.org/). [Solr config file](https://github.com/datacite/search/blob/master/src/main/resources/solrconfig.xml)
 
 ## Installation
 
-Install `oai` from GitHub
+Need `oai`  `> v0.2` from CRAN
 
 ```{r eval=FALSE}
-devtools::install_github("ropensci/oai")
+install.packages("oai")
 ```
 
 And install a newer version of `solrium` (`>= v0.2.4`), not yet on CRAN.
-
-> Note: If you want to use `wt='csv'` in `dc_*()` function calls, you'll need `solrium` package version `0.1.8.99` or greater.
 
 ```{r eval=FALSE}
 devtools::install_github("ropensci/solrium")
 ```
 
 Now install `rdatacite`
+
+from CRAN
+
+```{r eval=FALSE}
+install.packages("rdatacite")
+```
+
+development version from github
 
 ```{r eval=FALSE}
 devtools::install_github("ropensci/rdatacite")
