@@ -1,4 +1,4 @@
-#' @title Metadata Prefixes
+#' Metadata Prefixes
 #'
 #' These three options can be used in \code{dc_oai_*()} functions as input to
 #' the \code{prefix} parameter.
