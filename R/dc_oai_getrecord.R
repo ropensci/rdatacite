@@ -19,16 +19,11 @@
 #' dc_oai_getrecord(temp$identifier[1:2])
 #' }
 
-dc_oai_getrecord <- function(id = NULL) {
-  if (!is.null(id)) {
-    tt <- sapply(id, function(z) grepl('oai:oai.datacite.org', z))
-    if (!all(tt)) {
-      id <- unname(sapply(id, strextract, pattern = "[0-9]+"))
-      id <- paste("oai:oai.datacite.org:", id, sep = "")
-    }
-  } else {
-    id <- NULL
+dc_oai_getrecord <- function(id) {
+  tt <- sapply(id, function(z) grepl('oai:oai.datacite.org', z))
+  if (!all(tt)) {
+    id <- unname(sapply(id, strextract, pattern = "[0-9]+"))
+    id <- paste("oai:oai.datacite.org:", id, sep = "")
   }
-
   oai::get_records(ids = id, prefix = "oai_dc", url = dc_oai_base())
 }

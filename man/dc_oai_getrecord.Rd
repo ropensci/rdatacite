@@ -4,10 +4,11 @@
 \alias{dc_oai_getrecord}
 \title{Retrieve an individual record from the DataCite repository}
 \usage{
-dc_oai_getrecord(id = NULL)
+dc_oai_getrecord(id)
 }
 \arguments{
-\item{id}{DataCite identifier, e.g., "56225"}
+\item{id}{DataCite identifier, e.g., "oai:oai.datacite.org:6718729". If left
+blank, get all metadataformats}
 }
 \description{
 Retrieve an individual record from the DataCite repository
