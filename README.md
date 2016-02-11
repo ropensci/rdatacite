@@ -14,30 +14,14 @@ rdatacite
 
 ## Installation
 
-Need `oai`  `> v0.2` from CRAN
-
-
-```r
-install.packages("oai")
-```
-
-And install a newer version of `solrium` (`>= v0.2.4`), not yet on CRAN.
-
-
-```r
-devtools::install_github("ropensci/solrium")
-```
-
-Now install `rdatacite`
-
-from CRAN
+Stable CRAN version
 
 
 ```r
 install.packages("rdatacite")
 ```
 
-development version from github
+Development version from github
 
 
 ```r
@@ -132,13 +116,13 @@ Search for the term _laser_
 dc_search(q = "laser", fl = c('doi','publicationYear'), rows = 5)
 #> Source: local data frame [5 x 2]
 #> 
-#>                     doi publicationYear
-#>                   (chr)           (chr)
-#> 1   10.5169/SEALS-52668            1982
-#> 2 10.2314/GBV:499941845            2004
-#> 3 10.2314/GBV:676509665            2011
-#> 4 10.2314/GBV:667365621            2010
-#> 5 10.2314/GBV:377452467            2002
+#>                          doi publicationYear
+#>                        (chr)           (chr)
+#> 1 10.17035/D.2016.0008119129            2016
+#> 2        10.5169/SEALS-52668            1982
+#> 3      10.2314/GBV:676509665            2011
+#> 4      10.2314/GBV:667365621            2010
+#> 5      10.2314/GBV:574957529            2007
 ```
 
 Another search: published between 2000 and 2005
@@ -168,9 +152,9 @@ dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 #> $facet_fields
 #> $facet_fields$publisher_facet
 #>                                                                   X1    X2
-#> 1         PANGAEA - Data Publisher for Earth & Environmental Science 30661
+#> 1         PANGAEA - Data Publisher for Earth & Environmental Science 30670
 #> 2 Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  1119
-#> 3                                                        Unpublished   759
+#> 3                                                        Unpublished   760
 #> 4                                                           Figshare   317
 #> 5                                           Archaeology Data Service   263
 #> 
@@ -193,7 +177,7 @@ dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 dc_stats(q = "ecology", stats.field = 'date')
 #> $data
 #>                          min                max count missing
-#> date 01-Jan-2007/29-Nov-2010 September 30, 2015 13321    3967
+#> date 01-Jan-2007/29-Nov-2010 September 30, 2015 13584    3989
 #> 
 #> $facet
 #> NULL

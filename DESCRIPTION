@@ -1,20 +1,20 @@
 Package: rdatacite
 Type: Package
-Title: 'DataCite' Client for 'Oai-PMH' Methods and their Search 'API'
+Title: 'DataCite' Client for 'OAI-PMH' Methods and their Search 'API'
 Description: Client for the web service methods provided
-    by 'DataCite' (http://datacite.org/), including functions to interface with
+    by 'DataCite' (<https://www.datacite.org/>), including functions to interface with
     their 'OAI-PMH' 'metadata' service, and a 'RESTful' search 'API'. The 'API'
     is backed by 'SOLR', allowing expressive queries, including faceting,
     statistics on variables, and 'more-like-this' queries.
-Version: 0.0.9.9800
+Version: 0.1.0
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 URL: https://github.com/ropensci/rdatacite
 BugReports: https://github.com/ropensci/rdatacite/issues
 Imports:
-    oai,
-    solrium (>= 0.2.4)
+    oai (>= 0.2.0),
+    solrium (>= 0.3.0)
 Suggests:
     knitr,
     testthat

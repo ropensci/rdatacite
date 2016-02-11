@@ -48,30 +48,30 @@
 #' }
 dc_search <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, callopts=list()) {
   check_conn(verbose, errors, proxy)
-  solr_search(..., callopts = callopts)
+  solrium::solr_search(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname dc_search
 dc_facet <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, callopts=list()) {
   check_conn(verbose, errors, proxy)
-  solr_facet(..., callopts = callopts)
+  solrium::solr_facet(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname dc_search
 dc_stats <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, callopts=list()) {
   check_conn(verbose, errors, proxy)
-  solr_stats(..., callopts = callopts)
+  solrium::solr_stats(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname dc_search
 dc_mlt <- function(..., verbose = TRUE, errors = "simple", proxy = NULL, callopts=list()) {
   check_conn(verbose, errors, proxy)
-  solr_mlt(..., callopts = callopts)
+  solrium::solr_mlt(..., callopts = callopts)
 }
 
 check_conn <- function(verbose, errors, proxy) {
-  solr_connect(dc_base(), proxy = proxy, errors = errors, verbose = verbose)
+  solrium::solr_connect(dc_base(), proxy = proxy, errors = errors, verbose = verbose)
 }

@@ -21,27 +21,13 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-Need `oai`  `> v0.2` from CRAN
-
-```{r eval=FALSE}
-install.packages("oai")
-```
-
-And install a newer version of `solrium` (`>= v0.2.4`), not yet on CRAN.
-
-```{r eval=FALSE}
-devtools::install_github("ropensci/solrium")
-```
-
-Now install `rdatacite`
-
-from CRAN
+Stable CRAN version
 
 ```{r eval=FALSE}
 install.packages("rdatacite")
 ```
 
-development version from github
+Development version from github
 
 ```{r eval=FALSE}
 devtools::install_github("ropensci/rdatacite")
