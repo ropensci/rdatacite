@@ -13,6 +13,7 @@ knitr::opts_chunk$set(
 [![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
 [![codecov.io](https://codecov.io/github/ropensci/rdatacite/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdatacite?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdatacite)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/rdatacite)](http://cran.rstudio.com/package=rdatacite)
 
 `rdatacite` provides programmatic accesses to [DataCite](http://datacite.org/) metadata
 

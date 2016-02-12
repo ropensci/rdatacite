@@ -6,6 +6,7 @@ rdatacite
 [![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
 [![codecov.io](https://codecov.io/github/ropensci/rdatacite/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdatacite?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdatacite)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/rdatacite)](http://cran.rstudio.com/package=rdatacite)
 
 `rdatacite` provides programmatic accesses to [DataCite](http://datacite.org/) metadata
 
@@ -75,8 +76,8 @@ dc_oai_listmetadataformats(id = "56225")
 
 ```r
 dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
-#> <ListRecords> 5 X 4 
-#> 
+#> <ListRecords> 5 X 4
+#>
 #>                   identifier            datestamp setSpec setSpec.1
 #> 1 oai:oai.datacite.org:32153 2011-06-08T08:57:11Z     TIB  TIB.WDCC
 #> 2 oai:oai.datacite.org:32200 2011-06-20T08:12:41Z     TIB TIB.DAGST
@@ -90,8 +91,8 @@ dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
 
 ```r
 dc_oai_getrecord(id = "56225")
-#> <GetRecord> 1 X 23 
-#> 
+#> <GetRecord> 1 X 23
+#>
 #>                   identifier            datestamp setSpec setSpec.1
 #> 1 oai:oai.datacite.org:56225 2014-06-03T12:03:28Z      BL    BL.ADS
 #> Variables not shown: title (chr), creator (chr), publisher (chr), date
@@ -115,7 +116,7 @@ Search for the term _laser_
 ```r
 dc_search(q = "laser", fl = c('doi','publicationYear'), rows = 5)
 #> Source: local data frame [5 x 2]
-#> 
+#>
 #>                          doi publicationYear
 #>                        (chr)           (chr)
 #> 1 10.17035/D.2016.0008119129            2016
@@ -131,7 +132,7 @@ Another search: published between 2000 and 2005
 ```r
 dc_search(q = "publicationYear:[2000 TO 2005]", fl = c('doi', 'publicationYear'), rows = 5)
 #> Source: local data frame [5 x 2]
-#> 
+#>
 #>                   doi publicationYear
 #>                 (chr)           (chr)
 #> 1      10.13155/36809            2004
@@ -148,7 +149,7 @@ dc_search(q = "publicationYear:[2000 TO 2005]", fl = c('doi', 'publicationYear')
 dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 #> $facet_queries
 #> NULL
-#> 
+#>
 #> $facet_fields
 #> $facet_fields$publisher_facet
 #>                                                                   X1    X2
@@ -157,14 +158,14 @@ dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 #> 3                                                        Unpublished   760
 #> 4                                                           Figshare   317
 #> 5                                           Archaeology Data Service   263
-#> 
-#> 
+#>
+#>
 #> $facet_pivot
 #> NULL
-#> 
+#>
 #> $facet_dates
 #> NULL
-#> 
+#>
 #> $facet_ranges
 #> NULL
 ```
@@ -178,7 +179,7 @@ dc_stats(q = "ecology", stats.field = 'date')
 #> $data
 #>                          min                max count missing
 #> date 01-Jan-2007/29-Nov-2010 September 30, 2015 13584    3989
-#> 
+#>
 #> $facet
 #> NULL
 ```
@@ -190,7 +191,7 @@ dc_stats(q = "ecology", stats.field = 'date')
 dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 #> $docs
 #> Source: local data frame [10 x 1]
-#> 
+#>
 #>                    doi
 #>                  (chr)
 #> 1    10.5167/UZH-76892
@@ -203,23 +204,23 @@ dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 #> 8      10.5167/UZH-503
 #> 9    10.5167/UZH-38402
 #> 10 10.7892/BORIS.16333
-#> 
+#>
 #> $mlt
 #> $mlt$`1712990`
 #>                         doi
 #> 1 10.13140/RG.2.1.3868.5287
 #> 2 10.6084/M9.FIGSHARE.15727
-#> 
+#>
 #> $mlt$`1710865`
 #>                        doi
 #> 1 10.7890/ETHZ-A-000467066
 #> 2 10.7890/ETHZ-A-000467004
-#> 
+#>
 #> $mlt$`1699696`
 #>                         doi
 #> 1 10.13140/RG.2.1.3868.5287
 #> 2 10.6084/M9.FIGSHARE.15727
-#> 
+#>
 #> $mlt$`1695042`
 #>                    doi
 #> 1 10.5169/SEALS-511492
