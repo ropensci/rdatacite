@@ -21,7 +21,7 @@ test_that("dc_oai_listidentifiers - from & until", {
   expect_is(aa, "oai_df")
   expect_is(bb, "oai_df")
 
-  expect_less_than(NROW(aa), NROW(bb))
+  expect_lt(NROW(aa), NROW(bb))
 })
 
 test_that("dc_oai_listidentifiers - set", {

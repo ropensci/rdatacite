@@ -7,7 +7,7 @@ test_that("dc_search basic functionality works", {
   # default uses q=*:*
   aa <- dc_search(verbose = FALSE)
   # basic search
-  bb <- dc_search(q = "laser", rows = 2, verbose = FALSE)
+  #bb <- dc_search(q = "laser", rows = 2, verbose = FALSE)
   # specify fields to get back
   bb <- dc_search(q = "laser", fl=c('doi','publicationYear'), rows=2, verbose = FALSE)
   # search a specific field
@@ -15,8 +15,8 @@ test_that("dc_search basic functionality works", {
 
   expect_is(aa, "tbl_df")
   expect_is(aa$minted, "character")
-  expect_is(aa$language, "character")
-  expect_less_than(20, NCOL(aa))
+  expect_is(aa$subject, "character")
+  expect_lt(20, NCOL(aa))
 
   expect_is(bb, "tbl_df")
   expect_named(bb, c('doi', 'publicationYear'))
