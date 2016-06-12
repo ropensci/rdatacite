@@ -1,16 +1,17 @@
 language: r
+cache: packages
+sudo: false
 
-r_github_packages:
-  - ropensci/solrium
-  - ropensci/oai
-  - jimhester/covr
+r:
+  - release
+  - devel
 
 after_success:
   - Rscript -e 'covr::codecov()'
 
 notifications:
   email:
-    on_success: change
-    on_failure: change
+    on_success: never
+    on_failure: never
   slack:
     secure: J33bN8jgnG4X7KserEewpPZ2rFAKiivnMlc8FOaQ/VUdlQQBJ7fNHsAIbEzchZUyxnXARnJyqP+D7nNoKQfBe7oCBuqjolgtq3VwHHT11Wwdr+B9y5sCBtYSbv2ATACWfdSjjCxFTi29HpH0jt3bSmOfs6hwlylgc7UHF0SKkNo=
