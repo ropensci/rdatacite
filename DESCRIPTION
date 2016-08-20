@@ -17,6 +17,5 @@ Imports:
     solrium (>= 0.3.0)
 Suggests:
     knitr,
-    testthat,
-    covr
+    testthat
 RoxygenNote: 5.0.1
