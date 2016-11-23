@@ -13,9 +13,10 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
 URL: https://github.com/ropensci/rdatacite
 BugReports: https://github.com/ropensci/rdatacite/issues
 Imports:
-    oai (>= 0.2.0),
+    oai (>= 0.2.2),
     solrium (>= 0.3.0)
 Suggests:
     knitr,
     testthat
+Remotes: ropensci/oai
 RoxygenNote: 5.0.1

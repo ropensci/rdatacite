@@ -6,7 +6,7 @@ test_that("dc_oai_listidentifiers - from", {
   aa <- dc_oai_listidentifiers(from = "2015-09-03T00:00:00Z", until="2015-09-03T00:30:00Z")
 
   expect_is(aa, "data.frame")
-  expect_is(aa, "oai_df")
+  expect_is(aa, "tbl_df")
   expect_is(aa$identifier, "character")
   expect_is(aa$datestamp, "character")
   expect_equal(as.character(as.Date(aa$datestamp[1])), "2015-09-03")
@@ -18,8 +18,8 @@ test_that("dc_oai_listidentifiers - from & until", {
   aa <- dc_oai_listidentifiers(from = '2015-09-03T00:00:00Z', until = '2015-09-03T00:30:00Z')
   bb <- dc_oai_listidentifiers(from = '2015-09-03T00:30:00Z', until = '2015-09-03T01:15:00Z')
 
-  expect_is(aa, "oai_df")
-  expect_is(bb, "oai_df")
+  expect_is(aa, "tbl_df")
+  expect_is(bb, "tbl_df")
 
   expect_lt(NROW(aa), NROW(bb))
 })
@@ -30,8 +30,8 @@ test_that("dc_oai_listidentifiers - set", {
   aa <- dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-11-01T', set = "ANDS")
   bb <- dc_oai_listidentifiers(from = '2011-06-01T', until = '2012-11-01T', set = "CDL.OSU")
 
-  expect_is(aa, "oai_df")
-  expect_is(bb, "oai_df")
+  expect_is(aa, "tbl_df")
+  expect_is(bb, "tbl_df")
 
   expect_equal(aa$setSpec[1], "ANDS")
   expect_equal(bb$setSpec[1], "CDL")

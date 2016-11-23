@@ -5,10 +5,12 @@ test_that("dc_oai_getrecord - basic functionality works", {
 
   aa <- dc_oai_getrecord("oai:oai.datacite.org:32255")
 
-  expect_is(aa, "data.frame")
-  expect_is(aa, "oai_df")
-  expect_is(aa$identifier, "character")
-  expect_is(aa$title, "character")
+  expect_is(aa, "list")
+  expect_is(aa[[1]], "list")
+  expect_is(aa[[1]]$header, "tbl_df")
+  expect_is(aa[[1]]$metadata, "tbl_df")
+  expect_is(aa[[1]]$header$identifier, "character")
+  expect_is(aa[[1]]$metadata$title, "character")
 })
 
 test_that("dc_oai_getrecord - many record Ids input works", {
@@ -17,12 +19,18 @@ test_that("dc_oai_getrecord - many record Ids input works", {
   recs <- c("oai:oai.datacite.org:32255", "oai:oai.datacite.org:32325")
   aa <- dc_oai_getrecord(recs)
 
-  expect_is(aa, "data.frame")
-  expect_is(aa, "oai_df")
-  expect_is(aa$identifier, "character")
-  expect_is(aa$title, "character")
-  expect_equal(NROW(aa), 2)
-  expect_equal(aa$identifier, recs)
+  expect_is(aa, "list")
+  expect_is(aa[[1]], "list")
+  expect_is(aa[[2]], "list")
+
+  expect_is(aa[[1]], "list")
+  expect_is(aa[[1]]$header, "tbl_df")
+  expect_is(aa[[1]]$metadata, "tbl_df")
+  expect_is(aa[[1]]$header$identifier, "character")
+  expect_is(aa[[1]]$metadata$title, "character")
+
+  expect_equal(NROW(aa[[2]]$header), 1)
+  expect_equal(unname(vapply(aa, "[[", "", c('header', 'identifier'))), recs)
 })
 
 test_that("dc_oai_getrecord fails well", {

@@ -6,7 +6,7 @@ test_that("dc_oai_listrecords works", {
   a <- dc_oai_listrecords(from = '2011-06-01T', until = '2011-07-01T')
 
   expect_is(a, "data.frame")
-  expect_is(a, "oai_df")
+  expect_is(a, "tbl_df")
   expect_is(a$identifier, "character")
 })
 

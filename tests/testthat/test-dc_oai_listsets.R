@@ -6,7 +6,7 @@ test_that("dc_oai_listsets", {
   aa <- dc_oai_listsets()
 
   expect_is(aa, "data.frame")
-  expect_is(aa, "oai_df")
+  expect_is(aa, "tbl_df")
   expect_is(aa$setSpec, "character")
   expect_is(aa$setName, "character")
 })
