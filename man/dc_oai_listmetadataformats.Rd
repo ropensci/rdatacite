@@ -21,4 +21,3 @@ dc_oai_listmetadataformats()
 dc_oai_listmetadataformats("oai:oai.datacite.org:6718729")
 }
 }
-

@@ -20,4 +20,3 @@ Useful for selective harvesting
 dc_oai_listsets()
 }
 }
-

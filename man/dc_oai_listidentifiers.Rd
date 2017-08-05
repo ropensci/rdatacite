@@ -36,4 +36,3 @@ dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
 dc_oai_listidentifiers(set = "REFQUALITY")
 }
 }
-

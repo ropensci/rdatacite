@@ -17,4 +17,3 @@ Learn about the Dryad OAI-PMH service
 dc_oai_identify()
 }
 }
-

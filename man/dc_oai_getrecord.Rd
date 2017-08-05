@@ -30,4 +30,3 @@ temp <- dc_oai_listidentifiers(from = today)
 dc_oai_getrecord(temp$identifier[1:2])
 }
 }
-

@@ -26,4 +26,3 @@ the \code{prefix} parameter.
  OAI-PMH version 2.0 compliant for the previously stated reasons.
 }
 }
-

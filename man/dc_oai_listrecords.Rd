@@ -34,4 +34,3 @@ dc_oai_listrecords(from = '2011-06-01T', until = '2011-07-01T')
 dc_oai_listrecords(from = '2011-06-01T', until = '2011-11-01T', set = "REFQUALITY")
 }
 }
-

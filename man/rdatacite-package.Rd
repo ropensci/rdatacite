@@ -2,8 +2,8 @@
 % Please edit documentation in R/rdatacite-package.R
 \docType{package}
 \name{rdatacite-package}
-\alias{rdatacite}
 \alias{rdatacite-package}
+\alias{rdatacite}
 \title{DataCite R client.}
 \description{
 DataCite R client.
@@ -37,8 +37,8 @@ DataCite R client.
 
 Coming soon...
 }
+
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \keyword{package}
-
