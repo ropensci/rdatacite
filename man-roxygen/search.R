@@ -1,15 +1,13 @@
+#' @param params (list) a named list of parameters, results in a GET reqeust
+#' as long as no body parameters given
+#' @param body (list) a named list of parameters, if given a POST request
+#' will be performed
 #' @param ... Solr parameters passed on to the respective \code{solrium} package
 #' function.
 #' @param proxy List of arguments for a proxy connection, including one or more of:
-#' url, port, username, password, and auth. See \code{\link[httr]{use_proxy}} for
+#' url, port, username, password, and auth. See \code{\link[crul]{proxy}} for
 #' help, which is used to construct the proxy connection.
-#' @param errors (character) One of simple or complete. Simple gives http code and
-#' error message on an error, while complete gives both http code and error message,
-#' and stack trace, if available.
-#' @param verbose (logical) Whether to print help messages or not. E.g., if
-#' \code{TRUE}, we print the URL on each request to a Solr server for your
-#' reference. Default: \code{TRUE}
-#' @param callopts Further args passed on to \code{\link[httr]{GET}}
+#' @param callopts Further args passed on to \code{\link[crul]{HttpClient}}
 #'
 #' @details See the \code{solrium} package documentation for available parameters. For each
 #' of \code{dc_search}, \code{dc_facet}, \code{dc_stats}, and \code{dc_mlt} see the

@@ -7,35 +7,33 @@
 \alias{dc_mlt}
 \title{Use the DataCite RESTful API for search, facet, stats, and mlt queries.}
 \usage{
-dc_search(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+dc_search(params = list(q = "*:*"), body = NULL, proxy = NULL,
+  callopts = list(), ...)
 
-dc_facet(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+dc_facet(params = list(q = "*:*"), body = NULL, proxy = NULL,
+  callopts = list(), ...)
 
-dc_stats(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+dc_stats(params = list(q = "*:*"), body = NULL, proxy = NULL,
+  callopts = list(), ...)
 
-dc_mlt(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+dc_mlt(params = list(q = "*:*"), body = NULL, proxy = NULL,
+  callopts = list(), ...)
 }
 \arguments{
-\item{...}{Solr parameters passed on to the respective \code{solrium} package
-function.}
+\item{params}{(list) a named list of parameters, results in a GET reqeust
+as long as no body parameters given}
 
-\item{verbose}{(logical) Whether to print help messages or not. E.g., if
-\code{TRUE}, we print the URL on each request to a Solr server for your
-reference. Default: \code{TRUE}}
-
-\item{errors}{(character) One of simple or complete. Simple gives http code and
-error message on an error, while complete gives both http code and error message,
-and stack trace, if available.}
+\item{body}{(list) a named list of parameters, if given a POST request
+will be performed}
 
 \item{proxy}{List of arguments for a proxy connection, including one or more of:
-url, port, username, password, and auth. See \code{\link[httr]{use_proxy}} for
+url, port, username, password, and auth. See \code{\link[crul]{proxy}} for
 help, which is used to construct the proxy connection.}
 
-\item{callopts}{Further args passed on to \code{\link[httr]{GET}}}
+\item{callopts}{Further args passed on to \code{\link[crul]{HttpClient}}}
+
+\item{...}{Solr parameters passed on to the respective \code{solrium} package
+function.}
 }
 \description{
 Use the DataCite RESTful API for search, facet, stats, and mlt queries.
@@ -89,43 +87,53 @@ greater. Installation instructions at \url{https://github.com/ropensci/solrium#q
 # Search
 ## various searches
 ### containing laser
-dc_search(q = "laser", fl=c('doi','publicationYear'), rows=5)
+dc_search(params = list(q = "laser", fl=c('doi','publicationYear'), rows=5))
 
 ### containing laser and safety
-dc_search(q = "laser safety", fl=c('doi','publicationYear'), rows=5)
+dc_search(params = list(q = "laser safety", fl=c('doi','publicationYear'),
+rows=5))
 
 ### containing laser and not medicine
-dc_search(q = "laser -medicine", fl=c('doi','publicationYear'), rows=5)
+dc_search(params = list(q = "laser -medicine", fl=c('doi',
+  'publicationYear'), rows=5))
 
 ### containing laser and red or green
-dc_search(q = "laser AND (red OR green)", fl=c('doi','publicationYear'), rows=5)
+dc_search(params = list(q = "laser AND (red OR green)", fl=c('doi',
+  'publicationYear'), rows=5))
 
 ### containing wind turbine as a phrase in the title
-dc_search(q = 'title:"wind turbine"', fl=c('doi','title'), rows=5)
+dc_search(params = list(q = 'title:"wind turbine"', fl=c('doi','title'),
+  rows=5))
 
 ### containing geology in metadata field subject
-dc_search(q = "subject:geology", fl=c('doi','subject'), rows=5)
+dc_search(params = list(q = "subject:geology", fl=c('doi','subject'),
+  rows=5))
 
 ### belonging to DataCite members BL or TIB
-dc_search(q = "allocator:(BL OR TIB)", fl=c('doi','allocator'), rows=5)
+dc_search(params = list(q = "allocator:(BL OR TIB)",
+  fl=c('doi','allocator'), rows=5))
 
 ### published between 2000 and 2005
-dc_search(q = "publicationYear:[2000 TO 2005]", fl=c('doi','publicationYear'), rows=5)
+dc_search(params = list(q = "publicationYear:[2000 TO 2005]",
+  fl=c('doi','publicationYear'), rows=5))
 
 ### uploaded to DataCite in the last 5 days
-dc_search(q = "uploaded:[NOW-5DAYS TO NOW]", fl=c('doi','uploaded'), rows=5)
+dc_search(params = list(q = "uploaded:[NOW-5DAYS TO NOW]",
+  fl=c('doi','uploaded'), rows=5))
 
 ## search with csv output
-### If you want to use wt=csv, install development version of solr package, see Details
-dc_search(q = 'wind', fl=c('doi','title'), wt='csv')
+### If you want to use wt=csv, install development version of
+### solr package, see Details
+dc_search(params = list(q = 'wind', fl=c('doi','title'), wt='csv'))
 
 # Faceting
-dc_facet(q = "wind", facet.field='publisher_facet')
+dc_facet(params = list(q = "wind", facet.field='publisher_facet'))
 
 # Stats
-dc_stats(q = "ecology", stats.field='date')
+dc_stats(params = list(q = "ecology", stats.field='date'))
 
 # More like this (aka mlt)
-dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5, fl=c('doi','title'))
+dc_mlt(params = list(q = "ecology", mlt.fl='title', mlt.count=5,
+  fl=c('doi','title')))
 }
 }
