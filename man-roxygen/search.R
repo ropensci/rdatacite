@@ -1,17 +1,15 @@
-#' @param params (list) a named list of parameters, results in a GET reqeust
-#' as long as no body parameters given
-#' @param body (list) a named list of parameters, if given a POST request
-#' will be performed
-#' @param ... Solr parameters passed on to the respective \code{solrium} package
-#' function.
-#' @param proxy List of arguments for a proxy connection, including one or more of:
-#' url, port, username, password, and auth. See \code{\link[crul]{proxy}} for
-#' help, which is used to construct the proxy connection.
-#' @param callopts Further args passed on to \code{\link[crul]{HttpClient}}
+#' @param ... Solr parameters passed on to the respective \code{solrium}
+#' package function. See Details below.
+#' @param proxy List of arguments for a proxy connection, including one or
+#' more of: url, port, username, password, and auth. See
+#' \code{\link[crul]{proxy}} for help, which is used to construct the
+#' proxy connection.
+#' @param callopts Curl options in a named list passed on to
+#' \code{\link[crul]{HttpClient}}, see \code{\link[crul]{curl-options}}
 #'
-#' @details See the \code{solrium} package documentation for available parameters. For each
-#' of \code{dc_search}, \code{dc_facet}, \code{dc_stats}, and \code{dc_mlt} see the
-#' equivalently named function in \code{solrium}:
+#' @details See the \code{solrium} package documentation for available
+#' parameters. For each of \code{dc_search}, \code{dc_facet}, \code{dc_stats},
+#' and \code{dc_mlt} see the equivalently named function in \code{solrium}:
 #'
 #' \itemize{
 #'  \item \code{dc_search} - \code{\link[solrium]{solr_search}}
@@ -41,13 +39,14 @@
 #'  \item subject
 #'  \item version
 #'  \item allocator symbol of the DataCite member (e.g. BL = British Library)
-#'  \item datacentre symbol of the datacentre, which uploaded the metadata (e.g.
-#'  BL.ADS = Archeology Data Service)
+#'  \item datacentre symbol of the datacentre, which uploaded the metadata
+#'  (e.g. BL.ADS = Archeology Data Service)
 #'  \item indexed datestamp of indexing
 #'  \item prefix DOI prefix (e.g. 10.5284)
 #'  \item refQuality reference quality flag (1 or 0)
 #'  \item uploaded datestamp of metadata uploading
 #' }
 #'
-#' If you want to use \code{wt='csv'} you'll need \code{solrium} package version \code{0.1.8.99} or
-#' greater. Installation instructions at \url{https://github.com/ropensci/solrium#quick-start}.
+#' If you want to use \code{wt='csv'} you'll need \code{solrium} package
+#' version \code{0.1.8.99} or greater. Installation instructions at
+#' \url{https://github.com/ropensci/solrium#quick-start}.

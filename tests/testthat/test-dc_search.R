@@ -5,15 +5,15 @@ test_that("dc_search basic functionality works", {
   skip_on_cran()
 
   # default uses q=*:*
-  aa <- dc_search()
+  aa <- dc_search(q = "*:*")
   # basic search
   #bb <- dc_search(q = "laser", rows = 2, verbose = FALSE)
   # specify fields to get back
-  bb <- dc_search(params = list(q = "laser", fl=c('doi','publicationYear'),
-    rows=2))
+  bb <- dc_search(q = "laser", fl=c('doi','publicationYear'),
+    rows=2)
   # search a specific field
-  cc <- dc_search(params = list(q = "subject:geology", fl=c('doi','subject'),
-    rows=2))
+  cc <- dc_search(q = "subject:geology", fl=c('doi','subject'),
+    rows=2)
 
   expect_is(aa, "tbl_df")
   expect_is(aa$minted, "character")
@@ -32,9 +32,8 @@ test_that("dc_search basic functionality works", {
 test_that("dc_search works w/ csv output", {
   skip_on_cran()
 
-  aa <- dc_search(params = list(q = 'wind', fl=c('doi','title'),
-    wt='csv'))
-  bb <- dc_search(params = list(q = 'wind', fl=c('doi','title')))
+  aa <- dc_search(q = 'wind', fl=c('doi','title'), wt='csv')
+  bb <- dc_search(q = 'wind', fl=c('doi','title'))
 
   expect_is(aa, "tbl_df")
   expect_named(aa, c('doi', 'title'))

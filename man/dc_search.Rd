@@ -5,43 +5,37 @@
 \alias{dc_facet}
 \alias{dc_stats}
 \alias{dc_mlt}
-\title{Use the DataCite RESTful API for search, facet, stats, and mlt queries.}
+\title{Use the DataCite RESTful API for search, facet, stats,
+and mlt queries}
 \usage{
-dc_search(params = list(q = "*:*"), body = NULL, proxy = NULL,
-  callopts = list(), ...)
+dc_search(..., proxy = NULL, callopts = list())
 
-dc_facet(params = list(q = "*:*"), body = NULL, proxy = NULL,
-  callopts = list(), ...)
+dc_facet(..., proxy = NULL, callopts = list())
 
-dc_stats(params = list(q = "*:*"), body = NULL, proxy = NULL,
-  callopts = list(), ...)
+dc_stats(..., proxy = NULL, callopts = list())
 
-dc_mlt(params = list(q = "*:*"), body = NULL, proxy = NULL,
-  callopts = list(), ...)
+dc_mlt(..., proxy = NULL, callopts = list())
 }
 \arguments{
-\item{params}{(list) a named list of parameters, results in a GET reqeust
-as long as no body parameters given}
+\item{...}{Solr parameters passed on to the respective \code{solrium}
+package function. See Details below.}
 
-\item{body}{(list) a named list of parameters, if given a POST request
-will be performed}
+\item{proxy}{List of arguments for a proxy connection, including one or
+more of: url, port, username, password, and auth. See
+\code{\link[crul]{proxy}} for help, which is used to construct the
+proxy connection.}
 
-\item{proxy}{List of arguments for a proxy connection, including one or more of:
-url, port, username, password, and auth. See \code{\link[crul]{proxy}} for
-help, which is used to construct the proxy connection.}
-
-\item{callopts}{Further args passed on to \code{\link[crul]{HttpClient}}}
-
-\item{...}{Solr parameters passed on to the respective \code{solrium} package
-function.}
+\item{callopts}{Curl options in a named list passed on to
+\code{\link[crul]{HttpClient}}, see \code{\link[crul]{curl-options}}}
 }
 \description{
-Use the DataCite RESTful API for search, facet, stats, and mlt queries.
+Use the DataCite RESTful API for search, facet, stats,
+and mlt queries
 }
 \details{
-See the \code{solrium} package documentation for available parameters. For each
-of \code{dc_search}, \code{dc_facet}, \code{dc_stats}, and \code{dc_mlt} see the
-equivalently named function in \code{solrium}:
+See the \code{solrium} package documentation for available
+parameters. For each of \code{dc_search}, \code{dc_facet}, \code{dc_stats},
+and \code{dc_mlt} see the equivalently named function in \code{solrium}:
 
 \itemize{
  \item \code{dc_search} - \code{\link[solrium]{solr_search}}
@@ -71,69 +65,70 @@ Fields you can search on and retrieve back are:
  \item subject
  \item version
  \item allocator symbol of the DataCite member (e.g. BL = British Library)
- \item datacentre symbol of the datacentre, which uploaded the metadata (e.g.
- BL.ADS = Archeology Data Service)
+ \item datacentre symbol of the datacentre, which uploaded the metadata
+ (e.g. BL.ADS = Archeology Data Service)
  \item indexed datestamp of indexing
  \item prefix DOI prefix (e.g. 10.5284)
  \item refQuality reference quality flag (1 or 0)
  \item uploaded datestamp of metadata uploading
 }
 
-If you want to use \code{wt='csv'} you'll need \code{solrium} package version \code{0.1.8.99} or
-greater. Installation instructions at \url{https://github.com/ropensci/solrium#quick-start}.
+If you want to use \code{wt='csv'} you'll need \code{solrium} package
+version \code{0.1.8.99} or greater. Installation instructions at
+\url{https://github.com/ropensci/solrium#quick-start}.
 }
 \examples{
 \dontrun{
 # Search
 ## various searches
 ### containing laser
-dc_search(params = list(q = "laser", fl=c('doi','publicationYear'), rows=5))
+dc_search(q = "laser", fl=c('doi','publicationYear'), rows=5)
 
 ### containing laser and safety
-dc_search(params = list(q = "laser safety", fl=c('doi','publicationYear'),
-rows=5))
+dc_search(q = "laser safety", fl=c('doi','publicationYear'),
+  rows=5)
 
 ### containing laser and not medicine
-dc_search(params = list(q = "laser -medicine", fl=c('doi',
-  'publicationYear'), rows=5))
+dc_search(q = "laser -medicine", fl=c('doi',
+  'publicationYear'), rows=5)
 
 ### containing laser and red or green
-dc_search(params = list(q = "laser AND (red OR green)", fl=c('doi',
-  'publicationYear'), rows=5))
+dc_search(q = "laser AND (red OR green)", fl=c('doi',
+  'publicationYear'), rows=5)
 
 ### containing wind turbine as a phrase in the title
-dc_search(params = list(q = 'title:"wind turbine"', fl=c('doi','title'),
-  rows=5))
+dc_search(q = 'title:"wind turbine"', fl=c('doi','title'),
+  rows=5)
 
 ### containing geology in metadata field subject
-dc_search(params = list(q = "subject:geology", fl=c('doi','subject'),
-  rows=5))
+dc_search(q = "subject:geology", fl=c('doi','subject'),
+  rows=5)
 
 ### belonging to DataCite members BL or TIB
-dc_search(params = list(q = "allocator:(BL OR TIB)",
-  fl=c('doi','allocator'), rows=5))
+dc_search(q = "allocator:(BL OR TIB)", fl=c('doi','allocator'),
+  rows=5)
 
 ### published between 2000 and 2005
-dc_search(params = list(q = "publicationYear:[2000 TO 2005]",
-  fl=c('doi','publicationYear'), rows=5))
+dc_search(q = "publicationYear:[2000 TO 2005]",
+  fl=c('doi','publicationYear'), rows=5)
 
 ### uploaded to DataCite in the last 5 days
-dc_search(params = list(q = "uploaded:[NOW-5DAYS TO NOW]",
-  fl=c('doi','uploaded'), rows=5))
+dc_search(q = "uploaded:[NOW-5DAYS TO NOW]",
+  fl=c('doi','uploaded'), rows=5)
 
 ## search with csv output
 ### If you want to use wt=csv, install development version of
 ### solr package, see Details
-dc_search(params = list(q = 'wind', fl=c('doi','title'), wt='csv'))
+dc_search(q = 'wind', fl=c('doi','title'), wt='csv')
 
 # Faceting
-dc_facet(params = list(q = "wind", facet.field='publisher_facet'))
+dc_facet(q = "wind", facet.field='publisher_facet')
 
 # Stats
-dc_stats(params = list(q = "ecology", stats.field='date'))
+dc_stats(q = "ecology", stats.field='date')
 
 # More like this (aka mlt)
-dc_mlt(params = list(q = "ecology", mlt.fl='title', mlt.count=5,
-  fl=c('doi','title')))
+dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5,
+  fl=c('doi','title'))
 }
 }
