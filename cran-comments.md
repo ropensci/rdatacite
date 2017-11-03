@@ -1,12 +1,26 @@
-I have read and agree to the the CRAN policies at
-http://cran.r-project.org/web/packages/policies.html
+## Test environments
 
-R CMD CHECK passed on my local OS X install with R 3.2.3 and
-R development version, Ubuntu running on Travis-CI, and WinBuilder.
+* local OS X install, R 3.4.2 patched
+* ubuntu 12.04 (on travis-ci), R 3.4.2
+* win-builder (devel and release)
 
-This is a new package.
+## R CMD check results
 
-R CHECK will likely suggest spelling changes for 'OAI-PMH' to 'Oai-PMH', but 
-'OAI-PMH' is the correct form. 
+0 errors | 0 warnings | 1 note
 
-Thanks! Scott Chamberlain
+License components with restrictions and base license permitting such:
+  MIT + file LICENSE
+File 'LICENSE':
+  YEAR: 2017
+COPYRIGHT HOLDER: Scott Chamberlain
+
+## Reverse dependencies
+
+There are no reverse dependencies.
+
+---
+
+This version xxx.
+
+Thanks!
+Scott Chamberlain

@@ -1,4 +1,4 @@
-#' Use the DataCite RESTful API for search, facet, stats,
+#' DataCite Solr web service for search, facet, stats,
 #' and mlt queries
 #'
 #' @export

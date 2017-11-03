@@ -7,6 +7,9 @@
 #' @param callopts Curl options in a named list passed on to
 #' \code{\link[crul]{HttpClient}}, see \code{\link[crul]{curl-options}}
 #'
+#' @references
+#' \url{https://support.datacite.org/docs/datacite-search-user-documentation}
+#'
 #' @details See the \code{solrium} package documentation for available
 #' parameters. For each of \code{dc_search}, \code{dc_facet}, \code{dc_stats},
 #' and \code{dc_mlt} see the equivalently named function in \code{solrium}:

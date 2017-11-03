@@ -6,18 +6,20 @@ Description: Client for the web service methods provided
     their 'OAI-PMH' 'metadata' service, and a 'RESTful' search 'API'. The 'API'
     is backed by 'SOLR', allowing expressive queries, including faceting,
     statistics on variables, and 'more-like-this' queries.
-Version: 0.1.2.9621
+Version: 0.3.0
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 URL: https://github.com/ropensci/rdatacite
 BugReports: https://github.com/ropensci/rdatacite/issues
+Roxygen: list(markdown = TRUE)
 Imports:
     oai (>= 0.2.2),
-    solrium (>= 1.0.0)
+    solrium (>= 1.0.0),
+    jsonlite,
+    crul (>= 0.4.0)
 Suggests:
     roxygen2 (>= 6.0.1),
     knitr,
     testthat
-Remotes: ropensci/solrium
 RoxygenNote: 6.0.1

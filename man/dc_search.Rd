@@ -5,7 +5,7 @@
 \alias{dc_facet}
 \alias{dc_stats}
 \alias{dc_mlt}
-\title{Use the DataCite RESTful API for search, facet, stats,
+\title{DataCite Solr web service for search, facet, stats,
 and mlt queries}
 \usage{
 dc_search(..., proxy = NULL, callopts = list())
@@ -29,7 +29,7 @@ proxy connection.}
 \code{\link[crul]{HttpClient}}, see \code{\link[crul]{curl-options}}}
 }
 \description{
-Use the DataCite RESTful API for search, facet, stats,
+DataCite Solr web service for search, facet, stats,
 and mlt queries
 }
 \details{
@@ -131,4 +131,7 @@ dc_stats(q = "ecology", stats.field='date')
 dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5,
   fl=c('doi','title'))
 }
+}
+\references{
+\url{https://support.datacite.org/docs/datacite-search-user-documentation}
 }
