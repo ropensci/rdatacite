@@ -1,9 +1,9 @@
 Package: rdatacite
 Type: Package
-Title: 'DataCite' Client for 'OAI-PMH' Methods and their Search 'API'
+Title: 'DataCite' Client for 'OAI-PMH' Methods and their Search API
 Description: Client for the web service methods provided
     by 'DataCite' (<https://www.datacite.org/>), including functions to interface with
-    their 'OAI-PMH' 'metadata' service, and a 'RESTful' search 'API'. The 'API'
+    their 'OAI-PMH' 'metadata' service, and a 'RESTful' search API. The API
     is backed by 'SOLR', allowing expressive queries, including faceting,
     statistics on variables, and 'more-like-this' queries.
 Version: 0.3.0

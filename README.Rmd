@@ -12,13 +12,14 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
 [![codecov.io](https://codecov.io/github/ropensci/rdatacite/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdatacite?branch=master)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdatacite)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/rdatacite)](http://cran.rstudio.com/package=rdatacite)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rdatacite)](https://github.com/metacran/cranlogs.app)
+[![cran version](https://www.r-pkg.org/badges/version/rdatacite)](https://cran.r-project.org/package=rdatacite)
 
 `rdatacite` provides programmatic accesses to [DataCite](http://datacite.org/) metadata
 
-* OAI-PMH. Documentation for the DataCite OAI-PMH is available [here](http://oai.datacite.org/). [Documentation for OAI-PMH](http://www.openarchives.org/OAI/openarchivesprotocol.html)
-* REST API. [Docs](http://search.datacite.org/help.html). [Metadata schema](http://schema.datacite.org/). [Solr config file](https://github.com/datacite/search/blob/master/src/main/resources/solrconfig.xml)
+* OAI-PMH. Documentation for the DataCite OAI-PMH is available [here](http://oai.datacite.org/). [Documentation for general OAI-PMH](http://www.openarchives.org/OAI/openarchivesprotocol.html)
+* Solr service. [Docs](http://search.datacite.org/help.html)
+* REST API. Docs: <https://support.datacite.org/docs/api> and <https://support.datacite.org/reference>
 
 ## Installation
 
@@ -66,7 +67,7 @@ dc_oai_getrecord(id = "56225")
 
 You can pass in more than one identifier to `id` parameter.
 
-## Search API
+## Solr based search
 
 This is the API for the same query interface you'd use on the DataCite website.
 
@@ -101,6 +102,21 @@ dc_stats(q = "ecology", stats.field = 'date')
 
 ```{r}
 dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
+```
+
+## REST API
+
+* `dc_data_center()` - Get a single data center
+* `dc_data_centers()` - Search data centers
+* `dc_member()` - Get single DataCite member
+* `dc_members()` - Search DataCite members
+* `dc_work()` - Get single works
+* `dc_works()` - Search works
+
+### Get a work
+
+```{r}
+dc_work(doi = "10.5438/0012")
 ```
 
 
