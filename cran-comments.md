@@ -20,6 +20,9 @@ There are no reverse dependencies.
 
 ---
 
+This is a resubmission of the same version fixing
+a few things as requested.
+
 This version changes to work with new version of
 solrium package and adds some new methods for a
 DataCite API service.
