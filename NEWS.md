@@ -3,21 +3,15 @@ rdatacite 0.3.0
 
 ### NEW FEATURES
 
-* xx (#xx)
-* xx (#xx)
-* xx (#xx)
-
-### MINOR IMPROVEMENTS
-
-* xx (#xx)
-* xx (#xx)
-* xx (#xx)
+* Gains new functions for working with the DataCite REST API:
+`dc_data_center`, `dc_data_centers`, `dc_member`, `dc_members`,
+`dc_work`, `dc_works` (#13)
+* Now using new version of solrium package - users shouldn't see any differences (#16)
 
 ### BUG FIXES
 
-* xx (#xx)
-* xx (#xx)
-* xx (#xx)
+* Fix scientific notation (#15)
+* Fix `vapply` error (#14)
 
 
 
