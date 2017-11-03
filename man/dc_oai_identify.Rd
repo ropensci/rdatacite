@@ -13,7 +13,9 @@ dc_oai_identify(...)
 Learn about the Dryad OAI-PMH service
 }
 \examples{
-\dontrun{
-dc_oai_identify()
+library(crul)
+url <- "https://oai.datacite.org/oai"
+if (crul::HttpClient$new(url=url)$get()$success()) {
+  dc_oai_identify()
 }
 }

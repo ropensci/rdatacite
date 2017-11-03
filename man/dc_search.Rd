@@ -78,7 +78,10 @@ version \code{0.1.8.99} or greater. Installation instructions at
 \url{https://github.com/ropensci/solrium#quick-start}.
 }
 \examples{
-\dontrun{
+library(crul)
+url <- "https://search.datacite.org/api"
+if (crul::HttpClient$new(url=url)$get()$success()) {
+
 # Search
 ## various searches
 ### containing laser
@@ -92,6 +95,9 @@ dc_search(q = "laser safety", fl=c('doi','publicationYear'),
 dc_search(q = "laser -medicine", fl=c('doi',
   'publicationYear'), rows=5)
 
+}
+
+\dontrun{
 ### containing laser and red or green
 dc_search(q = "laser AND (red OR green)", fl=c('doi',
   'publicationYear'), rows=5)
@@ -130,6 +136,7 @@ dc_stats(q = "ecology", stats.field='date')
 # More like this (aka mlt)
 dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5,
   fl=c('doi','title'))
+
 }
 }
 \references{

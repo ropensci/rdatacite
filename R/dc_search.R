@@ -4,7 +4,11 @@
 #' @export
 #' @template search
 #'
-#' @examples \dontrun{
+#' @examples
+#' library(crul)
+#' url <- "https://search.datacite.org/api"
+#' if (crul::HttpClient$new(url=url)$get()$success()) {
+#'
 #' # Search
 #' ## various searches
 #' ### containing laser
@@ -18,6 +22,9 @@
 #' dc_search(q = "laser -medicine", fl=c('doi',
 #'   'publicationYear'), rows=5)
 #'
+#' }
+#'
+#' \dontrun{
 #' ### containing laser and red or green
 #' dc_search(q = "laser AND (red OR green)", fl=c('doi',
 #'   'publicationYear'), rows=5)
@@ -56,6 +63,7 @@
 #' # More like this (aka mlt)
 #' dc_mlt(q = "ecology", mlt.fl='title', mlt.count=5,
 #'   fl=c('doi','title'))
+#'
 #' }
 dc_search <- function(..., proxy = NULL, callopts=list()) {
 

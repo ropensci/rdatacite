@@ -2,7 +2,7 @@ dc_compact <- function(l) Filter(Negate(is.null), l)
 
 dc_base <- function() "search.datacite.org"
 
-dc_oai_base <- function() "http://oai.datacite.org/oai"
+dc_oai_base <- function() "https://oai.datacite.org/oai"
 
 pluck <- function(x, name, type) {
   if (missing(type)) {
