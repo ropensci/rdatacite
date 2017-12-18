@@ -12,7 +12,7 @@ test_that("dc_search basic functionality works", {
   bb <- dc_search(q = "data", fl=c('doi','updated'),
     rows=2)
   # search a specific field
-  cc <- dc_search(q = "datacentre:global", fl=c('doi','state'),
+  cc <- dc_search(q = "datacentre:global", fl=c('doi','has_media'),
     rows=2)
 
   expect_is(aa, "tbl_df")
@@ -24,7 +24,7 @@ test_that("dc_search basic functionality works", {
   expect_equal(NROW(bb), 2)
 
   expect_is(cc, "tbl_df")
-  expect_named(cc, c('state', 'doi'))
+  expect_named(cc, c('has_media', 'doi'))
   expect_equal(NROW(cc), 2)
 })
 
