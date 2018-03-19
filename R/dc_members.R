@@ -17,6 +17,6 @@ dc_members <- function(query = NULL, member_type = NULL, region = NULL,
 	year = NULL,  ...) {
 
 	args <- dc_compact(list(query = query, `member-type` = member_type,
-		region = region, year = year))
+		region = region, year = year, `page[size]` = rows))
   dc_rest_GET("members", args = args, ...)
 }
