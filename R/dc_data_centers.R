@@ -17,6 +17,6 @@ dc_data_centers <- function(query = NULL, member_id = NULL, offset = 0,
 
   if (!is.null(include)) include <- paste0(include, collapse = ",")
 	args <- dc_compact(list(query = query, `member-id` = member_id,
-		offset = offset, rows = rows, include = include))
+	`page[offset]` = offset, `page[size]` = rows, include = include))
   dc_rest_GET("data-centers", args = args, ...)
 }

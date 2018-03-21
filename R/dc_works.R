@@ -19,6 +19,6 @@ dc_works <- function(query = NULL, order = NULL, sort = NULL,
 
 	if (!is.null(include)) include <- paste0(include, collapse = ",")
 	args <- dc_compact(list(query = query, order = order, sort = sort,
-		rows = rows, offset = offset, include = include))
+		`page[size]` = rows, `page[offset]` = offset, include = include))
   dc_rest_GET("works", args = args, ...)
 }
