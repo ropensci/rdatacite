@@ -5,7 +5,7 @@
 \title{DataCite REST API: members}
 \usage{
 dc_members(query = NULL, member_type = NULL, region = NULL, year = NULL,
-  ...)
+  offset = 0, rows = 25, ...)
 }
 \arguments{
 \item{query}{(character) Query string, e.g., data center name}
@@ -17,6 +17,10 @@ or "non-allocating"}
 or "emea"}
 
 \item{year}{(numeric/integer) year member joined DataCite}
+
+\item{offset}{(numeric/integer) result offset, the record to start at}
+
+\item{rows}{(numeric/integer) results per page}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
