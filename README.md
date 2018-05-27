@@ -2,6 +2,7 @@ rdatacite
 =========
 
 
+
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![cran checks](https://cranchecks.info/badges/worst/rdatacite)](https://cranchecks.info/pkgs/rdatacite)
 [![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
@@ -43,10 +44,10 @@ library('rdatacite')
 
 ```r
 dc_oai_identify()
-#>   repositoryName                     baseURL protocolVersion
-#> 1   DataCite MDS http://oai.datacite.org/oai             2.0
-#>           adminEmail    earliestDatestamp deletedRecord
-#> 1 admin@datacite.org 2011-01-01T00:00:00Z    persistent
+#>   repositoryName                      baseURL protocolVersion
+#> 1   DataCite MDS https://oai.datacite.org/oai             2.0
+#>             adminEmail    earliestDatestamp deletedRecord
+#> 1 support@datacite.org 2011-01-01T00:00:00Z    persistent
 #>            granularity compression compression.1
 #> 1 YYYY-MM-DDThh:mm:ssZ        gzip       deflate
 #>                                      description
@@ -68,13 +69,13 @@ dc_oai_listmetadataformats(id = "56225")
 ```r
 dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
 #> # A tibble: 5 x 4
-#>                   identifier            datestamp setSpec setSpec.1
-#>                        <chr>                <chr>   <chr>     <chr>
-#> 1 oai:oai.datacite.org:32153 2011-06-08T08:57:11Z     TIB  TIB.WDCC
-#> 2 oai:oai.datacite.org:32200 2011-06-20T08:12:41Z     TIB TIB.DAGST
-#> 3 oai:oai.datacite.org:32220 2011-06-28T14:11:08Z     TIB TIB.DAGST
-#> 4 oai:oai.datacite.org:32241 2011-06-30T13:24:45Z     TIB TIB.DAGST
-#> 5 oai:oai.datacite.org:32255 2011-07-01T12:09:24Z     TIB TIB.DAGST
+#>   identifier                 datestamp            setSpec setSpec.1
+#>   <chr>                      <chr>                <chr>   <chr>    
+#> 1 oai:oai.datacite.org:32153 2011-06-08T08:57:11Z TIB     TIB.WDCC 
+#> 2 oai:oai.datacite.org:32200 2011-06-20T08:12:41Z TIB     TIB.DAGST
+#> 3 oai:oai.datacite.org:32220 2011-06-28T14:11:08Z TIB     TIB.DAGST
+#> 4 oai:oai.datacite.org:32241 2011-06-30T13:24:45Z TIB     TIB.DAGST
+#> 5 oai:oai.datacite.org:32255 2011-07-01T12:09:24Z TIB     TIB.DAGST
 ```
 
 ### Get records
@@ -85,18 +86,16 @@ dc_oai_getrecord(id = "56225")
 #> $`oai:oai.datacite.org:56225`
 #> $`oai:oai.datacite.org:56225`$header
 #> # A tibble: 1 x 3
-#>                   identifier            datestamp   setSpec
-#>                        <chr>                <chr>     <chr>
+#>   identifier                 datestamp            setSpec  
+#>   <chr>                      <chr>                <chr>    
 #> 1 oai:oai.datacite.org:56225 2014-06-03T12:03:28Z BL;BL.ADS
 #> 
 #> $`oai:oai.datacite.org:56225`$metadata
 #> # A tibble: 1 x 12
-#>                                                                         title
-#>                                                                         <chr>
-#> 1 Land at Hill Barton, Clyst St Mary, Devon (NGR SY 0002 9083) Hill Barton In
-#> # ... with 11 more variables: creator <chr>, publisher <chr>, date <chr>,
-#> #   identifier <chr>, relation <chr>, subject <chr>, language <chr>,
-#> #   type <chr>, format <chr>, rights <chr>, coverage <chr>
+#>   title creator publisher date  identifier relation subject language type 
+#>   <chr> <chr>   <chr>     <chr> <chr>      <chr>    <chr>   <chr>    <chr>
+#> 1 Land… AC arc… Archaeol… 2011  doi:10.52… url:htt… Archae… en       Text…
+#> # ... with 3 more variables: format <chr>, rights <chr>, coverage <chr>
 ```
 
 You can pass in more than one identifier to `id` parameter.
@@ -113,13 +112,13 @@ Search for the term _laser_
 ```r
 dc_search(q = "laser", fl = c('doi','publicationYear'), rows = 5)
 #> # A tibble: 5 x 2
-#>                          doi publicationYear
-#>                        <chr>           <chr>
-#> 1 10.17035/D.2016.0008119129            2016
-#> 2             10.7283/R3ZW26            2016
-#> 3             10.7283/R3V30K            2016
-#> 4      10.2314/GBV:377452467            2002
-#> 5      10.2314/GBV:499941845            2004
+#>   doi                        publicationYear
+#>   <chr>                      <chr>          
+#> 1 10.7283/R3ZW26             2016           
+#> 2 10.17035/D.2016.0008119129 2016           
+#> 3 10.17035/D.2017.0043078392 2017           
+#> 4 10.7283/R3V30K             2016           
+#> 5 10.2314/GBV:574957529      2007
 ```
 
 Another search: published between 2000 and 2005
@@ -128,13 +127,13 @@ Another search: published between 2000 and 2005
 ```r
 dc_search(q = "publicationYear:[2000 TO 2005]", fl = c('doi', 'publicationYear'), rows = 5)
 #> # A tibble: 5 x 2
-#>                       doi publicationYear
-#>                     <chr>           <chr>
-#> 1 10.5279/DK-SA-DDA-10032            2003
-#> 2  10.5279/DK-SA-DDA-1606            2002
-#> 3  10.5279/DK-SA-DDA-1149            2001
-#> 4  10.5279/DK-SA-DDA-9704            2004
-#> 5  10.5279/DK-SA-DDA-5909            2001
+#>   doi                      publicationYear
+#>   <chr>                    <chr>          
+#> 1 10.7266/N74Q7RW9         2002           
+#> 2 10.7266/N71N7Z2D         2000           
+#> 3 10.7275/R5X92877         2003           
+#> 4 10.3929/ETHZ-A-003907049 2000           
+#> 5 10.3929/ETHZ-A-003880262 2000
 ```
 
 ### Facet
@@ -148,13 +147,13 @@ dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 #> $facet_fields
 #> $facet_fields$publisher_facet
 #> # A tibble: 5 x 2
-#>                                                         term value
-#>                                                        <chr> <chr>
-#> 1 PANGAEA - Data Publisher for Earth & Environmental Science 32456
-#> 2                       Defense Technical Information Center  2382
-#> 3                                                   Figshare  1545
-#> 4                                                Unpublished  1193
-#> 5                                                     Zenodo   609
+#>   term                                                       value
+#>   <chr>                                                      <chr>
+#> 1 PANGAEA - Data Publisher for Earth & Environmental Science 33188
+#> 2 Defense Technical Information Center                       2382 
+#> 3 Zenodo                                                     2272 
+#> 4 Figshare                                                   2247 
+#> 5 Unpublished                                                1311 
 #> 
 #> 
 #> $facet_pivot
@@ -174,8 +173,8 @@ dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5)
 ```r
 dc_stats(q = "ecology", stats.field = 'date')
 #> $data
-#>                          min                max  count missing
-#> date 01-Jan-2007/29-Nov-2010 September 30, 2015 154991    5409
+#>                          min         max  count missing
+#> date 01-Jan-2007/29-Nov-2010 Summer 2017 212109    6155
 #> 
 #> $facet
 #> NULL
@@ -188,26 +187,32 @@ dc_stats(q = "ecology", stats.field = 'date')
 dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 #> $docs
 #> # A tibble: 10 x 1
-#>                            doi
-#>                          <chr>
-#>  1         10.7892/BORIS.16589
-#>  2         10.7892/BORIS.79067
-#>  3         10.7892/BORIS.16333
-#>  4      10.13140/2.1.3940.8968
-#>  5      10.1594/PANGAEA.745038
-#>  6      10.1594/PANGAEA.745039
-#>  7      10.1594/PANGAEA.745049
-#>  8 10.6084/M9.FIGSHARE.1540730
-#>  9 10.6084/M9.FIGSHARE.1541138
-#> 10 10.6084/M9.FIGSHARE.1178080
+#>    doi                           
+#>    <chr>                         
+#>  1 10.7892/BORIS.16333           
+#>  2 10.7892/BORIS.16589           
+#>  3 10.7892/BORIS.79067           
+#>  4 10.7892/BORIS.97918           
+#>  5 10.13140/2.1.3940.8968        
+#>  6 10.1594/PANGAEA.745038        
+#>  7 10.1594/PANGAEA.745039        
+#>  8 10.1594/PANGAEA.745049        
+#>  9 10.6084/M9.FIGSHARE.1540730.V1
+#> 10 10.6084/M9.FIGSHARE.1541138.V1
 #> 
 #> $mlt
+#> $mlt$`5704684`
+#> # A tibble: 1 x 2
+#>   numFound start
+#>      <int> <int>
+#> 1        0     0
+#> 
 #> $mlt$`7245706`
 #> # A tibble: 2 x 3
-#>   numFound start                      doi
-#>      <int> <int>                    <chr>
-#> 1      604     0 10.11588/DIGLIT.27812.12
-#> 2      604     0         10.4224/23001521
+#>   numFound start doi                     
+#>      <int> <int> <chr>                   
+#> 1      822     0 10.11588/DIGLIT.27812.12
+#> 2      822     0 10.7282/T3P55KJ4        
 #> 
 #> $mlt$`8103779`
 #> # A tibble: 1 x 2
@@ -215,7 +220,7 @@ dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 #>      <int> <int>
 #> 1        0     0
 #> 
-#> $mlt$`5704684`
+#> $mlt$`11360691`
 #> # A tibble: 1 x 2
 #>   numFound start
 #>      <int> <int>
@@ -245,19 +250,13 @@ dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 #>      <int> <int>
 #> 1        0     0
 #> 
-#> $mlt$`6743504`
+#> $mlt$`7506434`
 #> # A tibble: 1 x 2
 #>   numFound start
 #>      <int> <int>
 #> 1        0     0
 #> 
-#> $mlt$`6746350`
-#> # A tibble: 1 x 2
-#>   numFound start
-#>      <int> <int>
-#> 1        0     0
-#> 
-#> $mlt$`4013379`
+#> $mlt$`7506554`
 #> # A tibble: 1 x 2
 #>   numFound start
 #>      <int> <int>
@@ -280,7 +279,7 @@ dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi')
 dc_work(doi = "10.5438/0012")
 #> $data
 #> $data$id
-#> [1] "10.5438/0012"
+#> [1] "https://doi.org/10.5438/0012"
 #> 
 #> $data$type
 #> [1] "works"
@@ -293,7 +292,7 @@ dc_work(doi = "10.5438/0012")
 #> [1] "https://doi.org/10.5438/0012"
 #> 
 #> $data$attributes$url
-#> [1] "https://schema.datacite.org/meta/kernel-4.0/index.html"
+#> NULL
 #> 
 #> $data$attributes$author
 #>                           literal
@@ -345,6 +344,9 @@ dc_work(doi = "10.5438/0012")
 #> $data$attributes$registered
 #> [1] "2016-09-19T21:53:56Z"
 #> 
+#> $data$attributes$checked
+#> NULL
+#> 
 #> $data$attributes$updated
 #> [1] "2016-09-19T22:16:45Z"
 #> 
@@ -357,18 +359,32 @@ dc_work(doi = "10.5438/0012")
 #> 
 #> $data$relationships
 #> $data$relationships$`data-center`
-#> $data$relationships$`data-center`$meta
-#> named list()
+#> $data$relationships$`data-center`$data
+#> $data$relationships$`data-center`$data$id
+#> [1] "datacite.datacite"
+#> 
+#> $data$relationships$`data-center`$data$type
+#> [1] "data-centers"
+#> 
 #> 
 #> 
 #> $data$relationships$member
-#> $data$relationships$member$meta
-#> named list()
+#> $data$relationships$member$data
+#> $data$relationships$member$data$id
+#> [1] "datacite"
+#> 
+#> $data$relationships$member$data$type
+#> [1] "members"
+#> 
 #> 
 #> 
 #> $data$relationships$`resource-type`
-#> $data$relationships$`resource-type`$meta
-#> named list()
+#> $data$relationships$`resource-type`$data
+#> $data$relationships$`resource-type`$data$id
+#> [1] "text"
+#> 
+#> $data$relationships$`resource-type`$data$type
+#> [1] "resource-types"
 ```
 
 
