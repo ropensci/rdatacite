@@ -37,9 +37,3 @@ test_that("dc_search works w/ csv output", {
     expect_false(identical(aa, bb))
   })
 })
-
-test_that("dc_search fails nicely", {
-  skip_on_cran()
-  expect_error(dc_search(callopts = list(timeout_ms = 1)),
-    "Timeout was reached")
-})

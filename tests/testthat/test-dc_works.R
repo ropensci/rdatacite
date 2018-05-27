@@ -9,8 +9,3 @@ test_that("dc_works basic functionality works", {
     expect_is(aa$meta, 'list')
   })
 })
-
-test_that("dc_works fails nicely", {
-  skip_on_cran()
-  expect_error(dc_works(timeout_ms = 1), "time")
-})

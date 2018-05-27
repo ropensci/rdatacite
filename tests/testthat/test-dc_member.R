@@ -16,5 +16,4 @@ test_that("dc_member basic functionality works", {
 test_that("dc_member fails nicely", {
   skip_on_cran()
   expect_error(dc_member(), "argument \"member_id\" is missing")
-  expect_error(dc_member("asdfasdf", timeout_ms = 1), "time")
 })

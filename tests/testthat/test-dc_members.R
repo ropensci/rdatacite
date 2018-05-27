@@ -10,7 +10,3 @@ test_that("dc_members basic functionality works", {
   })
 })
 
-test_that("dc_members fails nicely", {
-  skip_on_cran()
-  expect_error(dc_members(timeout_ms = 1), "time")
-})

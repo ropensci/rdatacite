@@ -1,3 +1,13 @@
+rdatacite 0.4.0
+===============
+
+### MINOR IMPROVEMENTS
+
+* pagination fixes (#18)
+* fix unused httr package warning, flagged by cran team (#21)
+* add .github PR and issue templates
+
+
 rdatacite 0.3.0
 ===============
 

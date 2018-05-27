@@ -14,5 +14,4 @@ test_that("dc_work basic functionality works", {
 test_that("dc_work fails nicely", {
   skip_on_cran()
   expect_error(dc_work(), "argument \"doi\" is missing")
-  expect_error(dc_work("10.5438/0012", timeout_ms = 1), "time")
 })

@@ -18,6 +18,4 @@ test_that("dc_data_center basic functionality works", {
 test_that("dc_data_center fails nicely", {
   skip_on_cran()
   expect_error(dc_data_center(), "argument \"data_center_id\" is missing")
-  expect_error(dc_data_center("asdfasdf", timeout_ms = 1),
-    "Timeout was reached")
 })

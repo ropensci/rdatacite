@@ -13,8 +13,3 @@ test_that("dc_data_centers basic functionality works", {
     expect_is(aa$meta$years, 'data.frame')
   })
 })
-
-test_that("dc_data_centers fails nicely", {
-  skip_on_cran()
-  expect_error(dc_data_centers(timeout_ms = 1), "time")
-})

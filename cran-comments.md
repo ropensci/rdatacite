@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.4.2 patched
-* ubuntu 12.04 (on travis-ci), R 3.4.2
+* local OS X install, R 3.5.0
+* ubuntu 14.04 (on travis-ci), R 3.5.0
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -11,7 +11,7 @@
 License components with restrictions and base license permitting such:
   MIT + file LICENSE
 File 'LICENSE':
-  YEAR: 2017
+  YEAR: 2018
 COPYRIGHT HOLDER: Scott Chamberlain
 
 ## Reverse dependencies
@@ -20,12 +20,7 @@ There are no reverse dependencies.
 
 ---
 
-This is a resubmission of the same version fixing
-a few things as requested.
-
-This version changes to work with new version of
-solrium package and adds some new methods for a
-DataCite API service.
+This version fixes a few minor things, including fixing a "'library' or 'require' call not declared from" warning.
 
 Thanks!
 Scott Chamberlain
