@@ -3,10 +3,22 @@ cache: packages
 sudo: false
 dist: trusty
 
-r:
-  - release
-  - devel
+matrix:
+  include:
+    - os: linux
+      r: oldrel
+    - os: linux
+      r: release
+      env: R_CODECOV=true
+    - os: linux
+      r: devel
 
+r_github_packages:
+  - jimhester/covr
+
+after_success:
+  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
+  
 notifications:
   email:
     on_success: never
