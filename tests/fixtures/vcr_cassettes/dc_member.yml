@@ -1,0 +1,55 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/members/cern
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.2 crul/0.5.2
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: max-age=0, private, must-revalidate
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/vnd.api+json; charset=utf-8
+      date: Sun, 27 May 2018 15:46:01 GMT
+      etag: W/"dcd7182fd22bc5e0850fdecd6ebc3ae7"
+      server: nginx/1.14.0 + Phusion Passenger 5.3.1
+      status:
+      - HTTP/1.1 200 OK
+      - 200 OK
+      transfer-encoding: chunked
+      vary: Accept-Encoding, Origin
+      x-anonymous-consumer: 'true'
+      x-powered-by: Phusion Passenger 5.3.1
+      x-request-id: fb7c253b-e60d-4e5f-a286-84a66af57936
+      x-runtime: '0.007309'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"cern","type":"members","attributes":{"title":"CERN -
+        European Organization for Nuclear Research","description":"CERN, the European
+        Organization for Nuclear Research, is the world''s largest particle physics
+        laboratory. Founded in 1954 and based on the Franco-Swiss border near Geneva,
+        it was one of Europe''s first joint ventures and now has 21 member states
+        and more than 50 cooperation agreements and scientific contacts with other
+        countries.\n\nAt CERN, physicists and engineers probe the fundamental structure
+        of the universe. They use the world''s largest and most complex scientific
+        instrument, the Large Hadron Collider (LHC), to study the basic constituents
+        of matter. The results of their experimental and theoretical work are publicly
+        available following CERN''s Open Access Policy.\n\nCERN services implementing
+        DOIs are its institutional repository (CDS, CERN Document Server); INSPIRE-HEP,
+        a digital library for the field of High-Energy Physics run in collaboration
+        with other institutions; or the CERN Open Data Portal, which provides high
+        level and analyzable data and software from the LHC experiments.\n\nFurthermore,
+        CERN is also providing DOIs to ZENODO, a multidisciplinary data repository
+        for the “long tail” of research results. It allows researchers to share and
+        preserve their output independent of size, type of material or discipline.","member-type":"provider","institution-type":null,"region":"EMEA","country":"Switzerland","year":2014,"logo-url":"https://assets.datacite.org/images/members/cern.png","email":"sunje.dallmeier-tiessen@cern.ch","website":"http://doi.web.cern.ch/","phone":null,"joined":"2014-03-25","created":"2014-04-10T13:41:44.000Z","updated":"2018-05-27T02:25:51.000Z"}}}'
+  recorded_at: 2018-05-27 15:46:01 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

@@ -20,5 +20,7 @@ Imports:
     crul (>= 0.4.0)
 Suggests:
     knitr,
-    testthat
+    testthat,
+    webmockr,
+    vcr
 RoxygenNote: 6.0.1

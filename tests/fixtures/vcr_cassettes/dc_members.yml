@@ -1,0 +1,61 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/members?query=ands&page%5Boffset%5D=0&page%5Bsize%5D=25
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.2 crul/0.5.2
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: max-age=0, private, must-revalidate
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/vnd.api+json; charset=utf-8
+      date: Sun, 27 May 2018 15:45:54 GMT
+      etag: W/"ff309ce2752e2871691a9256cda94fbf"
+      server: nginx/1.14.0 + Phusion Passenger 5.3.1
+      status:
+      - HTTP/1.1 200 OK
+      - 200 OK
+      transfer-encoding: chunked
+      vary: Accept-Encoding, Origin
+      x-anonymous-consumer: 'true'
+      x-powered-by: Phusion Passenger 5.3.1
+      x-request-id: c7451f98-504b-4c3f-8a71-952156644bed
+      x-runtime: '0.015309'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"ands","type":"members","attributes":{"title":"Australian
+        National Data Service (ANDS)","description":"The Australian National Data
+        Service (ANDS) makes Australia''s research data assets more valuable for researchers,
+        research institutions and the nation.\n\nWe do this through working in trusted
+        partnerships on research data projects, delivering reliable national services
+        and enhancing the capability of Australia''s research data system.\n \nA key
+        ANDS service is the [Research Data Australia](http://researchdata.ands.org.au/)
+        discovery portal where you can find, access and reuse Australian research
+        data.\n\nANDS is a partnership led by Monash University, in collaboration
+        with the Australian National University and CSIRO. It is funded by the Australian
+        Government through the National Collaborative Research Infrastructure Strategy
+        (NCRIS).\n \nANDS involvement in the DataCite consortium ensures that we are
+        active in global initiatives addressing the issues surrounding research data,
+        including those of publication, citation and standards. ANDS has run its [Cite
+        My Data](http://ands.org.au/services/cite-my-data.html) service since 2011.
+        This service allows Australian research organisations to assign DOIs to their
+        own research collections. This, in turn, provides researchers with a means
+        of citing their published data and achieving recognition for their research
+        data output.\n \nSubscribe to our discussion list: [ANDS Google Group](https://groups.google.com/forum/?hl=en#!forum/ands-general).\n
+        \nSubscribe to our e-newsletter: [andsUP](http://us7.campaign-archive2.com/home/?u=b542ef52e49302569068046d9\u0026id=22b849a4ee).","member-type":"provider","institution-type":null,"region":"Asia
+        Pacific","country":"Australia","year":2010,"logo-url":"https://assets.datacite.org/images/members/ands.png","email":"adrian.burton@ands.org.au","website":"http://www.ands.org.au","phone":"+61
+        3 9902 0585","joined":"2010-02-05","created":"2010-01-01T00:00:00.000Z","updated":"2018-05-27T02:25:51.000Z"}},{"id":"nioz","type":"members","attributes":{"title":"Royal
+        Netherlands Institute for Sea Research","description":null,"member-type":"provider","institution-type":null,"region":null,"country":null,"year":null,"logo-url":null,"email":"Eric.Epping@nioz.nl","website":"https://www.nioz.nl/en","phone":null,"joined":null,"created":"2018-05-23T11:58:55.000Z","updated":"2018-05-27T02:25:53.000Z"}}],"meta":{"total":2,"total-pages":1,"page":1,"regions":[{"id":"apac","title":"Asia
+        and Pacific","count":1}],"years":[{"id":"2010","title":"2010","count":1}]}}'
+  recorded_at: 2018-05-27 15:45:54 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

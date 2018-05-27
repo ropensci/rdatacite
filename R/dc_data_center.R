@@ -8,8 +8,6 @@
 #' @family rest api methods
 #' @examples \dontrun{
 #' dc_data_center("cdl.dryad")
-#' dc_data_center("cdl.dryad",
-#'   include = c("member", "registration-agency"))
 #' }
 dc_data_center <- function(data_center_id, include = NULL, ...) {
   if (!is.null(include)) include <- paste0(include, collapse = ",")

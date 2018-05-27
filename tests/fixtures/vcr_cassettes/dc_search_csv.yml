@@ -1,0 +1,75 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://search.datacite.org/api?q=%2A%3A%2A&fl=doi%2Ctitle&wt=csv
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.2 crul/0.5.2
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Sun, 27 May 2018 15:16:51 GMT
+      content-type: text/plain;charset=UTF-8
+      transfer-encoding: chunked
+      connection: keep-alive
+      server: nginx/1.10.3 (Ubuntu)
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      access-control-expose-headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+    body:
+      encoding: UTF-8
+      string: |
+        doi,title
+        10.6068/DP15E776BEAE529,"Most Recent Data (2008). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Panama - 2008 | Breakdown: Income terciles: Medium income tercile | Gender: Male-headed household | Indicator: Protein consumption | Measure: Mean\, 2008. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776BF2E130,"Most Recent Data (2005). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Malawi - 2004-2005 | Breakdown: Country-level | Gender: Male-headed household | Indicator: Protein consumption | Measure: Number Observations\, 2005. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776BFAFC31,"Most Recent Data (2002). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Côte d'Ivoire - 2002 | Breakdown: Gender composition: Only adult males in the househ | Gender: Total | Indicator: Protein consumption | Measure: Mean\, 2002. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776C030732,"Most Recent Data (2005). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Malawi - 2004-2005 | Breakdown: High dependency rate: 70% dependency rate or more | Gender: Male-headed household | Indicator: Protein consumption | Measure: Number Observations\, 2005. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776C0B4133,"Most Recent Data (2001). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Bangladesh - 2000-2001 | Breakdown: Presence children under 5: Household with children | Gender: Male-headed household | Indicator: Protein consumption | Measure: Standard Deviation\, 2001. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776C13F834,"Most Recent Data (2005). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Bangladesh - 2005 | Breakdown: Income terciles: Highest income tercile | Gender: Male-headed household | Indicator: Protein consumption | Measure: Number Observations\, 2005. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776C1B9635,"Most Recent Data (2008). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Mexico - 2008 | Breakdown: Household size: One person | Gender: Female-headed household | Indicator: Protein consumption | Measure: Standard Deviation\, 2008. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776C232436,"Most Recent Data (2003). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Mozambique - 2002-2003 | Breakdown: Age of household head: less than 35 yrs | Gender: Female-headed household | Indicator: Protein consumption | Measure: Standard Deviation\, 2003. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776C2AD237,"Most Recent Data (2006). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Kenya - 2005-2006 | Breakdown: Household size: One person | Gender: Male-headed household | Indicator: Protein consumption | Measure: Standard Deviation\, 2006. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+        10.6068/DP15E776C32DD38,"Most Recent Data (2002). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Côte d'Ivoire - 2002 | Breakdown: Age of household head: less than 35 yrs | Gender: Female-headed household | Indicator: Protein consumption | Measure: Median\, 2002. Data-Planet™ Statistical Ready Reference by Conquest Systems\, Inc.  Dataset-ID: 067-001-070."
+  recorded_at: 2018-05-27 15:16:51 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2
+- request:
+    method: get
+    uri: https://search.datacite.org/api?q=%2A%3A%2A&fl=doi%2Ctitle&wt=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.2 crul/0.5.2
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Sun, 27 May 2018 15:16:51 GMT
+      content-type: application/json;charset=UTF-8
+      transfer-encoding: chunked
+      connection: keep-alive
+      server: nginx/1.10.3 (Ubuntu)
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      access-control-expose-headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+    body:
+      encoding: UTF-8
+      string: |
+        {"responseHeader":{"status":0,"QTime":1},"response":{"numFound":13698883,"start":0,"docs":[{"doi":"10.6068/DP15E776BEAE529","title":["Most Recent Data (2008). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Panama - 2008 | Breakdown: Income terciles: Medium income tercile | Gender: Male-headed household | Indicator: Protein consumption | Measure: Mean, 2008. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776BF2E130","title":["Most Recent Data (2005). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Malawi - 2004-2005 | Breakdown: Country-level | Gender: Male-headed household | Indicator: Protein consumption | Measure: Number Observations, 2005. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776BFAFC31","title":["Most Recent Data (2002). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Côte d'Ivoire - 2002 | Breakdown: Gender composition: Only adult males in the househ | Gender: Total | Indicator: Protein consumption | Measure: Mean, 2002. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776C030732","title":["Most Recent Data (2005). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Malawi - 2004-2005 | Breakdown: High dependency rate: 70% dependency rate or more | Gender: Male-headed household | Indicator: Protein consumption | Measure: Number Observations, 2005. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776C0B4133","title":["Most Recent Data (2001). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Bangladesh - 2000-2001 | Breakdown: Presence children under 5: Household with children | Gender: Male-headed household | Indicator: Protein consumption | Measure: Standard Deviation, 2001. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776C13F834","title":["Most Recent Data (2005). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Bangladesh - 2005 | Breakdown: Income terciles: Highest income tercile | Gender: Male-headed household | Indicator: Protein consumption | Measure: Number Observations, 2005. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776C1B9635","title":["Most Recent Data (2008). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Mexico - 2008 | Breakdown: Household size: One person | Gender: Female-headed household | Indicator: Protein consumption | Measure: Standard Deviation, 2008. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776C232436","title":["Most Recent Data (2003). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Mozambique - 2002-2003 | Breakdown: Age of household head: less than 35 yrs | Gender: Female-headed household | Indicator: Protein consumption | Measure: Standard Deviation, 2003. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776C2AD237","title":["Most Recent Data (2006). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Kenya - 2005-2006 | Breakdown: Household size: One person | Gender: Male-headed household | Indicator: Protein consumption | Measure: Standard Deviation, 2006. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]},{"doi":"10.6068/DP15E776C32DD38","title":["Most Recent Data (2002). Food and Agriculture Organization of the United Nations. Food and Agriculture Organization Statistics: Food Security - Indicators from Household Surveys | Survey: Côte d'Ivoire - 2002 | Breakdown: Age of household head: less than 35 yrs | Gender: Female-headed household | Indicator: Protein consumption | Measure: Median, 2002. Data-Planet™ Statistical Ready Reference by Conquest Systems, Inc.  Dataset-ID: 067-001-070."]}]}}
+  recorded_at: 2018-05-27 15:16:51 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2

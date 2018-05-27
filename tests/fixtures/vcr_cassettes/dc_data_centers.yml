@@ -1,0 +1,64 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/data-centers?member-id=delft&page%5Boffset%5D=0&page%5Bsize%5D=25
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.2 crul/0.5.2
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      access-control-allow-headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin: '*'
+      access-control-expose-headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      cache-control: max-age=0, private, must-revalidate
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json; charset=utf-8
+      date: Sun, 27 May 2018 15:58:19 GMT
+      etag: W/"2443f9f5fc9028479348dea9897674db"
+      server: nginx/1.12.2 + Phusion Passenger 5.2.3
+      status:
+      - HTTP/1.1 200 OK
+      - 200 OK
+      transfer-encoding: chunked
+      vary: Accept-Encoding
+      x-anonymous-consumer: 'true'
+      x-powered-by: Phusion Passenger 5.2.3
+      x-request-id: 4b996191-baf4-471d-831d-0126f86c0c03
+      x-runtime: '0.080730'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"delft.data4tu","type":"data-centers","attributes":{"title":"4TU.Centre
+        for Research Data","member-id":"delft","year":2011,"created":"2011-09-30T09:18:16Z","updated":"2018-05-27T02:30:09Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.bira","type":"data-centers","attributes":{"title":"Belgian
+        Institute for Space Aeronomy","member-id":"delft","year":2016,"created":"2016-01-04T07:26:36Z","updated":"2018-05-27T02:30:30Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.easy","type":"data-centers","attributes":{"title":"DANS","member-id":"delft","year":2014,"created":"2014-10-30T07:02:02Z","updated":"2018-05-27T02:30:22Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.tissue","type":"data-centers","attributes":{"title":"Euro-CNS
+        ALS Brain Tissue Bank","member-id":"delft","year":2014,"created":"2014-11-28T15:52:14Z","updated":"2018-05-27T02:30:22Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.ecris","type":"data-centers","attributes":{"title":"euroCRIS","member-id":"delft","year":2018,"created":"2018-05-04T06:38:19Z","updated":"2018-05-27T02:30:53Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.tud3me","type":"data-centers","attributes":{"title":"Faculty
+        of 3mE, Mechanical, Maritime and Materials Engineering, TU Delft","member-id":"delft","year":2017,"created":"2017-06-01T10:31:10Z","updated":"2018-05-27T02:30:42Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.tpm","type":"data-centers","attributes":{"title":"Faculty
+        of Technology, Policy and Management, TU Delft","member-id":"delft","year":2015,"created":"2015-10-20T11:40:20Z","updated":"2018-05-27T02:30:29Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.hva","type":"data-centers","attributes":{"title":"Hogeschool
+        van Amsterdam","member-id":"delft","year":2016,"created":"2016-06-21T11:31:50Z","updated":"2018-05-27T02:30:33Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.iea","type":"data-centers","attributes":{"title":"International
+        Association for the Evaluation of Educational Achievement","member-id":"delft","year":2014,"created":"2014-07-10T13:34:05Z","updated":"2018-05-27T02:30:20Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.ioc","type":"data-centers","attributes":{"title":"IOC
+        of UNESCO (Intergovernmental Oceanographic Commission)","member-id":"delft","year":2018,"created":"2018-03-06T12:22:42Z","updated":"2018-05-27T02:30:50Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.isric","type":"data-centers","attributes":{"title":"ISRIC","member-id":"delft","year":2014,"created":"2014-10-30T07:26:49Z","updated":"2018-05-27T02:30:22Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.jrc","type":"data-centers","attributes":{"title":"Joint
+        Research Centre''s Institute of Energy","member-id":"delft","year":2011,"created":"2011-12-21T08:21:24Z","updated":"2018-05-27T02:30:10Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.knmi","type":"data-centers","attributes":{"title":"KNMI
+        Data Centre","member-id":"delft","year":2016,"created":"2016-07-14T05:32:21Z","updated":"2018-05-27T02:30:34Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.kb","type":"data-centers","attributes":{"title":"Koninklijke
+        Bibliotheek","member-id":"delft","year":2017,"created":"2017-03-30T07:01:03Z","updated":"2018-05-27T02:30:40Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.lup","type":"data-centers","attributes":{"title":"Leiden
+        University Press","member-id":"delft","year":2017,"created":"2017-10-03T07:44:04Z","updated":"2018-05-27T02:30:45Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.maastro","type":"data-centers","attributes":{"title":"MAASTRO
+        Clinic","member-id":"delft","year":2015,"created":"2015-02-06T14:32:51Z","updated":"2018-05-27T02:30:24Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.rivm","type":"data-centers","attributes":{"title":"RIVM
+        - Rijksinstituut voor Volksgezondheid en Milieu","member-id":"delft","year":2017,"created":"2017-01-19T07:39:18Z","updated":"2018-05-27T02:30:38Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.rbins","type":"data-centers","attributes":{"title":"Royal
+        Belgian Institute of Natural Sciences","member-id":"delft","year":2017,"created":"2017-11-09T07:12:26Z","updated":"2018-05-27T02:30:46Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.rob","type":"data-centers","attributes":{"title":"Royal
+        Observatory of Belgium","member-id":"delft","year":2017,"created":"2017-07-14T05:44:48Z","updated":"2018-05-27T02:30:43Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.nibg","type":"data-centers","attributes":{"title":"Sound
+        and Vision","member-id":"delft","year":2015,"created":"2015-06-09T12:42:47Z","updated":"2018-05-27T02:30:27Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.surfsara","type":"data-centers","attributes":{"title":"SURFsara","member-id":"delft","year":2017,"created":"2017-11-20T09:29:00Z","updated":"2018-05-27T02:30:46Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.tudarch","type":"data-centers","attributes":{"title":"TU
+        Delft Architecture","member-id":"delft","year":2012,"created":"2012-04-26T07:02:36Z","updated":"2018-05-27T02:30:11Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.tudelft","type":"data-centers","attributes":{"title":"TU
+        Delft Library","member-id":"delft","year":2011,"created":"2011-02-21T15:57:37Z","updated":"2018-05-27T02:30:07Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.tue","type":"data-centers","attributes":{"title":"TU
+        Eindhoven","member-id":"delft","year":2012,"created":"2012-03-22T13:41:03Z","updated":"2018-05-27T02:30:11Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}},{"id":"delft.uu","type":"data-centers","attributes":{"title":"Universiteit
+        Utrecht","member-id":"delft","year":2017,"created":"2017-10-30T13:42:16Z","updated":"2018-05-27T02:30:45Z"},"relationships":{"member":{"data":{"id":"delft","type":"members"}}}}],"meta":{"total":28,"total-pages":2,"page":1,"years":[{"id":"2018","title":"2018","count":2},{"id":"2017","title":"2017","count":8},{"id":"2016","title":"2016","count":4},{"id":"2015","title":"2015","count":3},{"id":"2014","title":"2014","count":5},{"id":"2013","title":"2013","count":1},{"id":"2012","title":"2012","count":2},{"id":"2011","title":"2011","count":3}],"members":[{"id":"DELFT","title":"TU
+        Delft Library","count":28}]}}'
+  recorded_at: 2018-05-27 15:58:19 GMT
+  recorded_with: vcr/0.1.0, webmockr/0.2.6, crul/0.5.2
