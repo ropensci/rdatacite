@@ -6,7 +6,7 @@ Description: Client for the web service methods provided
     their 'OAI-PMH' 'metadata' service, and a 'RESTful' search API. The API
     is backed by 'SOLR', allowing expressive queries, including faceting,
     statistics on variables, and 'more-like-this' queries.
-Version: 0.3.0.9321
+Version: 0.3.9.9110
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
@@ -19,7 +19,6 @@ Imports:
     jsonlite,
     crul (>= 0.4.0)
 Suggests:
-    roxygen2 (>= 6.0.1),
     knitr,
     testthat
 RoxygenNote: 6.0.1
