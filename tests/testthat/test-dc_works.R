@@ -7,5 +7,5 @@ test_that("dc_works basic functionality works", {
     expect_named(aa, c("data", "meta"))
     expect_is(aa$data, 'data.frame')
     expect_is(aa$meta, 'list')
-  })
+  }, preserve_exact_body_bytes = TRUE)
 })

@@ -13,7 +13,7 @@ rdatacite
 `rdatacite` provides programmatic accesses to [DataCite](https://datacite.org/) metadata
 
 * OAI-PMH. Documentation for the DataCite OAI-PMH is available at http://oai.datacite.org/ - Documentation for general OAI-PMH at http://www.openarchives.org/OAI/openarchivesprotocol.html
-* Solr service docs: http://search.datacite.org/help.html
+* Solr service docs: https://search.datacite.org/help.html
 * REST API. Docs: https://support.datacite.org/docs/api and https://support.datacite.org/reference
 
 ## Installation

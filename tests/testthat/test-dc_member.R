@@ -10,7 +10,7 @@ test_that("dc_member basic functionality works", {
     expect_match(aa$data$id, 'cern')
     expect_is(aa$data$attributes, 'list')
     expect_match(tolower(aa$data$attributes$title), 'cern')
-  })
+  }, preserve_exact_body_bytes = TRUE)
 })
 
 test_that("dc_member fails nicely", {
