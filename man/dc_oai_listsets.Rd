@@ -10,7 +10,7 @@ dc_oai_listsets(token = NULL, ...)
 \item{token}{a token previously provided by the server to resume a request
 where it last left off.}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{httr::GET}}
 }
 \description{
 Useful for selective harvesting

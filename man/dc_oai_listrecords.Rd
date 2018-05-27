@@ -8,11 +8,13 @@ dc_oai_listrecords(from = NULL, until = NULL, set = NULL,
   prefix = "oai_dc", token = NULL, ...)
 }
 \arguments{
-\item{from}{specifies that records returned must have been created/update/deleted
+\item{from}{specifies that records returned must have been
+created/update/deleted
 on or after this date.}
 
-\item{until}{specifies that records returned must have been created/update/deleted
-on or before this date.}
+\item{until}{specifies that records returned must have been
+created/update/deleted
+or before this date.}
 
 \item{set}{specifies the set that returned records must belong to.}
 
@@ -23,7 +25,7 @@ returned in. One of: oai_dc (default), oai_datacite, or datacite. See
 \item{token}{a token previously provided by the server to resume a request
 where it last left off.}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{httr::GET}}
 }
 \description{
 List the records in the DataCite metadata repository.

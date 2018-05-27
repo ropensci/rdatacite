@@ -9,10 +9,3 @@ test_that("dc_oai_identify - default uses datacite", {
   expect_match(aa$repositoryName, "DataCite")
   expect_match(aa$baseURL, "oai.datacite.org")
 })
-
-test_that("dc_oai_identify - httr options work", {
-  skip_on_cran()
-
-  library("httr")
-  expect_error(dc_oai_identify(config = timeout(0.01)))
-})

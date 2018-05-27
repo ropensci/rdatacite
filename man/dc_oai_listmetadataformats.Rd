@@ -2,18 +2,20 @@
 % Please edit documentation in R/dc_oai_listmetadataformats.R
 \name{dc_oai_listmetadataformats}
 \alias{dc_oai_listmetadataformats}
-\title{List available metadata formats that the DataCite repository can disseminate}
+\title{List available metadata formats that the DataCite repository
+can disseminate}
 \usage{
 dc_oai_listmetadataformats(id = NULL, ...)
 }
 \arguments{
-\item{id}{DataCite identifier, e.g., "oai:oai.datacite.org:6718729". If left
-blank, get all metadataformats}
+\item{id}{DataCite identifier, e.g., "oai:oai.datacite.org:6718729".
+If left blank, get all metadataformats}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{httr::GET}}
 }
 \description{
-List available metadata formats that the DataCite repository can disseminate
+List available metadata formats that the DataCite repository
+can disseminate
 }
 \examples{
 \dontrun{

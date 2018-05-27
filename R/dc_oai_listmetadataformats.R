@@ -1,9 +1,10 @@
-#' List available metadata formats that the DataCite repository can disseminate
+#' List available metadata formats that the DataCite repository 
+#' can disseminate
 #'
 #' @export
-#' @param id DataCite identifier, e.g., "oai:oai.datacite.org:6718729". If left
-#' blank, get all metadataformats
-#' @param ... Curl options passed on to \code{\link[httr]{GET}}
+#' @param id DataCite identifier, e.g., "oai:oai.datacite.org:6718729". 
+#' If left blank, get all metadataformats
+#' @param ... Curl options passed on to `httr::GET`
 #' @examples \dontrun{
 #' dc_oai_listmetadataformats()
 #' dc_oai_listmetadataformats("oai:oai.datacite.org:6718729")

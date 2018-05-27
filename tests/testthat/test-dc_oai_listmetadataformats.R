@@ -23,14 +23,6 @@ test_that("dc_oai_listmetadataformats - no formats avail. vs. avail", {
   expect_is(bb[[1]], "data.frame")
 })
 
-test_that("dc_oai_listmetadataformats - curl options", {
-  skip_on_cran()
-
-  library("httr")
-
-  expect_error(dc_oai_listmetadataformats(config = timeout(0.001)), "Timeout was reached")
-})
-
 test_that("dc_oai_listmetadataformats fails well", {
   skip_on_cran()
 

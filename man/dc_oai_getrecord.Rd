@@ -7,8 +7,8 @@
 dc_oai_getrecord(id)
 }
 \arguments{
-\item{id}{DataCite identifier, e.g., "oai:oai.datacite.org:6718729". If left
-blank, get all metadataformats}
+\item{id}{DataCite identifier, e.g., "oai:oai.datacite.org:6718729".
+If left blank, get all metadataformats}
 }
 \description{
 Retrieve an individual record from the DataCite repository

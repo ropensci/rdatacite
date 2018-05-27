@@ -7,7 +7,7 @@
 dc_oai_identify(...)
 }
 \arguments{
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{httr::GET}}
 }
 \description{
 Learn about the Dryad OAI-PMH service
