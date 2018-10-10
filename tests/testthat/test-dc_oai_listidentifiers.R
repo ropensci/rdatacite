@@ -3,23 +3,23 @@ context("dc_oai_listidentifiers")
 test_that("dc_oai_listidentifiers - from", {
   skip_on_cran()
 
-  aa <- dc_oai_listidentifiers(from = "2015-09-03T00:00:00Z", 
-    until="2015-09-03T00:30:00Z")
+  aa <- dc_oai_listidentifiers(from = "2017-09-03T00:00:00Z", 
+    until="2017-09-03T00:30:00Z")
 
   expect_is(aa, "data.frame")
   expect_is(aa, "tbl_df")
   expect_is(aa$identifier, "character")
   expect_is(aa$datestamp, "character")
-  expect_equal(as.character(as.Date(aa$datestamp[1])), "2015-09-03")
+  expect_equal(as.character(as.Date(aa$datestamp[1])), "2017-09-03")
 })
 
 test_that("dc_oai_listidentifiers - from & until", {
   skip_on_cran()
 
-  aa <- dc_oai_listidentifiers(from = '2015-09-03T00:00:00Z', 
-    until = '2015-09-03T00:30:00Z')
-  bb <- dc_oai_listidentifiers(from = '2015-09-03T00:30:00Z', 
-    until = '2015-09-03T01:15:00Z')
+  aa <- dc_oai_listidentifiers(from = '2017-09-03T00:00:00Z', 
+    until = '2017-09-03T00:30:00Z')
+  bb <- dc_oai_listidentifiers(from = '2017-09-03T00:00:00Z', 
+    until = '2017-09-03T01:15:00Z')
 
   expect_is(aa, "tbl_df")
   expect_is(bb, "tbl_df")
