@@ -1,0 +1,111 @@
+---
+title: "Put the title of your vignette here"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Put the title of your vignette here}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+`rdatacite` provides programmatic accesses to [DataCite](https://datacite.org/) metadata
+
+* OAI-PMH. Documentation for the DataCite OAI-PMH is available at http://oai.datacite.org/ - Documentation for general OAI-PMH at http://www.openarchives.org/OAI/openarchivesprotocol.html
+* Solr service docs: https://search.datacite.org/help.html
+* REST API. Docs: https://support.datacite.org/docs/api and https://support.datacite.org/reference
+
+## Installation
+
+Stable CRAN version
+
+```{r eval=FALSE}
+install.packages("rdatacite")
+```
+
+Development version from github
+
+```{r eval=FALSE}
+devtools::install_github("ropensci/rdatacite")
+```
+
+```{r}
+library('rdatacite')
+```
+
+## OAI-PMH
+
+### Ping the service
+
+```{r}
+dc_oai_identify()
+```
+
+<!-- ### List metadata formats -->
+
+<!-- ```{r} -->
+<!-- dc_oai_listmetadataformats(id = "56225") -->
+<!-- ``` -->
+
+<!-- ### List identifiers -->
+
+<!-- ```{r} -->
+<!-- dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-07-01T') -->
+<!-- ``` -->
+
+<!-- ### Get records -->
+
+<!-- ```{r} -->
+<!-- dc_oai_getrecord(id = "56225") -->
+<!-- ``` -->
+
+<!-- You can pass in more than one identifier to `id` parameter. -->
+
+<!-- ## Solr based search -->
+
+<!-- This is the API for the same query interface you'd use on the DataCite website. -->
+
+<!-- ### Search -->
+
+<!-- Search for the term _laser_ -->
+
+<!-- ```{r} -->
+<!-- dc_search(q = "laser", fl = c('doi','publicationYear'), rows = 5) -->
+<!-- ``` -->
+
+<!-- Another search: published between 2000 and 2005 -->
+
+<!-- ```{r} -->
+<!-- dc_search(q = "publicationYear:[2000 TO 2005]", fl = c('doi', 'publicationYear'), rows = 5) -->
+<!-- ``` -->
+
+<!-- ### Facet -->
+
+<!-- ```{r} -->
+<!-- dc_facet(q = "wind", facet.field = 'publisher_facet', facet.limit = 5) -->
+<!-- ``` -->
+
+<!-- ### Stats -->
+
+
+<!-- ```{r} -->
+<!-- dc_stats(q = "ecology", stats.field = 'date') -->
+<!-- ``` -->
+
+<!-- ### More-like-this -->
+
+<!-- ```{r} -->
+<!-- dc_mlt(q = "ecology", mlt.fl = 'title', mlt.count = 2, fl = 'doi') -->
+<!-- ``` -->
+
+<!-- ## REST API -->
+
+<!-- * `dc_data_center()` - Get a single data center -->
+<!-- * `dc_data_centers()` - Search data centers -->
+<!-- * `dc_member()` - Get single DataCite member -->
+<!-- * `dc_members()` - Search DataCite members -->
+<!-- * `dc_work()` - Get single works -->
+<!-- * `dc_works()` - Search works -->
+
+<!-- ### Get a work -->
+
+<!-- ```{r} -->
+<!-- dc_work(doi = "10.5438/0012") -->
+<!-- ``` -->
