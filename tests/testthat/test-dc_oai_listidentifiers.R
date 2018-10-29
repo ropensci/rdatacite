@@ -1,44 +1,27 @@
 context("dc_oai_listidentifiers")
 
-test_that("dc_oai_listidentifiers - from", {
-  skip_on_cran()
-
-  aa <- dc_oai_listidentifiers(from = "2017-09-03T00:00:00Z", 
-    until="2017-09-03T00:30:00Z")
-
-  expect_is(aa, "data.frame")
-  expect_is(aa, "tbl_df")
-  expect_is(aa$identifier, "character")
-  expect_is(aa$datestamp, "character")
-  expect_equal(as.character(as.Date(aa$datestamp[1])), "2017-09-03")
-})
-
-test_that("dc_oai_listidentifiers - from & until", {
-  skip_on_cran()
-
-  aa <- dc_oai_listidentifiers(from = '2017-09-03T00:00:00Z', 
-    until = '2017-09-03T00:30:00Z')
-  bb <- dc_oai_listidentifiers(from = '2017-09-03T00:00:00Z', 
-    until = '2017-09-03T01:15:00Z')
-
-  expect_is(aa, "tbl_df")
-  expect_is(bb, "tbl_df")
-
-  expect_lt(NROW(aa), NROW(bb))
-})
-
 test_that("dc_oai_listidentifiers - set", {
   skip_on_cran()
-
-  aa <- dc_oai_listidentifiers(from = '2011-06-01T',
-    until = '2011-11-01T', set = "ANDS")
+  skip_on_travis()
+  
+  today <- format(Sys.Date(), "%Y-%m-%d")
+  aa <- dc_oai_listidentifiers(from = today, set = "ANDS")
 
   expect_is(aa, "tbl_df")
   expect_equal(aa$setSpec[1], "ANDS")
 })
 
+test_that("dc_oai_listidentifiers - from & until", {
+  skip_on_cran()
+  skip_on_travis()
+
+  aa <- dc_oai_listidentifiers(from = '2011-06-01T', until = '2011-07-01T')
+  expect_is(aa, "tbl_df")
+})
+
 test_that("dc_oai_listidentifiers fails well", {
   skip_on_cran()
+  skip_on_travis()
 
   no_msg <- "The combination of the values of the from, until, set, and metadataPrefix arguments results in an empty list"
 

@@ -2,6 +2,7 @@ context("dc_oai_listsets")
 
 test_that("dc_oai_listsets", {
   skip_on_cran()
+  skip_on_travis()
 
   aa <- dc_oai_listsets()
 

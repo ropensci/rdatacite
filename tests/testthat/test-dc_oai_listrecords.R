@@ -2,6 +2,7 @@ context("dc_oai_listrecords")
 
 test_that("dc_oai_listrecords works", {
   skip_on_cran()
+  skip_on_travis()
 
   a <- dc_oai_listrecords(from = '2011-06-01T', until = '2011-07-01T')
 

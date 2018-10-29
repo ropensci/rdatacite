@@ -2,6 +2,7 @@ context("dc_oai_listmetadataformats")
 
 test_that("dc_oai_listmetadataformats - basic functionality works", {
   skip_on_cran()
+  skip_on_travis()
 
   aa <- dc_oai_listmetadataformats()
 
@@ -15,6 +16,7 @@ test_that("dc_oai_listmetadataformats - basic functionality works", {
 
 test_that("dc_oai_listmetadataformats - no formats avail. vs. avail", {
   skip_on_cran()
+  skip_on_travis()
 
   aa <- dc_oai_listmetadataformats(id = "oai:oai.datacite.org:22")
   bb <- dc_oai_listmetadataformats(id = "oai:oai.datacite.org:6718729")

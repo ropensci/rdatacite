@@ -2,6 +2,7 @@ context("dc_oai_getrecord")
 
 test_that("dc_oai_getrecord - basic functionality works", {
   skip_on_cran()
+  skip_on_travis()
 
   aa <- dc_oai_getrecord("oai:oai.datacite.org:32255")
 
@@ -15,6 +16,7 @@ test_that("dc_oai_getrecord - basic functionality works", {
 
 test_that("dc_oai_getrecord - many record Ids input works", {
   skip_on_cran()
+  skip_on_travis()
 
   recs <- c("oai:oai.datacite.org:32255", "oai:oai.datacite.org:32325")
   aa <- dc_oai_getrecord(recs)
