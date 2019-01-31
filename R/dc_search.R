@@ -69,9 +69,9 @@ dc_search <- function(..., proxy = NULL, callopts=list()) {
 
   if (!is.null(proxy)) conn_dc <- make_dc_conn(proxy)
   args <- list(...)
-	if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   conn_dc$search(params = args, minOptimizedRows = FALSE,
-  	callopts = callopts)
+    callopts = callopts)
 }
 
 #' @export
@@ -79,7 +79,7 @@ dc_search <- function(..., proxy = NULL, callopts=list()) {
 dc_facet <- function(..., proxy = NULL, callopts=list()) {
   if (!is.null(proxy)) conn_dc <- make_dc_conn(proxy)
   args <- list(...)
-	if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   conn_dc$facet(params = args, callopts = callopts)
 }
 
@@ -88,7 +88,7 @@ dc_facet <- function(..., proxy = NULL, callopts=list()) {
 dc_stats <- function(..., proxy = NULL, callopts=list()) {
   if (!is.null(proxy)) conn_dc <- make_dc_conn(proxy)
   args <- list(...)
-	if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   conn_dc$stats(params = args, callopts = callopts)
 }
 
@@ -97,6 +97,6 @@ dc_stats <- function(..., proxy = NULL, callopts=list()) {
 dc_mlt <- function(..., proxy = NULL, callopts=list()) {
   if (!is.null(proxy)) conn_dc <- make_dc_conn(proxy)
   args <- list(...)
-	if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   conn_dc$mlt(params = args, callopts = callopts)
 }

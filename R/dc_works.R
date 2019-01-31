@@ -15,10 +15,10 @@
 #' dc_works(query = "climate change")
 #' }
 dc_works <- function(query = NULL, order = NULL, sort = NULL,
-	rows = NULL, offset = NULL, include = NULL, ...) {
+  rows = NULL, offset = NULL, include = NULL, ...) {
 
-	if (!is.null(include)) include <- paste0(include, collapse = ",")
-	args <- dc_compact(list(query = query, order = order, sort = sort,
-		`page[size]` = rows, `page[offset]` = offset, include = include))
+  if (!is.null(include)) include <- paste0(include, collapse = ",")
+  args <- dc_compact(list(query = query, order = order, sort = sort,
+    `page[size]` = rows, `page[offset]` = offset, include = include))
   dc_rest_GET("works", args = args, ...)
 }

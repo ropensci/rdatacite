@@ -17,7 +17,7 @@ last <- function(x) x[length(x)][[1]]
 strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
 
 make_dc_conn <- function(proxy) {
-	solrium::SolrClient$new(host = dc_base(),
-  	path = "api", scheme = "https", port = NULL, errors = "complete",
-  	proxy = proxy)
+  solrium::SolrClient$new(host = dc_base(),
+    path = "api", scheme = "https", port = NULL, errors = "complete",
+    proxy = proxy)
 }
