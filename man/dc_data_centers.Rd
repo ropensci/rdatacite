@@ -4,8 +4,8 @@
 \alias{dc_data_centers}
 \title{DataCite REST API: data centers}
 \usage{
-dc_data_centers(query = NULL, member_id = NULL, offset = 0, rows = 25,
-  include = NULL, ...)
+dc_data_centers(query = NULL, member_id = NULL, offset = 0,
+  rows = 25, include = NULL, ...)
 }
 \arguments{
 \item{query}{(character) Query string, e.g., data center name}
@@ -36,3 +36,4 @@ Other rest api methods: \code{\link{dc_data_center}},
   \code{\link{dc_members}}, \code{\link{dc_member}},
   \code{\link{dc_works}}, \code{\link{dc_work}}
 }
+\concept{rest api methods}

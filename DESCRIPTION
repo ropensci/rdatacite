@@ -13,6 +13,7 @@ Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
 URL: https://github.com/ropensci/rdatacite
 BugReports: https://github.com/ropensci/rdatacite/issues
 Roxygen: list(markdown = TRUE)
+Encoding: UTF-8
 Imports:
     oai (>= 0.2.2),
     solrium (>= 1.0.0),
@@ -23,7 +24,7 @@ Suggests:
     testthat,
     webmockr,
     vcr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 X-schema.org-applicationCategory: Data
 X-schema.org-keywords: data, scholarly, dataset, https, API, web-services, solr
 X-schema.org-isPartOf: https://ropensci.org

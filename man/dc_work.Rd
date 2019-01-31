@@ -26,3 +26,4 @@ Other rest api methods: \code{\link{dc_data_centers}},
   \code{\link{dc_data_center}}, \code{\link{dc_members}},
   \code{\link{dc_member}}, \code{\link{dc_works}}
 }
+\concept{rest api methods}
