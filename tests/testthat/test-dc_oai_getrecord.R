@@ -39,7 +39,7 @@ test_that("dc_oai_getrecord fails well", {
   skip_on_cran()
 
   expect_error(dc_oai_getrecord(),
-               "argument \"id\" is missing, with no default")
+               "argument \"id\" is missing, with no default", class = "error")
   expect_error(dc_oai_getrecord('5000000000000asfaffs'),
-               "is unknown or illegal in this repository")
+               "is unknown or illegal in this repository", class = "error")
 })

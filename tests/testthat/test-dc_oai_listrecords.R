@@ -15,8 +15,11 @@ test_that("dc_oai_listrecords fails well", {
   skip_on_cran()
 
   expect_error(dc_oai_listrecords(from = '2011-06-01T', until = 'adffdsadsf'),
-               "The request includes illegal arguments")
+               "The request includes illegal arguments", 
+    class = "error")
   expect_error(dc_oai_listrecords(from = '2011-06-01T', until = 5),
-               "The request includes illegal arguments")
-  expect_error(dc_oai_listrecords(url = 5), "One or more of your URLs")
+               "The request includes illegal arguments", 
+    class = "error")
+  expect_error(dc_oai_listrecords(url = 5), "One or more of your URLs", 
+    class = "error")
 })
