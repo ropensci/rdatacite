@@ -148,7 +148,7 @@
   "contIntegration": "https://travis-ci.org/ropensci/rdatacite",
   "releaseNotes": "https://github.com/ropensci/rdatacite/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rdatacite/blob/master/README.md",
-  "fileSize": "199.152KB",
+  "fileSize": "199.16KB",
   "applicationCategory": "Data",
   "isPartOf": "https://ropensci.org",
   "keywords": ["data", "scholarly", "dataset", "https", "API", "web-services", "solr", "datacite", "oai-pmh", "metadata", "api-wrapper", "rstats", "r", "identifier", "r-package"],
