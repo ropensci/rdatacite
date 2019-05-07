@@ -10,14 +10,14 @@
   "codeRepository": "https://github.com/ropensci/rdatacite",
   "issueTracker": "https://github.com/ropensci/rdatacite/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.5.0",
+    "version": "3.6.0",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.5.0 (2018-04-23)",
+  "runtimePlatform": "R version 3.6.0 Patched (2019-04-30 r76446)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -135,7 +135,7 @@
       "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
-      "version": ">= 0.4.0",
+      "version": ">= 0.7.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -148,9 +148,12 @@
   "contIntegration": "https://travis-ci.org/ropensci/rdatacite",
   "releaseNotes": "https://github.com/ropensci/rdatacite/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rdatacite/blob/master/README.md",
-  "fileSize": "72.734KB",
+  "fileSize": "199.152KB",
   "applicationCategory": "Data",
   "isPartOf": "https://ropensci.org",
-  "keywords": ["data", "scholarly", "dataset", "https", "API", "web-services", "solr", "datacite", "oai-pmh", "metadata", "api-wrapper", "rstats", "r", "identifier"],
-  "developmentStatus": "http://www.repostatus.org/#active"
+  "keywords": ["data", "scholarly", "dataset", "https", "API", "web-services", "solr", "datacite", "oai-pmh", "metadata", "api-wrapper", "rstats", "r", "identifier", "r-package"],
+  "developmentStatus": "http://www.repostatus.org/#active",
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {}
 }

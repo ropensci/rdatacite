@@ -1,3 +1,11 @@
+rdatacite 0.4.2
+===============
+
+### MINOR IMPROVEMENTS
+
+* fix to two fixtures that had non-ascii text in them, that were causing tests to fail (#25)
+
+
 rdatacite 0.4.0
 ===============
 
