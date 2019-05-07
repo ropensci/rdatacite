@@ -7,7 +7,7 @@
 #' @seealso [dc_data_centers()]
 #' @family rest api methods
 #' @examples \dontrun{
-#' dc_data_center("cdl.dryad")
+#' # dc_data_center("delft.data4t")
 #' }
 dc_data_center <- function(data_center_id, include = NULL, ...) {
   if (!is.null(include)) include <- paste0(include, collapse = ",")

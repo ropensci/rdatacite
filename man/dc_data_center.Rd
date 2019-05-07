@@ -18,7 +18,7 @@ DataCite REST API: data center
 }
 \examples{
 \dontrun{
-dc_data_center("cdl.dryad")
+# dc_data_center("delft.data4t")
 }
 }
 \seealso{
