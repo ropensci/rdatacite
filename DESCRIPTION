@@ -6,7 +6,7 @@ Description: Client for the web service methods provided
     their 'OAI-PMH' 'metadata' service, and a 'RESTful' search API. The API
     is backed by 'SOLR', allowing expressive queries, including faceting,
     statistics on variables, and 'more-like-this' queries.
-Version: 0.4.2
+Version: 0.4.2.9100
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com",
