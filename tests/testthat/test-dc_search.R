@@ -3,7 +3,7 @@ context("dc_search")
 test_that("dc_search basic functionality works", {
   vcr::use_cassette("dc_search", {
     # default uses q=*:*
-    aa <- dc_search(q = "*:*")
+    # aa <- dc_search(q = "*:*", rows=10)
     # basic search
     # specify fields to get back
     bb <- dc_search(q = "data", fl=c('doi','updated'),
@@ -13,9 +13,9 @@ test_that("dc_search basic functionality works", {
       rows=2)
   }, preserve_exact_body_bytes = TRUE)
 
-  expect_is(aa, "tbl_df")
-  expect_is(aa$minted, "character")
-  expect_lt(20, NCOL(aa))
+  # expect_is(aa, "tbl_df")
+  # expect_is(aa$minted, "character")
+  # expect_lt(20, NCOL(aa))
 
   expect_is(bb, "tbl_df")
   expect_named(bb, c('updated', 'doi'))
