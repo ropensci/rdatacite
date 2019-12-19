@@ -409,6 +409,8 @@ dc_work(doi = "10.5438/0012")
 * Please [report any issues or bugs](https://github.com/ropensci/rdatacite/issues).
 * License: MIT
 * Get citation information for `rdatacite` in R doing `citation(package = 'rdatacite')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
 [![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
+
+[coc]: https://github.com/ropensci/rdatacite/blob/master/CODE_OF_CONDUCT.md
