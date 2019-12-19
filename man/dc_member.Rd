@@ -22,8 +22,11 @@ dc_member("cern")
 \seealso{
 \code{\link[=dc_members]{dc_members()}}
 
-Other rest api methods: \code{\link{dc_data_centers}},
-  \code{\link{dc_data_center}}, \code{\link{dc_members}},
-  \code{\link{dc_works}}, \code{\link{dc_work}}
+Other rest api methods: 
+\code{\link{dc_data_centers}()},
+\code{\link{dc_data_center}()},
+\code{\link{dc_members}()},
+\code{\link{dc_works}()},
+\code{\link{dc_work}()}
 }
 \concept{rest api methods}

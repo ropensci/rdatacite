@@ -6,7 +6,7 @@ Description: Client for the web service methods provided
     their 'OAI-PMH' 'metadata' service, and a 'RESTful' search API. The API
     is backed by 'SOLR', allowing expressive queries, including faceting,
     statistics on variables, and 'more-like-this' queries.
-Version: 0.4.2.9100
+Version: 0.4.2.92
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com",
@@ -25,7 +25,7 @@ Suggests:
     testthat,
     webmockr,
     vcr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 X-schema.org-applicationCategory: Data
 X-schema.org-keywords: data, scholarly, dataset, https, API, web-services, solr
 X-schema.org-isPartOf: https://ropensci.org

@@ -22,8 +22,11 @@ dc_work(doi = "10.5438/0012")
 \seealso{
 \code{\link[=dc_works]{dc_works()}}
 
-Other rest api methods: \code{\link{dc_data_centers}},
-  \code{\link{dc_data_center}}, \code{\link{dc_members}},
-  \code{\link{dc_member}}, \code{\link{dc_works}}
+Other rest api methods: 
+\code{\link{dc_data_centers}()},
+\code{\link{dc_data_center}()},
+\code{\link{dc_members}()},
+\code{\link{dc_member}()},
+\code{\link{dc_works}()}
 }
 \concept{rest api methods}

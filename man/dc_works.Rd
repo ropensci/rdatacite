@@ -4,8 +4,15 @@
 \alias{dc_works}
 \title{DataCite REST API: works}
 \usage{
-dc_works(query = NULL, order = NULL, sort = NULL, rows = NULL,
-  offset = NULL, include = NULL, ...)
+dc_works(
+  query = NULL,
+  order = NULL,
+  sort = NULL,
+  rows = NULL,
+  offset = NULL,
+  include = NULL,
+  ...
+)
 }
 \arguments{
 \item{query}{(character) Query string, e.g., any part of a work}
@@ -34,8 +41,11 @@ dc_works(query = "climate change")
 \seealso{
 \code{\link[=dc_work]{dc_work()}}
 
-Other rest api methods: \code{\link{dc_data_centers}},
-  \code{\link{dc_data_center}}, \code{\link{dc_members}},
-  \code{\link{dc_member}}, \code{\link{dc_work}}
+Other rest api methods: 
+\code{\link{dc_data_centers}()},
+\code{\link{dc_data_center}()},
+\code{\link{dc_members}()},
+\code{\link{dc_member}()},
+\code{\link{dc_work}()}
 }
 \concept{rest api methods}

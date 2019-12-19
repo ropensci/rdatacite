@@ -4,8 +4,14 @@
 \alias{dc_oai_listidentifiers}
 \title{Retrieve record headers}
 \usage{
-dc_oai_listidentifiers(from = NULL, until = NULL, set = NULL,
-  prefix = "oai_dc", token = NULL, ...)
+dc_oai_listidentifiers(
+  from = NULL,
+  until = NULL,
+  set = NULL,
+  prefix = "oai_dc",
+  token = NULL,
+  ...
+)
 }
 \arguments{
 \item{from}{specifies that records returned must have been

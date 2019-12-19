@@ -4,8 +4,14 @@
 \alias{dc_oai_listrecords}
 \title{List the records in the DataCite metadata repository.}
 \usage{
-dc_oai_listrecords(from = NULL, until = NULL, set = NULL,
-  prefix = "oai_dc", token = NULL, ...)
+dc_oai_listrecords(
+  from = NULL,
+  until = NULL,
+  set = NULL,
+  prefix = "oai_dc",
+  token = NULL,
+  ...
+)
 }
 \arguments{
 \item{from}{specifies that records returned must have been
