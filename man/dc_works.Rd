@@ -11,6 +11,7 @@ dc_works(
   rows = NULL,
   offset = NULL,
   include = NULL,
+  discard_xml = TRUE,
   ...
 )
 }
@@ -22,11 +23,14 @@ dc_works(
 \item{sort}{(character) sort results by a certain field, one of
 "deposited", "published", "updated" or "score"}
 
-\item{rows}{(numeric/integer) results per page}
+\item{rows}{(numeric/integer) results per page, max value: 1000}
 
 \item{offset}{(numeric/integer) result offset, the record to start at}
 
 \item{include}{(character) vector of member fields to return}
+
+\item{discard_xml}{(logical) discard xml field? the xml field
+can be very large and cause problems sometimes. default: \code{TRUE}}
 
 \item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
