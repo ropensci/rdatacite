@@ -1,16 +1,20 @@
 # helpers --------------------------
-dc_rest_GET <- function(route, id = NULL, args = NULL, discard_xml = TRUE,
+dc_GET <- function(route, args = NULL, discard_xml = TRUE,
   ...) {
 
-  cli <- crul::HttpClient$new(
+  con <- crul::HttpClient$new(
   	url = dc_rest_base(),
-  	opts = list(...)
+  	opts = list(...),
+    headers = list(Accept = "application/vnd.api+json")
   )
-  path <- if (!is.null(id)) file.path(route, id) else route
-  res <- cli$get(path, query = args)
+  res <- con$get(route, query = args)
   res$raise_for_status()
+  res$raise_for_ct_json()
   tmp <- jsonlite::fromJSON(res$parse("UTF-8"))
   if (discard_xml) tmp$data$attributes$xml <- NULL
+  if (!is.null(tmp$data)) tmp$data <- tibble::as_tibble(tmp$data)
+  if (!is.null(tmp$included)) tmp$included <- tibble::as_tibble(tmp$included)
+    if (!is.null(tmp$reports)) tmp$reports <- tibble::as_tibble(tmp$reports)
   return(tmp)
 }
 

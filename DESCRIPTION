@@ -1,12 +1,11 @@
 Package: rdatacite
 Type: Package
-Title: 'DataCite' Client for 'OAI-PMH' Methods and their Search API
+Title: Client for the 'DataCite' API
 Description: Client for the web service methods provided
     by 'DataCite' (<https://www.datacite.org/>), including functions to interface with
-    their 'OAI-PMH' 'metadata' service, and a 'RESTful' search API. The API
-    is backed by 'SOLR', allowing expressive queries, including faceting,
-    statistics on variables, and 'more-like-this' queries.
-Version: 0.4.2.92
+    their 'RESTful' search API. The API is backed by 'Elasticsearch', allowing
+    expressive queries, including faceting.
+Version: 0.4.9.92
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com",
@@ -16,10 +15,9 @@ BugReports: https://github.com/ropensci/rdatacite/issues
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 Imports:
-    oai (>= 0.2.2),
-    solrium (>= 1.0.0),
     jsonlite,
-    crul (>= 0.7.4)
+    crul (>= 0.7.4),
+    tibble
 Suggests:
     knitr,
     testthat,
@@ -27,5 +25,5 @@ Suggests:
     vcr
 RoxygenNote: 7.0.2
 X-schema.org-applicationCategory: Data
-X-schema.org-keywords: data, scholarly, dataset, https, API, web-services, solr
+X-schema.org-keywords: data, scholarly, dataset, https, API, web-services
 X-schema.org-isPartOf: https://ropensci.org
