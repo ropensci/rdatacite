@@ -1,0 +1,120 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois?page%5Bsize%5D=5&page%5Bnumber%5D=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/vnd.api+json
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: max-age=0, private, must-revalidate
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json; charset=utf-8
+      date: Wed, 01 Jan 2020 01:47:01 GMT
+      etag: W/"390158cfa413c51b6aa6014fa77b3f12"
+      server: nginx/1.14.0 + Phusion Passenger 6.0.4
+      status:
+      - HTTP/1.1 200 OK
+      - 200 OK
+      transfer-encoding: chunked
+      vary: Accept-Encoding, Origin
+      x-anonymous-consumer: 'true'
+      x-powered-by: Phusion Passenger 6.0.4
+      x-request-id: 1d5713c8-8469-48b2-945c-a6099da51ba8
+      x-runtime: '6.560170'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"data":[{"id":"10.26197/5e0bf724ecbfd","type":"dois","attributes":{"doi":"10.26197/5e0bf724ecbfd","identifiers":[{"identifier":"https://doi.org/10.26197/5e0bf724ecbfd","identifierType":"DOI"}],"creators":[{"name":"Atlas
+        Of Living Australia","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"Occurrence
+        download Isla_Gorge_National_Park_Occurrence_records"}],"publisher":"Atlas
+        Of Living Australia","container":{},"publicationYear":2020,"subjects":[],"contributors":[{"name":"Symes,
+        Peter","nameType":"Personal","givenName":"Peter","familyName":"Symes","affiliation":[],"contributorType":"Distributor","nameIdentifiers":[]}],"dates":[{"date":"2020","dateType":"Issued"}],"language":"en","types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Species
+        information","resourceTypeGeneral":"Text"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[{"description":"ALA
+        occurrence record download","descriptionType":"Other"}],"geoLocations":[],"fundingReferences":[],"url":"https://doi.ala.org.au/doi/977f52cd-f76b-4ba1-b972-0f969ab37870","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-3","source":"mds","isActive":true,"state":"findable","reason":null,"created":"2020-01-01T01:34:30.000Z","registered":"2020-01-01T01:34:31.000Z","published":"2020","updated":"2020-01-01T01:34:38.000Z"},"relationships":{"client":{"data":{"id":"ands.centre68","type":"clients"}}}},{"id":"10.13140/rg.2.2.16981.58080","type":"dois","attributes":{"doi":"10.13140/rg.2.2.16981.58080","identifiers":[{"identifier":"https://doi.org/10.13140/rg.2.2.16981.58080","identifierType":"DOI"}],"creators":[{"name":"Rahman,
+        Anis","nameType":"Personal","givenName":"Anis","familyName":"Rahman","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"TeraSpecta
+        in Action Benefits of TNS3DI for Nanoscale Metrology"}],"publisher":"Unpublished","container":{},"publicationYear":2020,"subjects":[],"contributors":[],"dates":[{"date":"2020","dateType":"Issued"}],"language":null,"types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Technical
+        Report","resourceTypeGeneral":"Text"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"url":"http://rgdoi.net/10.13140/RG.2.2.16981.58080","contentUrl":null,"metadataVersion":0,"schemaVersion":null,"source":"mds","isActive":true,"state":"findable","reason":null,"created":"2020-01-01T01:31:51.000Z","registered":"2020-01-01T01:31:52.000Z","published":"2020","updated":"2020-01-01T01:31:52.000Z"},"relationships":{"client":{"data":{"id":"rg.rg","type":"clients"}}}},{"id":"10.13140/rg.2.2.23692.46725","type":"dois","attributes":{"doi":"10.13140/rg.2.2.23692.46725","identifiers":[{"identifier":"https://doi.org/10.13140/rg.2.2.23692.46725","identifierType":"DOI"}],"creators":[{"name":"Abdelhammid
+        Belhadj Benziane","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"‫فھرس‬
+        ‫قوانين‬ ‫جزائرية‬ ‫في‬ ‫مجال‬ ‫الوقاية‬ ‫في‬ ‫الوسط‬ ،‫المھني‬ ،‫الصحي‬ ‫و‬
+        ‫من‬ ‫االخطار‬/Algerian laws in the field of prevention in the professional,
+        health and risk sectors/Législation algérienne en matière de prévention dans
+        les secteurs professionnel, santé et risques"}],"publisher":"Unpublished","container":{},"publicationYear":2020,"subjects":[],"contributors":[],"dates":[{"date":"2020","dateType":"Issued"}],"language":"en","types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Preprint","resourceTypeGeneral":"Text"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"url":"http://rgdoi.net/10.13140/RG.2.2.23692.46725","contentUrl":null,"metadataVersion":0,"schemaVersion":null,"source":"mds","isActive":true,"state":"findable","reason":null,"created":"2020-01-01T01:27:05.000Z","registered":"2020-01-01T01:27:06.000Z","published":"2020","updated":"2020-01-01T01:27:06.000Z"},"relationships":{"client":{"data":{"id":"rg.rg","type":"clients"}}}},{"id":"10.13140/rg.2.2.10270.69443","type":"dois","attributes":{"doi":"10.13140/rg.2.2.10270.69443","identifiers":[{"identifier":"https://doi.org/10.13140/rg.2.2.10270.69443","identifierType":"DOI"}],"creators":[{"name":"Blake,
+        Charlotte","nameType":"Personal","givenName":"Charlotte","familyName":"Blake","affiliation":[],"nameIdentifiers":[]},{"name":"Cherkaev,
+        Andrej","nameType":"Personal","givenName":"Andrej","familyName":"Cherkaev","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"Dynamic
+        Homogenization of a Chain with Bistable Springs. Statistical Approach"}],"publisher":"Unpublished","container":{},"publicationYear":2020,"subjects":[],"contributors":[],"dates":[{"date":"2020","dateType":"Issued"}],"language":null,"types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Preprint","resourceTypeGeneral":"Text"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"url":"http://rgdoi.net/10.13140/RG.2.2.10270.69443","contentUrl":null,"metadataVersion":0,"schemaVersion":null,"source":"mds","isActive":true,"state":"findable","reason":null,"created":"2020-01-01T01:22:43.000Z","registered":"2020-01-01T01:22:44.000Z","published":"2020","updated":"2020-01-01T01:22:44.000Z"},"relationships":{"client":{"data":{"id":"rg.rg","type":"clients"}}}},{"id":"10.26197/5e0bf31213811","type":"dois","attributes":{"doi":"10.26197/5e0bf31213811","identifiers":[{"identifier":"https://doi.org/10.26197/5e0bf31213811","identifierType":"DOI"}],"creators":[{"name":"Atlas
+        Of Living Australia","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"Occurrence
+        download Humboldt_State_Forest_Occurrence_records"}],"publisher":"Atlas Of
+        Living Australia","container":{},"publicationYear":2020,"subjects":[],"contributors":[{"name":"Symes,
+        Peter","nameType":"Personal","givenName":"Peter","familyName":"Symes","affiliation":[],"contributorType":"Distributor","nameIdentifiers":[]}],"dates":[{"date":"2020","dateType":"Issued"}],"language":"en","types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Species
+        information","resourceTypeGeneral":"Text"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[{"description":"ALA
+        occurrence record download","descriptionType":"Other"}],"geoLocations":[],"fundingReferences":[],"url":"https://doi.ala.org.au/doi/e588e18f-23c1-4552-b1dc-efa91cd4c16c","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-3","source":"mds","isActive":true,"state":"findable","reason":null,"created":"2020-01-01T01:17:07.000Z","registered":"2020-01-01T01:17:09.000Z","published":"2020","updated":"2020-01-01T01:17:15.000Z"},"relationships":{"client":{"data":{"id":"ands.centre68","type":"clients"}}}}],"included":[{"id":"ands.centre68","type":"clients","attributes":{"name":"Atlas
+        of Living Australia","symbol":"ANDS.CENTRE68","year":2015,"contactEmail":"services@ands.org.au","alternateName":null,"description":"The
+        Atlas of Living Australia (ALA) combines and provides scientifically collected
+        data from a wide range of sources such as museums, herbaria, community groups,
+        government departments, individuals and universities.  Data records consist
+        of images, literature, molecular DNA data, identification keys, species interaction
+        data, species profile data, nomenclature, source data, conservation indicators,
+        and spatial data.","language":[],"clientType":"repository","domains":"ala.org.au,zoatrack.org","re3data":"https://doi.org/10.17616/R3VG9S","opendoar":null,"issn":{},"url":"https://www.ala.org.au/","created":"2015-09-04T02:11:57.000Z","updated":"2019-12-13T00:21:19.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"ands","type":"providers"}},"prefixes":{"data":[{"id":"10.4226","type":"prefixes"},{"id":"10.26197","type":"prefixes"}]}}},{"id":"rg.rg","type":"clients","attributes":{"name":"ResearchGate","symbol":"RG.RG","year":2016,"contactEmail":"christian.scheb@researchgate.net","alternateName":null,"description":"ResearchGate
+        is a network where 15+ million scientists and researchers worldwide connect
+        to share their work. Researchers can upload data of any type and receive DOIs,
+        detailed statistics and real-time feedback.\r\nIn Data discovery Section of
+        ResearchGate you can explore the added datasets.","language":[],"clientType":"repository","domains":"researchgate.net,rgdoi.net","re3data":"https://doi.org/10.17616/R36H16","opendoar":null,"issn":null,"url":"https://www.researchgate.net/search/data","created":"2016-10-24T09:32:26.000Z","updated":"2018-12-20T13:00:56.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"rg","type":"providers"}},"prefixes":{"data":[{"id":"10.13140","type":"prefixes"}]}}}],"meta":{"total":18655674,"totalPages":2000,"page":1,"states":[{"id":"findable","title":"Findable","count":18655674}],"resourceTypes":[{"id":"dataset","title":"Dataset","count":6612872},{"id":"text","title":"Text","count":5985431},{"id":"image","title":"Image","count":1861865},{"id":"physical-object","title":"PhysicalObject","count":997255},{"id":"collection","title":"Collection","count":654718},{"id":"other","title":"Other","count":597544},{"id":"software","title":"Software","count":116979},{"id":"audiovisual","title":"Audiovisual","count":96718},{"id":"interactive-resource","title":"InteractiveResource","count":44803},{"id":"sound","title":"Sound","count":24256},{"id":"event","title":"Event","count":10652},{"id":"workflow","title":"Workflow","count":5212},{"id":"model","title":"Model","count":3389},{"id":"data-paper","title":"DataPaper","count":1951},{"id":"film","title":"Film","count":1603}],"created":[{"id":"2011","title":"2011","count":378891},{"id":"2012","title":"2012","count":628778},{"id":"2013","title":"2013","count":705088},{"id":"2014","title":"2014","count":1417837},{"id":"2015","title":"2015","count":1828880},{"id":"2016","title":"2016","count":2183710},{"id":"2017","title":"2017","count":3011725},{"id":"2018","title":"2018","count":3592690},{"id":"2019","title":"2019","count":4908010},{"id":"2020","title":"2020","count":65}],"registered":[{"id":"2004","title":"2004","count":21},{"id":"2005","title":"2005","count":99103},{"id":"2006","title":"2006","count":70301},{"id":"2007","title":"2007","count":33870},{"id":"2008","title":"2008","count":24013},{"id":"2009","title":"2009","count":76398},{"id":"2010","title":"2010","count":331477},{"id":"2011","title":"2011","count":152630},{"id":"2012","title":"2012","count":457593},{"id":"2013","title":"2013","count":470890},{"id":"2014","title":"2014","count":1415528},{"id":"2015","title":"2015","count":1828011},{"id":"2016","title":"2016","count":2181687},{"id":"2017","title":"2017","count":3011563},{"id":"2018","title":"2018","count":3561022},{"id":"2019","title":"2019","count":3798865},{"id":"2020","title":"2020","count":65}],"providers":[{"id":"ethz","title":"ETH
+        Zurich","count":2091426},{"id":"cern","title":"CERN - European Organization
+        for Nuclear Research","count":1510413},{"id":"figshare","title":"figshare","count":1465980},{"id":"tib","title":"German
+        National Library of Science and Technology","count":1309013},{"id":"crossref","title":"Crossref","count":1141046},{"id":"fao","title":"FAO","count":905800},{"id":"ccdc","title":"Cambridge
+        Crystallographic Data Centre","count":823803},{"id":"gesis","title":"GESIS
+        Leibniz Institute for the Social Sciences","count":779112},{"id":"rg","title":"ResearchGate","count":751522},{"id":"gbif","title":"Global
+        Biodiversity Information Facility","count":708510},{"id":"estdoi","title":"Tartu
+        University","count":692054},{"id":"cul","title":"Columbia University Libraries","count":614035},{"id":"gdcc","title":"The
+        Global Dataverse Community Consortium (GDCC)","count":532492},{"id":"cisti","title":"National
+        Research Council Canada","count":516581},{"id":"bl","title":"The British Library","count":510498}],"clients":[{"id":"cern.zenodo","title":"Zenodo","count":1391637},{"id":"figshare.ars","title":"figshare
+        Academic Research System","count":1375882},{"id":"crossref.citations","title":"Crossref
+        Citations","count":1141046},{"id":"fao.itpgrfa","title":"International Treaty
+        on Plant Genetic Resources for Food and Agriculture","count":905800},{"id":"ccdc.csd","title":"The
+        Cambridge Structural Database","count":823803},{"id":"ethz.seals","title":"E-Periodica","count":799020},{"id":"rg.rg","title":"ResearchGate","count":751522},{"id":"gbif.gbif","title":"Global
+        Biodiversity Information Facility","count":707341},{"id":"estdoi.bio","title":"Plutof.  Data
+        Management and Publishing Platform","count":686358},{"id":"cul.columbia","title":"Columbia
+        University Libraries","count":586233},{"id":"ethz.epics-ba","title":"E-Pics
+        Bildarchiv","count":524532},{"id":"gdcc.harvard-dv","title":"Harvard IQSS
+        Dataverse","count":494033},{"id":"usc.dl","title":"University of Southern
+        California Digital Library","count":455126},{"id":"tib.pangaea","title":"PANGAEA","count":379385},{"id":"gesis.die","title":"Deutsches
+        Institut für Erwachsenenbildung","count":373193}],"affiliations":[{"id":"https://ror.org/041kmwe10","title":"Imperial
+        College London","count":12570},{"id":"https://ror.org/05dxps055","title":"California
+        Institute of Technology","count":4826},{"id":"https://ror.org/04zjtrb98","title":"Old
+        Dominion University","count":863},{"id":"https://ror.org/00pggkr55","title":"Centre
+        for Ecology and Hydrology","count":673},{"id":"https://ror.org/00pjdza24","title":"University
+        of California System","count":533},{"id":"https://ror.org/052gg0110","title":"University
+        of Oxford","count":438},{"id":"https://ror.org/02feahw73","title":"French
+        National Centre for Scientific Research","count":399},{"id":"https://ror.org/03rmrcq20","title":"University
+        of British Columbia","count":355},{"id":"https://ror.org/05bnh6r87","title":"Cornell
+        University","count":332},{"id":"https://ror.org/03yghzc09","title":"University
+        of Exeter","count":331},{"id":"https://ror.org/02y3ad647","title":"University
+        of Florida","count":309},{"id":"https://ror.org/048a87296","title":"Uppsala
+        University","count":303},{"id":"https://ror.org/05rrcem69","title":"University
+        of California, Davis","count":297},{"id":"https://ror.org/02k3smh20","title":"University
+        of Kentucky","count":291},{"id":"https://ror.org/02crff812","title":"University
+        of Zurich","count":283}],"prefixes":[{"id":"10.5281","title":"10.5281","count":1391637},{"id":"10.6084","title":"10.6084","count":1375898},{"id":"10.18730","title":"10.18730","count":905795},{"id":"10.5517","title":"10.5517","count":816115},{"id":"10.5169","title":"10.5169","count":799020},{"id":"10.13140","title":"10.13140","count":751522},{"id":"10.15468","title":"10.15468","count":707315},{"id":"10.15156","title":"10.15156","count":686358},{"id":"10.7916","title":"10.7916","count":586233},{"id":"10.3932","title":"10.3932","count":524532},{"id":"10.7910","title":"10.7910","count":494033},{"id":"10.25549","title":"10.25549","count":455126},{"id":"10.1594","title":"10.1594","count":434803},{"id":"10.12764","title":"10.12764","count":373193},{"id":"10.6068","title":"10.6068","count":322767}],"certificates":[],"schemaVersions":[{"id":"3","title":"Schema
+        3","count":7687472},{"id":"4","title":"Schema 4","count":6950787},{"id":"2.2","title":"Schema
+        2.2","count":470327},{"id":"2.1","title":"Schema 2.1","count":4301}],"sources":[{"id":"mds","title":"Mds","count":7463621},{"id":"levriero","title":"Levriero","count":1142355},{"id":"ez","title":"Ez","count":550310},{"id":"legacy","title":"Legacy","count":80493},{"id":"fabricaForm","title":"Fabrica
+        Form","count":39741},{"id":"fabrica","title":"Fabrica","count":24468}],"linkChecksStatus":[{"id":"200","title":"200","count":887084},{"id":"404","title":"404","count":8147},{"id":"429","title":"429","count":4797},{"id":"400","title":"400","count":4384},{"id":"503","title":"503","count":2346},{"id":"403","title":"403","count":2044},{"id":"500","title":"500","count":1732},{"id":"502","title":"502","count":536},{"id":"410","title":"410","count":331},{"id":"401","title":"401","count":202},{"id":"504","title":"504","count":149},{"id":"402","title":"402","count":19},{"id":"405","title":"405","count":2},{"id":"302","title":"302","count":1},{"id":"501","title":"501","count":1}],"linksChecked":34162,"linksWithSchemaOrg":[{"id":"0","title":"0","count":929357},{"id":"1","title":"1","count":96321}],"linkChecksSchemaOrgId":61451,"linkChecksDcIdentifier":216335,"linkChecksCitationDoi":0,"subjects":[{"id":"Plant
+        Genetic Resource for Food and Agriculture","title":"Plant Genetic Resource
+        For Food And Agriculture","count":905795},{"id":"Crystallography","title":"Crystallography","count":825207},{"id":"Cell
+        Parameters","title":"Cell Parameters","count":823803},{"id":"Crystal System","title":"Crystal
+        System","count":823803},{"id":"Space Group","title":"Space Group","count":823803},{"id":"Crystal
+        Structure","title":"Crystal Structure","count":823731},{"id":"Experimental
+        3D Coordinates","title":"Experimental 3 D Coordinates","count":823684},{"id":"Biodiversity","title":"Biodiversity","count":780304},{"id":"Taxonomy","title":"Taxonomy","count":778053},{"id":"biodiversity","title":"Biodiversity","count":666568},{"id":"GBIF","title":"Gbif","count":656943},{"id":"species
+        occurrences","title":"Species Occurrences","count":656903},{"id":"Terrestrial","title":"Terrestrial","count":541274},{"id":"Herbarium","title":"Herbarium","count":541254},{"id":"69999
+        Biological Sciences not elsewhere classified","title":"69999 Biological Sciences
+        Not Elsewhere Classified","count":409409}]},"links":{"self":"https://api.datacite.org/dois?page%5Bsize%5D=5&page%5Bnumber%5D=1","next":"https://api.datacite.org/dois?page%5Bnumber%5D=2&page%5Bsize%5D=5"}}'
+  recorded_at: 2020-01-01 01:47:01 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

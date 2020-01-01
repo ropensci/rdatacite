@@ -1,27 +1,28 @@
 {
   "@context": [
-    "http://purl.org/codemeta/2.0",
+    "https://doi.org/10.5063/schema/codemeta-2.0",
     "http://schema.org"
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "rdatacite",
-  "description": "Client for the web service methods provided\n    by 'DataCite' (<https://www.datacite.org/>), including functions to interface with\n    their 'OAI-PMH' 'metadata' service, and a 'RESTful' search API. The API\n    is backed by 'SOLR', allowing expressive queries, including faceting,\n    statistics on variables, and 'more-like-this' queries.",
-  "name": "rdatacite: 'DataCite' Client for 'OAI-PMH' Methods and their Search API",
+  "description": "Client for the web service methods provided\n    by 'DataCite' (<https://www.datacite.org/>), including functions to interface with\n    their 'RESTful' search API. The API is backed by 'Elasticsearch', allowing\n    expressive queries, including faceting.",
+  "name": "rdatacite: Client for the 'DataCite' API",
   "codeRepository": "https://github.com/ropensci/rdatacite",
+  "relatedLink": "https://docs.ropensci.org/rdatacite",
   "issueTracker": "https://github.com/ropensci/rdatacite/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.4.2",
+  "version": "0.4.9.92",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.0",
+    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.0 Patched (2019-04-30 r76446)",
+  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
-    "name": "Central R Archive Network (CRAN)",
+    "name": "Comprehensive R Archive Network (CRAN)",
     "url": "https://cran.r-project.org"
   },
   "author": [
@@ -33,6 +34,9 @@
       "@id": "https://orcid.org/0000-0003-1444-9135"
     }
   ],
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {},
   "maintainer": [
     {
       "@type": "Person",
@@ -95,32 +99,6 @@
   "softwareRequirements": [
     {
       "@type": "SoftwareApplication",
-      "identifier": "oai",
-      "name": "oai",
-      "version": ">= 0.2.2",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=oai"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "solrium",
-      "name": "solrium",
-      "version": ">= 1.0.0",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=solrium"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
       "provider": {
@@ -143,17 +121,26 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=crul"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "tibble",
+      "name": "tibble",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tibble"
     }
   ],
-  "contIntegration": "https://travis-ci.org/ropensci/rdatacite",
-  "releaseNotes": "https://github.com/ropensci/rdatacite/blob/master/NEWS.md",
-  "readme": "https://github.com/ropensci/rdatacite/blob/master/README.md",
-  "fileSize": "199.16KB",
   "applicationCategory": "Data",
   "isPartOf": "https://ropensci.org",
-  "keywords": ["data", "scholarly", "dataset", "https", "API", "web-services", "solr", "datacite", "oai-pmh", "metadata", "api-wrapper", "rstats", "r", "identifier", "r-package"],
-  "developmentStatus": "http://www.repostatus.org/#active",
-  "contributor": {},
-  "copyrightHolder": {},
-  "funder": {}
+  "keywords": ["data", "scholarly", "dataset", "https", "API", "web-services", "datacite", "oai-pmh", "metadata", "api-wrapper", "rstats", "r", "solr", "identifier", "r-package"],
+  "releaseNotes": "https://github.com/ropensci/rdatacite/blob/master/NEWS.md",
+  "readme": "https://github.com/ropensci/rdatacite/blob/master/README.md",
+  "fileSize": "32.781KB",
+  "contIntegration": ["https://travis-ci.org/ropensci/rdatacite", "https://codecov.io/github/ropensci/rdatacite?branch=master"],
+  "developmentStatus": "http://www.repostatus.org/#active"
 }

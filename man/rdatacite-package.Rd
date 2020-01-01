@@ -8,44 +8,20 @@
 \description{
 DataCite R client.
 }
-\section{OAI-PMH functions}{
-
-\itemize{
-\item \code{\link[=dc_oai_getrecord]{dc_oai_getrecord()}} - Get records
-\item \code{\link[=dc_oai_identify]{dc_oai_identify()}} - identify the OAI-PMH service
-\item \code{\link[=dc_oai_listidentifiers]{dc_oai_listidentifiers()}} - List identifiers
-\item \code{\link[=dc_oai_listmetadataformats]{dc_oai_listmetadataformats()}} - List metadata formats
-\item \code{\link[=dc_oai_listrecords]{dc_oai_listrecords()}} - List records
-\item \code{\link[=dc_oai_listsets]{dc_oai_listsets()}} - List sets
-}
-}
-
-\section{Search functions (Solr based)}{
-
-\itemize{
-\item \code{\link[=dc_search]{dc_search()}} - General search, only returns documents
-\item \code{\link[=dc_facet]{dc_facet()}} - Faceting only (w/o general search)
-\item \code{\link[=dc_mlt]{dc_mlt()}} - More like this (w/o general search)
-\item \code{\link[=dc_stats]{dc_stats()}} - Stats search (w/o general search)
-}
-}
-
 \section{REST API functions}{
 
 \itemize{
-\item \code{\link[=dc_data_center]{dc_data_center()}} - Get a single data center
-\item \code{\link[=dc_data_centers]{dc_data_centers()}} - Search data centers
-\item \code{\link[=dc_member]{dc_member()}} - Get single DataCite member
-\item \code{\link[=dc_members]{dc_members()}} - Search DataCite members
-\item \code{\link[=dc_work]{dc_work()}} - Get single works
-\item \code{\link[=dc_works]{dc_works()}} - Search works
+\item \code{\link[=dc_activities]{dc_activities()}} - xxx
+\item \code{\link[=dc_client_prefixes]{dc_client_prefixes()}} - xxx
+\item \code{\link[=dc_clients]{dc_clients()}} - xxx
+\item \code{\link[=dc_dois]{dc_dois()}} - xxx
+\item \code{\link[=dc_events]{dc_events()}} - xxx
+\item \code{\link[=dc_prefixes]{dc_prefixes()}} - xxx
+\item \code{\link[=dc_provider_prefixes]{dc_provider_prefixes()}} - xxx
+\item \code{\link[=dc_providers]{dc_providers()}} - xxx
+\item \code{\link[=dc_reports]{dc_reports()}} - xxx
+\item \code{\link[=dc_status]{dc_status()}} - xxx
 }
-}
-
-\section{Vignettes}{
-
-
-Coming soon...
 }
 
 \author{

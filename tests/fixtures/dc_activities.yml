@@ -1,0 +1,257 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/activities?page%5Bsize%5D=10&page%5Bnumber%5D=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/4.3 crul/0.9.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/vnd.api+json
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: max-age=0, private, must-revalidate
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json; charset=utf-8
+      date: Tue, 31 Dec 2019 22:44:10 GMT
+      etag: W/"10cb9398c710bf57ebd487a1f4884ccf"
+      server: nginx/1.14.0 + Phusion Passenger 6.0.4
+      status:
+      - HTTP/1.1 200 OK
+      - 200 OK
+      transfer-encoding: chunked
+      vary: Accept-Encoding, Origin
+      x-anonymous-consumer: 'true'
+      x-powered-by: Phusion Passenger 6.0.4
+      x-request-id: a21672bd-8188-45f0-80a0-9d4c60e504ff
+      x-runtime: '0.506537'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"data":[{"id":"44edefe5-f7ed-4ecb-8a40-207535460a98","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/44edefe5-f7ed-4ecb-8a40-207535460a98","prov:generatedAtTime":"2019-12-31T22:43:25.934Z","prov:wasDerivedFrom":"https://doi.org/10.17605/osf.io/xh7um","prov:wasAttributedTo":"https://api.datacite.org/clients/cos.osf","action":"update","version":2,"changes":{"url":[null,"https://osf.io/xh7um/"],"aasm_state":["draft","findable"],"schema_version":["http://datacite.org/schema/kernel-4",null]}},"relationships":{"doi":{"data":{"id":"10.17605/osf.io/xh7um","type":"dois"}}}},{"id":"752e618a-3d7c-4a12-88c0-d5015fa66119","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/752e618a-3d7c-4a12-88c0-d5015fa66119","prov:generatedAtTime":"2019-12-31T22:43:25.381Z","prov:wasDerivedFrom":"https://doi.org/10.17605/osf.io/xh7um","prov:wasAttributedTo":"https://api.datacite.org/clients/cos.osf","action":"create","version":1,"changes":{"doi":"10.17605/OSF.IO/XH7UM","url":null,"dates":[{"date":"2019","dateType":"Issued"}],"sizes":[],"types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Project","resourceTypeGeneral":"Text"},"reason":null,"source":"mds","titles":[{"title":"Attention
+        Bias and Expectancy Biases in Phylogenetic and Ontogenetic Stimuli"}],"formats":[],"creators":[{"name":"Abado,
+        Elinor","nameType":"Personal","givenName":"Elinor","familyName":"Abado"},{"name":"Okon-Singer,
+        Hadas","nameType":"Personal","givenName":"Hadas","familyName":"Okon-Singer"}],"language":null,"subjects":[],"container":{},"publisher":"Open
+        Science Framework","aasm_state":"draft","regenerate":null,"content_url":null,"identifiers":[{"identifier":"https://doi.org/10.17605/osf.io/xh7um","identifierType":"DOI"}],"rights_list":[],"contributors":[],"descriptions":[],"landing_page":null,"version_info":null,"geo_locations":[],"only_validate":false,"schema_version":"http://datacite.org/schema/kernel-4","should_validate":true,"publication_year":2019,"funding_references":[],"related_identifiers":[]}},"relationships":{"doi":{"data":{"id":"10.17605/osf.io/xh7um","type":"dois"}}}},{"id":"93b18314-7101-4ff6-a712-d5c81eb99f23","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/93b18314-7101-4ff6-a712-d5c81eb99f23","prov:generatedAtTime":"2019-12-31T22:40:13.437Z","prov:wasDerivedFrom":"https://doi.org/10.15468/dl.rznc9k","prov:wasAttributedTo":"https://api.datacite.org/clients/gbif.gbif","action":"create","version":1,"changes":{"doi":"10.15468/DL.RZNC9K","url":"https://www.gbif.org/occurrence/download/0031539-191105090559680","dates":[{"date":"2019-12-31","dateType":"Created"},{"date":"2019-12-31","dateType":"Updated"},{"date":"2019","dateType":"Issued"}],"sizes":["12472"],"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceTypeGeneral":"Dataset"},"reason":null,"source":null,"titles":[{"title":"Occurrence
+        Download"}],"formats":["Darwin Core Archive"],"creators":[{"name":"Occdownload
+        Gbif.Org","nameType":"Organizational","affiliation":[],"nameIdentifiers":[]}],"language":null,"subjects":[{"lang":"eng","subject":"GBIF"},{"lang":"eng","subject":"biodiversity"},{"lang":"eng","subject":"species
+        occurrences"}],"container":{},"publisher":"The Global Biodiversity Information
+        Facility","aasm_state":"findable","regenerate":null,"content_url":null,"identifiers":[{"identifier":"https://doi.org/10.15468/dl.rznc9k","identifierType":"DOI"},{"identifier":"0031539-191105090559680","identifierType":"GBIF"}],"rights_list":[{"rights":"Creative
+        Commons Attribution (CC-BY) 4.0","rightsUri":"http://creativecommons.org/licenses/by/4.0/legalcode"}],"contributors":[],"descriptions":[{"lang":"eng","description":"A
+        dataset containing 32 species occurrences available in GBIF matching the query:
+        { \"DatasetKey\" : [ \"is (Table 1) Proportion of Toxoplasma gondii seropositive
+        arctic foxes (Alopex lagopus) by age group and geographic area\" ] } The dataset
+        includes 32 records from 1 constituent datasets: 32 records from (Table 1)
+        Proportion of Toxoplasma gondii seropositive arctic foxes (Alopex lagopus)
+        by age group and geographic area. Data from some individual datasets included
+        in this download may be licensed under less restrictive terms.","descriptionType":"Abstract"}],"landing_page":null,"version_info":null,"geo_locations":[],"only_validate":false,"schema_version":"http://datacite.org/schema/kernel-4","should_validate":false,"publication_year":2019,"funding_references":[],"related_identifiers":[{"relationType":"References","relatedIdentifier":"10.1594/pangaea.818322","relatedIdentifierType":"DOI"}]}},"relationships":{"doi":{"data":{"id":"10.15468/dl.rznc9k","type":"dois"}}}},{"id":"43a72d4a-54f4-4606-9ac1-4ed0b998df1f","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/43a72d4a-54f4-4606-9ac1-4ed0b998df1f","prov:generatedAtTime":"2019-12-31T22:37:15.466Z","prov:wasDerivedFrom":"https://doi.org/10.5281/zenodo.3593988","prov:wasAttributedTo":"https://api.datacite.org/clients/cern.zenodo","action":"update","version":6,"changes":{"schema_version":["http://datacite.org/schema/kernel-4",null]}},"relationships":{"doi":{"data":{"id":"10.5281/zenodo.3593988","type":"dois"}}}},{"id":"226035b9-e47f-4909-bf73-fa6be2e7af48","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/226035b9-e47f-4909-bf73-fa6be2e7af48","prov:generatedAtTime":"2019-12-31T22:37:15.202Z","prov:wasDerivedFrom":"https://doi.org/10.5281/zenodo.3593988","prov:wasAttributedTo":"https://api.datacite.org/clients/cern.zenodo","action":"update","version":5,"changes":{"container":[{},{"type":"DataRepository","identifier":"https://zenodo.org/communities/uniseco-h2020","identifierType":"URL"}],"schema_version":[null,"http://datacite.org/schema/kernel-4"],"related_identifiers":[[{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.3593989","relatedIdentifierType":"DOI"}],[{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.3593989","relatedIdentifierType":"DOI"},{"relationType":"IsPartOf","relatedIdentifier":"https://zenodo.org/communities/uniseco-h2020","relatedIdentifierType":"URL"}]]}},"relationships":{"doi":{"data":{"id":"10.5281/zenodo.3593988","type":"dois"}}}},{"id":"0bcf06ff-fb0e-40f5-83e7-f5c5ab8b1fa5","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/0bcf06ff-fb0e-40f5-83e7-f5c5ab8b1fa5","prov:generatedAtTime":"2019-12-31T22:37:14.718Z","prov:wasDerivedFrom":"https://doi.org/10.5281/zenodo.3593989","prov:wasAttributedTo":"https://api.datacite.org/clients/cern.zenodo","action":"update","version":6,"changes":{"schema_version":["http://datacite.org/schema/kernel-4",null]}},"relationships":{"doi":{"data":{"id":"10.5281/zenodo.3593989","type":"dois"}}}},{"id":"8bd67b9e-0c73-4f6c-9a00-774c704ec1bc","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/8bd67b9e-0c73-4f6c-9a00-774c704ec1bc","prov:generatedAtTime":"2019-12-31T22:37:14.438Z","prov:wasDerivedFrom":"https://doi.org/10.5281/zenodo.3593989","prov:wasAttributedTo":"https://api.datacite.org/clients/cern.zenodo","action":"update","version":5,"changes":{"container":[{},{"type":"DataRepository","identifier":"https://zenodo.org/communities/uniseco-h2020","identifierType":"URL"}],"schema_version":[null,"http://datacite.org/schema/kernel-4"],"related_identifiers":[[{"relationType":"IsVersionOf","relatedIdentifier":"10.5281/zenodo.3593988","relatedIdentifierType":"DOI"}],[{"relationType":"IsVersionOf","relatedIdentifier":"10.5281/zenodo.3593988","relatedIdentifierType":"DOI"},{"relationType":"IsPartOf","relatedIdentifier":"https://zenodo.org/communities/uniseco-h2020","relatedIdentifierType":"URL"}]]}},"relationships":{"doi":{"data":{"id":"10.5281/zenodo.3593989","type":"dois"}}}},{"id":"168aae7e-af8f-467b-8fd7-7ba134feb814","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/168aae7e-af8f-467b-8fd7-7ba134feb814","prov:generatedAtTime":"2019-12-31T22:36:22.975Z","prov:wasDerivedFrom":"https://doi.org/10.5281/zenodo.786253","prov:wasAttributedTo":"https://api.datacite.org/clients/cern.zenodo","action":"update","version":3,"changes":{"schema_version":["http://datacite.org/schema/kernel-4",null]}},"relationships":{"doi":{"data":{"id":"10.5281/zenodo.786253","type":"dois"}}}},{"id":"5d633c59-446e-4f52-b038-07f6c1525d84","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/5d633c59-446e-4f52-b038-07f6c1525d84","prov:generatedAtTime":"2019-12-31T22:36:22.658Z","prov:wasDerivedFrom":"https://doi.org/10.5281/zenodo.786253","prov:wasAttributedTo":"https://api.datacite.org/clients/cern.zenodo","action":"update","version":2,"changes":{"source":[null,"mds"],"titles":[[{"title":"Correction
+        To The Traditional Ideal Rocket Thrust Equation"}],[{"title":"Correction to
+        the Traditional Ideal Rocket Thrust Equation"}]],"creators":[[{"name":"Hedemann,
+        Samuel R.","nameType":"Personal","givenName":"Samuel R.","familyName":"Hedemann","affiliation":[]}],[{"name":"Hedemann,
+        Samuel R.","nameType":"Personal","givenName":"Samuel R.","familyName":"Hedemann"}]],"identifiers":[[{"identifier":"https://doi.org/10.5281/zenodo.786253","identifierType":"DOI"},{"identifier":"https://zenodo.org/record/581372","identifierType":"URL"}],[{"identifier":"https://doi.org/10.5281/zenodo.786253","identifierType":"DOI"},{"identifier":"https://zenodo.org/record/3596173","identifierType":"URL"}]],"rights_list":[[{"rights":"Creative
+        Commons Attribution 4.0","rightsUri":"https://creativecommons.org/licenses/by/4.0"},{"rights":"Open
+        Access","rightsUri":"info:eu-repo/semantics/openAccess"}],[{"rights":"Creative
+        Commons Attribution 4.0 International","rightsUri":"http://creativecommons.org/licenses/by/4.0/legalcode"},{"rights":"Open
+        Access","rightsUri":"info:eu-repo/semantics/openAccess"}]],"descriptions":[[{"description":"The
+        accepted ideal rocket equation for thrust, found in countless textbooks, is
+        proved to be incorrect. The correct replacement is then presented and shown
+        to obey the full form of Newton''s second law \\(F={\\dot p}\\) , so the sum
+        of external forces on the rocket is the time derivative of its momentum. The
+        accepted velocity equation is correct, which may explain why this error has
+        been overlooked.","descriptionType":"Abstract"}],[{"description":"The accepted
+        ideal rocket equation for thrust, widely used in rocketry literature, is proved
+        to be incorrect. The correct replacement is then presented and shown to obey
+        the full form of Newton''s second law \\(F={\\dot p}\\) , so the sum of external
+        forces on the rocket is the time derivative of its momentum. The accepted
+        velocity equation is correct, which may explain why this error has been overlooked.","descriptionType":"Abstract"},{"description":"v2:
+        Added two new sections proving the same result by alternative methods. v3:
+        Added the case of variable relative velocity to the Conclusions; explained
+        how to use Newton''s second law to include gravity and other forces since
+        it is commonly misused or ignored; added minor elaborations. Original results
+        unchanged.","descriptionType":"Other"}]],"related_identifiers":[[{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.581372","relatedIdentifierType":"DOI"},{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.892241","relatedIdentifierType":"DOI"}],[{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.581372","relatedIdentifierType":"DOI"},{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.892241","relatedIdentifierType":"DOI"},{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.3596173","relatedIdentifierType":"DOI"}]]}},"relationships":{"doi":{"data":{"id":"10.5281/zenodo.786253","type":"dois"}}}},{"id":"a57564d2-7c5a-42d2-b21c-39592e7b272f","type":"activities","attributes":{"prov:wasGeneratedBy":"https://api.datacite.org/activities/a57564d2-7c5a-42d2-b21c-39592e7b272f","prov:generatedAtTime":"2019-12-31T22:36:22.212Z","prov:wasDerivedFrom":"https://doi.org/10.5281/zenodo.3596173","prov:wasAttributedTo":"https://api.datacite.org/clients/cern.zenodo","action":"update","version":2,"changes":{"url":[null,"https://zenodo.org/record/3596173"],"aasm_state":["draft","findable"],"schema_version":["http://datacite.org/schema/kernel-4",null]}},"relationships":{"doi":{"data":{"id":"10.5281/zenodo.3596173","type":"dois"}}}}],"included":[{"id":"10.17605/osf.io/xh7um","type":"dois","attributes":{"doi":"10.17605/osf.io/xh7um","identifiers":[{"identifier":"https://doi.org/10.17605/osf.io/xh7um","identifierType":"DOI"}],"creators":[{"name":"Abado,
+        Elinor","nameType":"Personal","givenName":"Elinor","familyName":"Abado","affiliation":[]},{"name":"Okon-Singer,
+        Hadas","nameType":"Personal","givenName":"Hadas","familyName":"Okon-Singer","affiliation":[]}],"titles":[{"title":"Attention
+        Bias and Expectancy Biases in Phylogenetic and Ontogenetic Stimuli"}],"publisher":"Open
+        Science Framework","container":{},"publicationYear":2019,"subjects":[],"contributors":[],"dates":[{"date":"2019","dateType":"Issued"}],"language":null,"types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Project","resourceTypeGeneral":"Text"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"url":"https://osf.io/xh7um/","contentUrl":null,"metadataVersion":0,"schemaVersion":null,"source":"mds","isActive":true,"state":"findable","reason":null,"created":"2019-12-31T22:43:25.000Z","registered":null,"published":"2019","updated":"2019-12-31T22:43:25.000Z"},"relationships":{"client":{"data":{"id":"cos.osf","type":"clients"}}}},{"id":"10.15468/dl.rznc9k","type":"dois","attributes":{"doi":"10.15468/dl.rznc9k","identifiers":[{"identifier":"https://doi.org/10.15468/dl.rznc9k","identifierType":"DOI"},{"identifier":"0031539-191105090559680","identifierType":"GBIF"}],"creators":[{"name":"Occdownload
+        Gbif.Org","nameType":"Organizational","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"Occurrence
+        Download"}],"publisher":"The Global Biodiversity Information Facility","container":{},"publicationYear":2019,"subjects":[{"lang":"eng","subject":"GBIF"},{"lang":"eng","subject":"biodiversity"},{"lang":"eng","subject":"species
+        occurrences"}],"contributors":[],"dates":[{"date":"2019-12-31","dateType":"Created"},{"date":"2019-12-31","dateType":"Updated"},{"date":"2019","dateType":"Issued"}],"language":null,"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[{"relationType":"References","relatedIdentifier":"10.1594/pangaea.818322","relatedIdentifierType":"DOI"}],"sizes":["12472"],"formats":["Darwin
+        Core Archive"],"version":null,"rightsList":[{"rights":"Creative Commons Attribution
+        (CC-BY) 4.0","rightsUri":"http://creativecommons.org/licenses/by/4.0/legalcode"}],"descriptions":[{"lang":"eng","description":"A
+        dataset containing 32 species occurrences available in GBIF matching the query:
+        { \"DatasetKey\" : [ \"is (Table 1) Proportion of Toxoplasma gondii seropositive
+        arctic foxes (Alopex lagopus) by age group and geographic area\" ] } The dataset
+        includes 32 records from 1 constituent datasets: 32 records from (Table 1)
+        Proportion of Toxoplasma gondii seropositive arctic foxes (Alopex lagopus)
+        by age group and geographic area. Data from some individual datasets included
+        in this download may be licensed under less restrictive terms.","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[],"url":"https://www.gbif.org/occurrence/download/0031539-191105090559680","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-4","source":null,"isActive":true,"state":"findable","reason":null,"created":"2019-12-31T22:40:13.000Z","registered":null,"published":"2019","updated":"2019-12-31T22:40:13.000Z"},"relationships":{"client":{"data":{"id":"gbif.gbif","type":"clients"}}}},{"id":"10.5281/zenodo.3593988","type":"dois","attributes":{"doi":"10.5281/zenodo.3593988","identifiers":[{"identifier":"https://doi.org/10.5281/zenodo.3593988","identifierType":"DOI"},{"identifier":"https://zenodo.org/record/3593989","identifierType":"URL"}],"creators":[{"name":"Landert,
+        Jan","nameType":"Personal","givenName":"Jan","familyName":"Landert","affiliation":["FiBL"]},{"name":"Pfeiffer,
+        Catherine","nameType":"Personal","givenName":"Catherine","familyName":"Pfeiffer","affiliation":["FiBL"]},{"name":"Carolus,
+        Johannes","nameType":"Personal","givenName":"Johannes","familyName":"Carolus","affiliation":["Thuenen
+        Institute"]},{"name":"Albanito, Fabrizio","nameType":"Personal","givenName":"Fabrizio","familyName":"Albanito","affiliation":["University
+        of Aberdeen"]},{"name":"Mueller, Adrian","nameType":"Personal","givenName":"Adrian","familyName":"Mueller","affiliation":["FiBL"]},{"name":"Baumgart,
+        Lukas","nameType":"Personal","givenName":"Lukas","familyName":"Baumgart","affiliation":["FiBL"]},{"name":"Blockeel,
+        Johan","nameType":"Personal","givenName":"Johan","familyName":"Blockeel","affiliation":["FiBL"]},{"name":"Schwarz,
+        Gerald","nameType":"Personal","givenName":"Gerald","familyName":"Schwarz","affiliation":["Thuenen
+        Institute"]},{"name":"Waisshaidinger, Rainer","nameType":"Personal","givenName":"Rainer","familyName":"Waisshaidinger","affiliation":["University
+        of Natural Resources and Life Sciences, Vienna"]},{"name":"Bartel-Kratochvil,
+        Ruth","nameType":"Personal","givenName":"Ruth","familyName":"Bartel-Kratochvil","affiliation":["University
+        of Natural Resources and Life Sciences, Vienna"]},{"name":"Hollaus, Alexander","nameType":"Personal","givenName":"Alexander","familyName":"Hollaus","affiliation":["University
+        of Natural Resources and Life Sciences, Vienna"]},{"name":"Hrabalová, Andrea","nameType":"Personal","givenName":"Andrea","familyName":"Hrabalová","affiliation":["Bioinstitut"]},{"name":"Helin,
+        Janne","nameType":"Personal","givenName":"Janne","familyName":"Helin","affiliation":["LUKE"]},{"name":"Aakkula,
+        Jyrki","nameType":"Personal","givenName":"Jyrki","familyName":"Aakkula","affiliation":["LUKE"]},{"name":"Svels,
+        Kristina","nameType":"Personal","givenName":"Kristina","familyName":"Svels","affiliation":["LUKE"]},{"name":"Guisepelli,
+        Emmanuel","nameType":"Personal","givenName":"Emmanuel","familyName":"Guisepelli","affiliation":["ISARA
+        Lyon"]},{"name":"Fleury, Philippe","nameType":"Personal","givenName":"Philippe","familyName":"Fleury","affiliation":["ISARA
+        Lyon"]},{"name":"Vincent, Audrey","nameType":"Personal","givenName":"Audrey","familyName":"Vincent","affiliation":["ISARA
+        Lyon"]},{"name":"Smyrniotopoulou, Alexandra","nameType":"Personal","givenName":"Alexandra","familyName":"Smyrniotopoulou","affiliation":["Agricultural
+        University of Athens"]},{"name":"Vlahos, George","nameType":"Personal","givenName":"George","familyName":"Vlahos","affiliation":["Agricultural
+        University of Athens"]},{"name":"Iordanidis, Yiannis","nameType":"Personal","givenName":"Yiannis","familyName":"Iordanidis","affiliation":["Agricultural
+        University of Athens"]},{"name":"Szilágyi, Alfred","nameType":"Personal","givenName":"Alfred","familyName":"Szilágyi","affiliation":["Geonardo"]},{"name":"Podmaniczky,
+        Laszlo","nameType":"Personal","givenName":"Laszlo","familyName":"Podmaniczky","affiliation":["Geonardo"]},{"name":"Balázs,
+        Katalin","nameType":"Personal","givenName":"Katalin","familyName":"Balázs","affiliation":["Geonardo"]},{"name":"Galioto,
+        Francesco","nameType":"Personal","givenName":"Francesco","familyName":"Galioto","affiliation":["CREA"]},{"name":"Longhitano,
+        Davide","nameType":"Personal","givenName":"Davide","familyName":"Longhitano","affiliation":["CREA"]},{"name":"Rossignolo,
+        Letizia","nameType":"Personal","givenName":"Letizia","familyName":"Rossignolo","affiliation":["CREA"]},{"name":"Povellato,
+        Andrea","nameType":"Personal","givenName":"Andrea","familyName":"Povellato","affiliation":["CREA"]},{"name":"Zīlāns,
+        Andis","nameType":"Personal","givenName":"Andis","familyName":"Zīlāns","affiliation":["Baltic
+        Environmental Forum Latvia"]},{"name":"Jegelevičius, Gražvydas","nameType":"Personal","givenName":"Gražvydas","familyName":"Jegelevičius","affiliation":["Baltic
+        Environmental Forum Lithuania"]},{"name":"Frățilă, Mihaela","nameType":"Personal","givenName":"Mihaela","familyName":"Frățilă","affiliation":["WWF
+        Romania"]},{"name":"Iragui Yoldi, Uxue","nameType":"Personal","givenName":"Uxue","familyName":"Iragui
+        Yoldi","affiliation":["Gestion Ambiental de Navarra"]},{"name":"Astrain Massa,
+        Carlos","nameType":"Personal","givenName":"Carlos","familyName":"Astrain Massa","affiliation":["Gestion
+        Ambiental de Navarra"]},{"name":"Bienzobas Adrian, Jon","nameType":"Personal","givenName":"Jon","familyName":"Bienzobas
+        Adrian","affiliation":["INTIA"]},{"name":"Resare Sahlin, Kajsa","nameType":"Personal","givenName":"Kajsa","familyName":"Resare
+        Sahlin","affiliation":["Swedish University of Agricultural Sciences"]},{"name":"Röös,
+        Elin","nameType":"Personal","givenName":"Elin","familyName":"Röös","affiliation":["Swedish
+        University of Agricultural Sciences"]},{"name":"Frick, Rebekka","nameType":"Personal","givenName":"Rebekka","familyName":"Frick","affiliation":["FiBL"]},{"name":"Bircher,
+        Richard","nameType":"Personal","givenName":"Richard","familyName":"Bircher","affiliation":["FiBL"]},{"name":"Aalders,
+        Inge","nameType":"Personal","givenName":"Inge","familyName":"Aalders","affiliation":["James
+        Hutton Institute"]},{"name":"Irvine, Katherine N.","nameType":"Personal","givenName":"Katherine
+        N.","familyName":"Irvine","affiliation":["James Hutton Institute"]},{"name":"Kyle,
+        Carol","nameType":"Personal","givenName":"Carol","familyName":"Kyle","affiliation":["James
+        Hutton Institute"]},{"name":"Miller, David","nameType":"Personal","givenName":"David","familyName":"Miller","affiliation":["James
+        Hutton Institute"]},{"name":"Sanders, Juern","nameType":"Personal","givenName":"Juern","familyName":"Sanders","affiliation":["Thuenen
+        Institute"]},{"name":"Smith, Pete","nameType":"Personal","givenName":"Pete","familyName":"Smith","affiliation":["University
+        of Aberdeen"]}],"titles":[{"title":"Database on the Performance of Current
+        Agro-Ecological Farming Systems (AEFS) as an Input to the Modelling in WP4"}],"publisher":"Zenodo","container":{"type":"DataRepository","identifier":"https://zenodo.org/communities/uniseco-h2020","identifierType":"URL"},"publicationYear":2019,"subjects":[],"contributors":[],"dates":[{"date":"2023-04-30","dateType":"Available"},{"date":"2019-12-16","dateType":"Accepted"},{"date":"2019","dateType":"Issued"}],"language":null,"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.3593989","relatedIdentifierType":"DOI"},{"relationType":"IsPartOf","relatedIdentifier":"https://zenodo.org/communities/uniseco-h2020","relatedIdentifierType":"URL"}],"sizes":[],"formats":[],"version":"2.0","rightsList":[{"rights":"Creative
+        Commons Attribution 4.0 International","rightsUri":"http://creativecommons.org/licenses/by/4.0/legalcode"},{"rights":"Embargoed
+        Access","rightsUri":"info:eu-repo/semantics/embargoedAccess"}],"descriptions":[{"description":"This
+        database contains farm data (e.g. yields) and results (indicators) from assessments
+        with the three decision support tools in the UNISECO case studies: SMART (www.fibl.org/en/themes/smart-en.html),
+        Cool Farm Tool (coolfarmtool.org) and COMPAS (www.thuenen.de). This version
+        (2.0) was developed as a benchmark for the assessment of exemplary cases of
+        how the core dilemmas of agro-ecological transitions may be overcome at farm
+        level and as an input to the modelling at territorial level in WP4. This database
+        was created in the course of the H2020 project UNISECO. The project has received
+        funding from the European Union’s Horizon 2020 research and innovation programme
+        under grant agreement N° 773901.","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[{"awardUri":"info:eu-repo/grantAgreement/EC/H2020/773901/","awardTitle":"Understanding
+        and improving the sustainability of agro-ecological farming systems in the
+        EU","funderName":"European Commission","awardNumber":"773901","funderIdentifier":"https://doi.org/10.13039/501100000780","funderIdentifierType":"Crossref
+        Funder ID"}],"url":"https://zenodo.org/record/3593988","contentUrl":null,"metadataVersion":2,"schemaVersion":null,"source":"mds","isActive":true,"state":"findable","reason":null,"created":"2019-12-27T16:56:32.000Z","registered":"2019-12-27T16:56:33.000Z","published":"2019","updated":"2019-12-31T22:37:15.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}}}},{"id":"10.5281/zenodo.3593989","type":"dois","attributes":{"doi":"10.5281/zenodo.3593989","identifiers":[{"identifier":"https://doi.org/10.5281/zenodo.3593989","identifierType":"DOI"},{"identifier":"https://zenodo.org/record/3593989","identifierType":"URL"}],"creators":[{"name":"Landert,
+        Jan","nameType":"Personal","givenName":"Jan","familyName":"Landert","affiliation":["FiBL"]},{"name":"Pfeiffer,
+        Catherine","nameType":"Personal","givenName":"Catherine","familyName":"Pfeiffer","affiliation":["FiBL"]},{"name":"Carolus,
+        Johannes","nameType":"Personal","givenName":"Johannes","familyName":"Carolus","affiliation":["Thuenen
+        Institute"]},{"name":"Albanito, Fabrizio","nameType":"Personal","givenName":"Fabrizio","familyName":"Albanito","affiliation":["University
+        of Aberdeen"]},{"name":"Mueller, Adrian","nameType":"Personal","givenName":"Adrian","familyName":"Mueller","affiliation":["FiBL"]},{"name":"Baumgart,
+        Lukas","nameType":"Personal","givenName":"Lukas","familyName":"Baumgart","affiliation":["FiBL"]},{"name":"Blockeel,
+        Johan","nameType":"Personal","givenName":"Johan","familyName":"Blockeel","affiliation":["FiBL"]},{"name":"Schwarz,
+        Gerald","nameType":"Personal","givenName":"Gerald","familyName":"Schwarz","affiliation":["Thuenen
+        Institute"]},{"name":"Waisshaidinger, Rainer","nameType":"Personal","givenName":"Rainer","familyName":"Waisshaidinger","affiliation":["University
+        of Natural Resources and Life Sciences, Vienna"]},{"name":"Bartel-Kratochvil,
+        Ruth","nameType":"Personal","givenName":"Ruth","familyName":"Bartel-Kratochvil","affiliation":["University
+        of Natural Resources and Life Sciences, Vienna"]},{"name":"Hollaus, Alexander","nameType":"Personal","givenName":"Alexander","familyName":"Hollaus","affiliation":["University
+        of Natural Resources and Life Sciences, Vienna"]},{"name":"Hrabalová, Andrea","nameType":"Personal","givenName":"Andrea","familyName":"Hrabalová","affiliation":["Bioinstitut"]},{"name":"Helin,
+        Janne","nameType":"Personal","givenName":"Janne","familyName":"Helin","affiliation":["LUKE"]},{"name":"Aakkula,
+        Jyrki","nameType":"Personal","givenName":"Jyrki","familyName":"Aakkula","affiliation":["LUKE"]},{"name":"Svels,
+        Kristina","nameType":"Personal","givenName":"Kristina","familyName":"Svels","affiliation":["LUKE"]},{"name":"Guisepelli,
+        Emmanuel","nameType":"Personal","givenName":"Emmanuel","familyName":"Guisepelli","affiliation":["ISARA
+        Lyon"]},{"name":"Fleury, Philippe","nameType":"Personal","givenName":"Philippe","familyName":"Fleury","affiliation":["ISARA
+        Lyon"]},{"name":"Vincent, Audrey","nameType":"Personal","givenName":"Audrey","familyName":"Vincent","affiliation":["ISARA
+        Lyon"]},{"name":"Smyrniotopoulou, Alexandra","nameType":"Personal","givenName":"Alexandra","familyName":"Smyrniotopoulou","affiliation":["Agricultural
+        University of Athens"]},{"name":"Vlahos, George","nameType":"Personal","givenName":"George","familyName":"Vlahos","affiliation":["Agricultural
+        University of Athens"]},{"name":"Iordanidis, Yiannis","nameType":"Personal","givenName":"Yiannis","familyName":"Iordanidis","affiliation":["Agricultural
+        University of Athens"]},{"name":"Szilágyi, Alfred","nameType":"Personal","givenName":"Alfred","familyName":"Szilágyi","affiliation":["Geonardo"]},{"name":"Podmaniczky,
+        Laszlo","nameType":"Personal","givenName":"Laszlo","familyName":"Podmaniczky","affiliation":["Geonardo"]},{"name":"Balázs,
+        Katalin","nameType":"Personal","givenName":"Katalin","familyName":"Balázs","affiliation":["Geonardo"]},{"name":"Galioto,
+        Francesco","nameType":"Personal","givenName":"Francesco","familyName":"Galioto","affiliation":["CREA"]},{"name":"Longhitano,
+        Davide","nameType":"Personal","givenName":"Davide","familyName":"Longhitano","affiliation":["CREA"]},{"name":"Rossignolo,
+        Letizia","nameType":"Personal","givenName":"Letizia","familyName":"Rossignolo","affiliation":["CREA"]},{"name":"Povellato,
+        Andrea","nameType":"Personal","givenName":"Andrea","familyName":"Povellato","affiliation":["CREA"]},{"name":"Zīlāns,
+        Andis","nameType":"Personal","givenName":"Andis","familyName":"Zīlāns","affiliation":["Baltic
+        Environmental Forum Latvia"]},{"name":"Jegelevičius, Gražvydas","nameType":"Personal","givenName":"Gražvydas","familyName":"Jegelevičius","affiliation":["Baltic
+        Environmental Forum Lithuania"]},{"name":"Frățilă, Mihaela","nameType":"Personal","givenName":"Mihaela","familyName":"Frățilă","affiliation":["WWF
+        Romania"]},{"name":"Iragui Yoldi, Uxue","nameType":"Personal","givenName":"Uxue","familyName":"Iragui
+        Yoldi","affiliation":["Gestion Ambiental de Navarra"]},{"name":"Astrain Massa,
+        Carlos","nameType":"Personal","givenName":"Carlos","familyName":"Astrain Massa","affiliation":["Gestion
+        Ambiental de Navarra"]},{"name":"Bienzobas Adrian, Jon","nameType":"Personal","givenName":"Jon","familyName":"Bienzobas
+        Adrian","affiliation":["INTIA"]},{"name":"Resare Sahlin, Kajsa","nameType":"Personal","givenName":"Kajsa","familyName":"Resare
+        Sahlin","affiliation":["Swedish University of Agricultural Sciences"]},{"name":"Röös,
+        Elin","nameType":"Personal","givenName":"Elin","familyName":"Röös","affiliation":["Swedish
+        University of Agricultural Sciences"]},{"name":"Frick, Rebekka","nameType":"Personal","givenName":"Rebekka","familyName":"Frick","affiliation":["FiBL"]},{"name":"Bircher,
+        Richard","nameType":"Personal","givenName":"Richard","familyName":"Bircher","affiliation":["FiBL"]},{"name":"Aalders,
+        Inge","nameType":"Personal","givenName":"Inge","familyName":"Aalders","affiliation":["James
+        Hutton Institute"]},{"name":"Irvine, Katherine N.","nameType":"Personal","givenName":"Katherine
+        N.","familyName":"Irvine","affiliation":["James Hutton Institute"]},{"name":"Kyle,
+        Carol","nameType":"Personal","givenName":"Carol","familyName":"Kyle","affiliation":["James
+        Hutton Institute"]},{"name":"Miller, David","nameType":"Personal","givenName":"David","familyName":"Miller","affiliation":["James
+        Hutton Institute"]},{"name":"Sanders, Juern","nameType":"Personal","givenName":"Juern","familyName":"Sanders","affiliation":["Thuenen
+        Institute"]},{"name":"Smith, Pete","nameType":"Personal","givenName":"Pete","familyName":"Smith","affiliation":["University
+        of Aberdeen"]}],"titles":[{"title":"Database on the Performance of Current
+        Agro-Ecological Farming Systems (AEFS) as an Input to the Modelling in WP4"}],"publisher":"Zenodo","container":{"type":"DataRepository","identifier":"https://zenodo.org/communities/uniseco-h2020","identifierType":"URL"},"publicationYear":2019,"subjects":[],"contributors":[],"dates":[{"date":"2023-04-30","dateType":"Available"},{"date":"2019-12-16","dateType":"Accepted"},{"date":"2019","dateType":"Issued"}],"language":null,"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[{"relationType":"IsVersionOf","relatedIdentifier":"10.5281/zenodo.3593988","relatedIdentifierType":"DOI"},{"relationType":"IsPartOf","relatedIdentifier":"https://zenodo.org/communities/uniseco-h2020","relatedIdentifierType":"URL"}],"sizes":[],"formats":[],"version":"2.0","rightsList":[{"rights":"Creative
+        Commons Attribution 4.0 International","rightsUri":"http://creativecommons.org/licenses/by/4.0/legalcode"},{"rights":"Embargoed
+        Access","rightsUri":"info:eu-repo/semantics/embargoedAccess"}],"descriptions":[{"description":"This
+        database contains farm data (e.g. yields) and results (indicators) from assessments
+        with the three decision support tools in the UNISECO case studies: SMART (www.fibl.org/en/themes/smart-en.html),
+        Cool Farm Tool (coolfarmtool.org) and COMPAS (www.thuenen.de). This version
+        (2.0) was developed as a benchmark for the assessment of exemplary cases of
+        how the core dilemmas of agro-ecological transitions may be overcome at farm
+        level and as an input to the modelling at territorial level in WP4. This database
+        was created in the course of the H2020 project UNISECO. The project has received
+        funding from the European Union’s Horizon 2020 research and innovation programme
+        under grant agreement N° 773901.","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[{"awardUri":"info:eu-repo/grantAgreement/EC/H2020/773901/","awardTitle":"Understanding
+        and improving the sustainability of agro-ecological farming systems in the
+        EU","funderName":"European Commission","awardNumber":"773901","funderIdentifier":"https://doi.org/10.13039/501100000780","funderIdentifierType":"Crossref
+        Funder ID"}],"url":"https://zenodo.org/record/3593989","contentUrl":null,"metadataVersion":2,"schemaVersion":null,"source":"mds","isActive":true,"state":"findable","reason":null,"created":"2019-12-27T16:56:32.000Z","registered":"2019-12-27T16:56:32.000Z","published":"2019","updated":"2019-12-31T22:37:14.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}}}},{"id":"10.5281/zenodo.786253","type":"dois","attributes":{"doi":"10.5281/zenodo.786253","identifiers":[{"identifier":"https://doi.org/10.5281/zenodo.786253","identifierType":"DOI"},{"identifier":"https://zenodo.org/record/3596173","identifierType":"URL"}],"creators":[{"name":"Hedemann,
+        Samuel R.","nameType":"Personal","givenName":"Samuel R.","familyName":"Hedemann","affiliation":[]}],"titles":[{"title":"Correction
+        to the Traditional Ideal Rocket Thrust Equation"}],"publisher":"Zenodo","container":{},"publicationYear":2017,"subjects":[{"subject":"rocket
+        thrust"},{"subject":"ideal rocket equation"},{"subject":"Newton''s second
+        law"},{"subject":"variable mass"}],"contributors":[],"dates":[{"date":"2017-05-19","dateType":"Issued"}],"language":null,"types":{"ris":"JOUR","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Journal
+        article","resourceTypeGeneral":"Text"},"relatedIdentifiers":[{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.581372","relatedIdentifierType":"DOI"},{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.892241","relatedIdentifierType":"DOI"},{"relationType":"HasVersion","relatedIdentifier":"10.5281/zenodo.3596173","relatedIdentifierType":"DOI"}],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"Creative
+        Commons Attribution 4.0 International","rightsUri":"http://creativecommons.org/licenses/by/4.0/legalcode"},{"rights":"Open
+        Access","rightsUri":"info:eu-repo/semantics/openAccess"}],"descriptions":[{"description":"The
+        accepted ideal rocket equation for thrust, widely used in rocketry literature,
+        is proved to be incorrect. The correct replacement is then presented and shown
+        to obey the full form of Newton''s second law \\(F={\\dot p}\\) , so the sum
+        of external forces on the rocket is the time derivative of its momentum. The
+        accepted velocity equation is correct, which may explain why this error has
+        been overlooked.","descriptionType":"Abstract"},{"description":"v2: Added
+        two new sections proving the same result by alternative methods. v3: Added
+        the case of variable relative velocity to the Conclusions; explained how to
+        use Newton''s second law to include gravity and other forces since it is commonly
+        misused or ignored; added minor elaborations. Original results unchanged.","descriptionType":"Other"}],"geoLocations":[],"fundingReferences":[],"url":"https://zenodo.org/record/786253","contentUrl":null,"metadataVersion":3,"schemaVersion":null,"source":"mds","isActive":true,"state":"findable","reason":null,"created":"2017-09-15T14:48:09.000Z","registered":"2017-09-15T14:48:09.000Z","published":"2017","updated":"2019-12-31T22:36:22.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}}}},{"id":"10.5281/zenodo.3596173","type":"dois","attributes":{"doi":"10.5281/zenodo.3596173","identifiers":[{"identifier":"https://doi.org/10.5281/zenodo.3596173","identifierType":"DOI"},{"identifier":"https://zenodo.org/record/3596173","identifierType":"URL"}],"creators":[{"name":"Hedemann,
+        Samuel R.","nameType":"Personal","givenName":"Samuel R.","familyName":"Hedemann","affiliation":[]}],"titles":[{"title":"Correction
+        to the Traditional Ideal Rocket Thrust Equation"}],"publisher":"Zenodo","container":{},"publicationYear":2017,"subjects":[{"subject":"rocket
+        thrust"},{"subject":"ideal rocket equation"},{"subject":"Newton''s second
+        law"},{"subject":"variable mass"}],"contributors":[],"dates":[{"date":"2017-05-19","dateType":"Issued"}],"language":null,"types":{"ris":"JOUR","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Journal
+        article","resourceTypeGeneral":"Text"},"relatedIdentifiers":[{"relationType":"IsVersionOf","relatedIdentifier":"10.5281/zenodo.786253","relatedIdentifierType":"DOI"}],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"Creative
+        Commons Attribution 4.0 International","rightsUri":"http://creativecommons.org/licenses/by/4.0/legalcode"},{"rights":"Open
+        Access","rightsUri":"info:eu-repo/semantics/openAccess"}],"descriptions":[{"description":"The
+        accepted ideal rocket equation for thrust, widely used in rocketry literature,
+        is proved to be incorrect. The correct replacement is then presented and shown
+        to obey the full form of Newton''s second law \\(F={\\dot p}\\) , so the sum
+        of external forces on the rocket is the time derivative of its momentum. The
+        accepted velocity equation is correct, which may explain why this error has
+        been overlooked.","descriptionType":"Abstract"},{"description":"v2: Added
+        two new sections proving the same result by alternative methods. v3: Added
+        the case of variable relative velocity to the Conclusions; explained how to
+        use Newton''s second law to include gravity and other forces since it is commonly
+        misused or ignored; added minor elaborations. Original results unchanged.","descriptionType":"Other"}],"geoLocations":[],"fundingReferences":[],"url":"https://zenodo.org/record/3596173","contentUrl":null,"metadataVersion":0,"schemaVersion":null,"source":"mds","isActive":true,"state":"findable","reason":null,"created":"2019-12-31T22:36:21.000Z","registered":"2019-12-31T22:36:22.000Z","published":"2017","updated":"2019-12-31T22:36:22.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}}}}],"meta":{"total":36435998,"totalPages":3643600,"page":1},"links":{"self":"https://api.datacite.org/activities?page%5Bsize%5D=10&page%5Bnumber%5D=1","next":"https://api.datacite.org/activities?page%5Bnumber%5D=2&page%5Bsize%5D=10"}}'
+  recorded_at: 2019-12-31 22:44:10 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
