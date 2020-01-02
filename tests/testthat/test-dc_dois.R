@@ -18,5 +18,5 @@ test_that("dc_dois fails well", {
   expect_error(dc_dois(query = 5), 'must be of class')
   expect_error(dc_dois(limit = "foo"), 'must be of class')
   expect_error(dc_dois(page = "bar"), 'must be of class')
-  expect_error(dc_dois(cursor = 5), 'must be of class')
+  expect_error(dc_dois(cursor = TRUE), 'must be of class')
 })

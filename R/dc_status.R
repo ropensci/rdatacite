@@ -13,9 +13,10 @@ dc_status <- function(...) {
   res$parse("UTF-8")
 }
 
+#' check if the DataCite API is up or not
 #' @export
+#' @return boolean
 #' @keywords internal
-#' @noRd
 dc_check <- function(...) {
   res <- crul::HttpClient$new(dc_rest_base())$get("heartbeat", ...)
   up <- res$status_code == 200L
