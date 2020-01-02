@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.6.0
-* ubuntu 14.04 (on travis-ci), R 3.6.0
+* local OS X install, R 3.6.2
+* ubuntu 14.04 (on travis-ci), R 3.6.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -14,7 +14,7 @@ There are no reverse dependencies.
 
 ---
 
-This version fixes two test fixtures that had non-ascii text that caused tests to fail on debian clang devel.
+This version refactor's the package for a new version of the DataCite API - fixes examples so they only run if the remote resource is operational.
 
 Thanks!
 Scott Chamberlain

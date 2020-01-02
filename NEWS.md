@@ -1,3 +1,15 @@
+rdatacite 0.5.0
+===============
+
+### NEW FEATURES
+
+* Major refactor to work with the new DataCite API: all functions from the previous version are defunct; all OAI-PMH functions are gone; new functions all start with `dc_` (#24) (#29)
+
+### MINOR IMPROVEMENTS
+
+* all examples check if DataCite API is up before running (#28)
+
+
 rdatacite 0.4.2
 ===============
 
