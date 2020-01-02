@@ -49,6 +49,7 @@
 #' dc_dois(client_id = "dryad.dryad")
 #' dc_dois(x$data$id[1])
 #' dc_dois(x$data$id[1:3])
+#' dc_dois("10.5281/zenodo.1308060")
 #' 
 #' # pagination
 #' dc_dois(limit = 1)
