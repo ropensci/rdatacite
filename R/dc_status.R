@@ -15,6 +15,7 @@ dc_status <- function(...) {
 
 #' @export
 #' @keywords internal
+#' @noRd
 dc_check <- function(...) {
   res <- crul::HttpClient$new(dc_rest_base())$get("heartbeat", ...)
   up <- res$status_code == 200L
