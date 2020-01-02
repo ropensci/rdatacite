@@ -22,6 +22,14 @@ knitr::opts_chunk$set(
 
 * REST API. Docs: https://support.datacite.org/docs/api and https://support.datacite.org/reference
 
+`rdatacite` docs: <https://docs.ropensci.org/rdatacite>
+
+Package API:
+
+```{r echo=FALSE, comment=NA, results='asis'}
+cat(paste(" -", paste(sprintf("`%s`", getNamespaceExports("rdatacite")), collapse = "\n - ")))
+```
+
 ## Installation
 
 Stable CRAN version
@@ -40,12 +48,30 @@ devtools::install_github("ropensci/rdatacite")
 library('rdatacite')
 ```
 
-### xxx
+## Result objects
+
+Outputs from nearly all `rdatacite` functions will be of class `dc`, an S3 class that's 
+simply a named list of results. You can easily remove the class via `unclass()`.
+The `print.dc` method prints the data.frame for the `data`, `included`, and `reports`
+slots if they exist, but hides the `meta` named list. You can get to the metadata by
+indexing to it like `$meta`.
+
+## Searching
+
+You may want to start with `dc_dois()`.
 
 ```{r}
-"xxx"
+dc_dois(query = "climate change")
 ```
 
+The `query` parameter supports Elasticearch query string queries. Some examples:
+
+```{r eval=FALSE}
+# search within a field
+dc_dois(query = "publicationYear:2016")
+# fuzzy search (via *) on a nested field
+dc_dois(query = "creators.familyName:mil*")
+```
 
 ## Meta
 
