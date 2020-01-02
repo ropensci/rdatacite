@@ -8,9 +8,10 @@
 #' @param prefix_id (character)
 #' @param sort (character) variable to sort by
 #' @examples \dontrun{
+#' if (dc_check()) {
 #' x <- dc_client_prefixes()
 #' x
-#' }
+#' }}
 dc_client_prefixes <- function(query = NULL, year = NULL,
   client_id = NULL, prefix_id = NULL, sort = NULL, include = NULL,
   limit = 25, page = 1, cursor = NULL, ...) {

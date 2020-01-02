@@ -7,10 +7,11 @@
 #' @param cursor (character) page cursor (used instead of `limit` param)
 #' @param ... curl options passed on to [crul::HttpClient]
 #' @examples \dontrun{
+#' if (dc_check()) {
 #' x <- dc_prefixes()
 #' x
 #' dc_prefixes(limit = 3)
-#' }
+#' }}
 dc_prefixes <- function(include = NULL, limit = 25, page = 1,
   cursor = NULL, ...) {
 

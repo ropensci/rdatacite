@@ -92,6 +92,7 @@ for details
 
 \examples{
 \dontrun{
+if (dc_check()) {
 x <- dc_dois()
 x
 dc_dois(query = "birds")
@@ -110,5 +111,5 @@ dc_dois("10.5281/zenodo.1308060")
 dc_dois(limit = 1)
 x <- dc_dois(cursor = 1)
 x$links$`next`
-}
+}}
 }

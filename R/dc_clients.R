@@ -8,11 +8,12 @@
 #' @param provider_id (character)
 #' @param software (character)
 #' @examples \dontrun{
+#' if (dc_check()) {
 #' x <- dc_clients()
 #' x
 #' dc_clients(x$data$id[1])
 #' dc_clients(x$data$id[1:2], verbose = TRUE)
-#' }
+#' }}
 dc_clients <- function(ids = NULL, query = NULL, year = NULL,
   provider_id = NULL, software = NULL, include = NULL, limit = 25, page = 1,
   cursor = NULL, ...) {

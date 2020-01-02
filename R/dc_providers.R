@@ -13,11 +13,12 @@
 #' @param cursor (character) page cursor (used instead of `limit` param)
 #' @param ... curl options passed on to [crul::HttpClient]
 #' @examples \dontrun{
+#' if (dc_check()) {
 #' x <- dc_providers()
 #' x
 #' dc_providers(limit = 3)
 #' dc_providers(ids = x$data$id[1:5])
-#' }
+#' }}
 dc_providers <- function(ids = NULL, query = NULL, year = NULL, region = NULL,
   organization_type = NULL, focus_area = NULL, include = NULL, limit = 25,
   page = 1, cursor = NULL, ...) {

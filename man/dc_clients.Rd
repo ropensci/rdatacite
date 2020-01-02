@@ -45,9 +45,10 @@ DataCite REST API: clients
 }
 \examples{
 \dontrun{
+if (dc_check()) {
 x <- dc_clients()
 x
 dc_clients(x$data$id[1])
 dc_clients(x$data$id[1:2], verbose = TRUE)
-}
+}}
 }

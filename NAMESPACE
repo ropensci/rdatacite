@@ -2,6 +2,7 @@
 
 S3method(print,dc)
 export(dc_activities)
+export(dc_check)
 export(dc_client_prefixes)
 export(dc_clients)
 export(dc_dois)

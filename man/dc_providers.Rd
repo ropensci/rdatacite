@@ -46,9 +46,10 @@ DataCite REST API: providers
 }
 \examples{
 \dontrun{
+if (dc_check()) {
 x <- dc_providers()
 x
 dc_providers(limit = 3)
 dc_providers(ids = x$data$id[1:5])
-}
+}}
 }

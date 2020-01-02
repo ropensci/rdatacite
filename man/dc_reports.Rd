@@ -46,9 +46,10 @@ DataCite REST API: reports
 }
 \examples{
 \dontrun{
+if (dc_check()) {
 x <- dc_reports()
 x
 dc_reports(limit = 3)
 # dc_reports(ids = x$reports$id[1:3]) # FIXME: doesn't work
-}
+}}
 }

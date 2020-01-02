@@ -45,7 +45,8 @@ DataCite REST API: client prefixes
 }
 \examples{
 \dontrun{
+if (dc_check()) {
 x <- dc_client_prefixes()
 x
-}
+}}
 }

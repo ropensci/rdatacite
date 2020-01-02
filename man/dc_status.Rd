@@ -14,6 +14,7 @@ DataCite REST API: status of the API
 }
 \examples{
 \dontrun{
+if (dc_check()) {
 dc_status()
-}
+}}
 }

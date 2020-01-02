@@ -22,8 +22,9 @@ DataCite REST API: provider prefixes
 }
 \examples{
 \dontrun{
+if (dc_check()) {
 x <- dc_provider_prefixes()
 x
 dc_provider_prefixes(limit = 3)
-}
+}}
 }

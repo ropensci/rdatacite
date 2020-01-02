@@ -37,6 +37,7 @@
 #' https://support.datacite.org/docs/api-queries#section-filtering-list-responses
 #' for details
 #' @examples \dontrun{
+#' if (dc_check()) {
 #' x <- dc_dois()
 #' x
 #' dc_dois(query = "birds")
@@ -55,7 +56,7 @@
 #' dc_dois(limit = 1)
 #' x <- dc_dois(cursor = 1)
 #' x$links$`next`
-#' }
+#' }}
 dc_dois <- function(ids = NULL, query = NULL, created = NULL,
   registered = NULL, provider_id = NULL, client_id = NULL, person_id = NULL,
   resource_type_id = NULL, subject = NULL, schema_version = NULL,
@@ -75,7 +76,7 @@ dc_dois <- function(ids = NULL, query = NULL, created = NULL,
   assert(include, "character")
   assert(limit, c("numeric", "integer"))
   assert(page, c("numeric", "integer"))
-  assert(cursor, "character")
+  assert(cursor, c("numeric", "integer", "character"))
   if (!is.null(ids)) ids <- paste0(ids, collapse = ",")
   args <- cpct(list(ids = ids, query = query, created = created,
     registered = registered, `provider-id` = provider_id,

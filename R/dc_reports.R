@@ -13,11 +13,12 @@
 #' @param page (numeric/integer) result page, the record to start at
 #' @param ... curl options passed on to [crul::HttpClient]
 #' @examples \dontrun{
+#' if (dc_check()) {
 #' x <- dc_reports()
 #' x
 #' dc_reports(limit = 3)
 #' # dc_reports(ids = x$reports$id[1:3]) # FIXME: doesn't work
-#' }
+#' }}
 dc_reports <- function(ids = NULL, platform = NULL, report_name = NULL,
   report_id = NULL, release = NULL, created = NULL, created_by= NULL,
   include = NULL, limit = 25, page = 1, ...) {

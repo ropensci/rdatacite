@@ -7,11 +7,12 @@
 #' @details for more info on the `/activities` route see
 #' https://support.datacite.org/docs/tracking-provenance
 #' @examples \dontrun{
+#' if (dc_check()) {
 #' x <- dc_activities()
 #' x
 #' # dc_activities(x$data$id[1]) # FIXME: doesn't work, returns no data
 #' # dc_activities(query = "ecology") # FIXME: this thlimit a 500 error
-#' }
+#' }}
 dc_activities <- function(ids = NULL, query = NULL, limit = 25, page = 1,
   cursor = NULL, ...) {
 
