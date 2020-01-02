@@ -4,23 +4,46 @@
 \name{rdatacite-package}
 \alias{rdatacite-package}
 \alias{rdatacite}
-\title{DataCite R client.}
+\title{DataCite R client}
 \description{
-DataCite R client.
+DataCite R client
 }
-\section{REST API functions}{
+\section{Methods in the package}{
 
 \itemize{
-\item \code{\link[=dc_activities]{dc_activities()}} - xxx
-\item \code{\link[=dc_client_prefixes]{dc_client_prefixes()}} - xxx
-\item \code{\link[=dc_clients]{dc_clients()}} - xxx
-\item \code{\link[=dc_dois]{dc_dois()}} - xxx
-\item \code{\link[=dc_events]{dc_events()}} - xxx
-\item \code{\link[=dc_prefixes]{dc_prefixes()}} - xxx
-\item \code{\link[=dc_provider_prefixes]{dc_provider_prefixes()}} - xxx
-\item \code{\link[=dc_providers]{dc_providers()}} - xxx
-\item \code{\link[=dc_reports]{dc_reports()}} - xxx
-\item \code{\link[=dc_status]{dc_status()}} - xxx
+\item \code{\link[=dc_providers]{dc_providers()}}
+\item \code{\link[=dc_reports]{dc_reports()}}
+\item \code{\link[=dc_check]{dc_check()}}
+\item \code{\link[=dc_events]{dc_events()}}
+\item \code{\link[=dc_dois]{dc_dois()}}
+\item \code{\link[=dc_clients]{dc_clients()}}
+\item \code{\link[=dc_client_prefixes]{dc_client_prefixes()}}
+\item \code{\link[=dc_provider_prefixes]{dc_provider_prefixes()}}
+\item \code{\link[=dc_status]{dc_status()}}
+\item \code{\link[=dc_prefixes]{dc_prefixes()}}
+\item \code{\link[=dc_activities]{dc_activities()}}
+}
+}
+
+\section{rdatacite defunct functions}{
+
+\itemize{
+\item \code{dc_data_center}
+\item \code{dc_data_centers}
+\item \code{dc_facet}
+\item \code{dc_member}
+\item \code{dc_members}
+\item \code{dc_mlt}
+\item \code{dc_oai_getrecord}
+\item \code{dc_oai_identify}
+\item \code{dc_oai_listidentifiers}
+\item \code{dc_oai_listmetadataformats}
+\item \code{dc_oai_listrecords}
+\item \code{dc_oai_listsets}
+\item \code{dc_search}
+\item \code{dc_stats}
+\item \code{dc_work}
+\item \code{dc_works}
 }
 }
 
