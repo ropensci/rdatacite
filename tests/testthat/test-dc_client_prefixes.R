@@ -17,6 +17,6 @@ test_that("dc_client_prefixes fails well", {
   expect_error(dc_client_prefixes(limit = "foo"), 'must be of class')
   expect_error(dc_client_prefixes(page = "bar"), 'must be of class')
   expect_error(dc_client_prefixes(cursor = 5), 'must be of class')
-  expect_error(dc_client_prefixes(year = "asdfasdf"), 'must be of class')
+  expect_error(dc_client_prefixes(year = FALSE), 'must be of class')
   expect_error(dc_client_prefixes(query = 5), 'must be of class')
 })

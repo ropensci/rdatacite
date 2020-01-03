@@ -3,9 +3,9 @@
 #' @export
 #' @inheritParams dc_dois
 #' @param query (character) Query string
-#' @param year (character)
-#' @param client_id (character)
-#' @param prefix_id (character)
+#' @param year (integer/numeric/character) a year
+#' @param client_id a client ID
+#' @param prefix_id a prefix ID
 #' @param sort (character) variable to sort by
 #' @examples \dontrun{
 #' if (dc_check()) {
@@ -17,9 +17,7 @@ dc_client_prefixes <- function(query = NULL, year = NULL,
   limit = 25, page = 1, cursor = NULL, ...) {
 
   assert(query, "character")
-  assert(year, c("numeric", "integer"))
-  assert(client_id, c("numeric", "integer"))
-  assert(prefix_id, c("numeric", "integer"))
+  assert(year, c("numeric", "integer", "character"))
   assert(sort, "character")
   assert(include, "character")
   assert(limit, c("numeric", "integer"))

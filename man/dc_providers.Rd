@@ -21,15 +21,15 @@ dc_providers(
 \arguments{
 \item{ids}{(character) one or more provider IDs}
 
-\item{query}{(character) x}
+\item{query}{(character) query string}
 
-\item{year}{(character) x}
+\item{year}{(character) year}
 
-\item{region}{(character) x}
+\item{region}{(character) region name}
 
-\item{organization_type}{(character) x}
+\item{organization_type}{(character) organization type}
 
-\item{focus_area}{(character) x}
+\item{focus_area}{(character) focus area}
 
 \item{include}{(character) vector of fields to return}
 

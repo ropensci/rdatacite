@@ -15,6 +15,10 @@
 dc_prefixes <- function(include = NULL, limit = 25, page = 1,
   cursor = NULL, ...) {
 
+  assert(include, "character")
+  assert(limit, c("numeric", "integer"))
+  assert(page, c("numeric", "integer"))
+  assert(cursor, c("numeric", "integer", "character"))
   args <- cpct(list(include = include, `page[size]` = limit,
     `page[number]` = page, `page[cursor]` = cursor))
   as_dc(dc_GET("prefixes", args, ...), "prefixes")

@@ -4,9 +4,9 @@
 #' @inheritParams dc_dois
 #' @param ids (character) one or more client IDs
 #' @param query (character) Query string
-#' @param year (character)
-#' @param provider_id (character)
-#' @param software (character)
+#' @param year (integer/numeric/character) a year
+#' @param provider_id a provider ID
+#' @param software no idea what should go here, anyone?
 #' @examples \dontrun{
 #' if (dc_check()) {
 #' x <- dc_clients()
@@ -21,8 +21,6 @@ dc_clients <- function(ids = NULL, query = NULL, year = NULL,
   assert(ids, "character")
   assert(query, "character")
   assert(year, c("numeric", "integer"))
-  assert(provider_id, c("numeric", "integer"))
-  assert(software, "character")
   assert(include, "character")
   assert(limit, c("numeric", "integer"))
   assert(page, c("numeric", "integer"))

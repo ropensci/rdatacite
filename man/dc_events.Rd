@@ -31,33 +31,38 @@ dc_events(
 \arguments{
 \item{ids}{(character) one or more event IDs}
 
-\item{query}{(character) Query string}
+\item{query}{(character) Query for any event information}
 
-\item{subj_id}{(character)}
+\item{subj_id}{(character) The identifier for the event subject, expressed
+as a URL. For example: \verb{https://doi.org/10.7272/q6qn64nk}}
 
-\item{obj_id}{(character)}
+\item{obj_id}{(character) The identifier for the event object, expressed
+as a URL. For example: \verb{https://doi.org/10.7272/q6qn64nk}}
 
-\item{doi}{(character)}
+\item{doi}{(character) The subj-id or obj-id of the event, expressed as
+a DOI. For example: \code{10.7272/q6qn64nk}}
 
-\item{orcid}{(character)}
+\item{orcid}{(character) an ORCID, presumably}
 
-\item{prefix}{(character)}
+\item{prefix}{(character) The DOI prefix of the subj-id or obj-id of the
+event. For example: \code{10.7272}}
 
-\item{subtype}{(character)}
+\item{subtype}{(character) xxx}
 
-\item{subject}{(character)}
+\item{subject}{(character) xxx}
 
-\item{source_id}{(character)}
+\item{source_id}{(character) a source ID. See Details}
 
 \item{registrant_id}{(character)}
 
-\item{relation_type_id}{(character)}
+\item{relation_type_id}{(character) a relation-type ID. See Details}
 
-\item{issn}{(character)}
+\item{issn}{(character) an ISSN, presumably}
 
-\item{publication_year}{(character)}
+\item{publication_year}{(character) the publication year}
 
-\item{year_month}{(character)}
+\item{year_month}{(character) The year and month in which the event
+occurred, in the format \code{YYYY-MM}. For example \code{2018-08}}
 
 \item{include}{(character) vector of fields to return}
 
@@ -75,6 +80,10 @@ to use cursor pagination, set \code{cursor = 1}, then use the link in
 }
 \description{
 DataCite REST API: events
+}
+\details{
+See https://support.datacite.org/docs/eventdata-guide for
+details on possible values for parameters
 }
 \examples{
 \dontrun{

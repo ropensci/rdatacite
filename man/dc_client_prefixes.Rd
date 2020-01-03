@@ -20,11 +20,11 @@ dc_client_prefixes(
 \arguments{
 \item{query}{(character) Query string}
 
-\item{year}{(character)}
+\item{year}{(integer/numeric/character) a year}
 
-\item{client_id}{(character)}
+\item{client_id}{a client ID}
 
-\item{prefix_id}{(character)}
+\item{prefix_id}{a prefix ID}
 
 \item{sort}{(character) variable to sort by}
 

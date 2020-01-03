@@ -22,11 +22,11 @@ dc_clients(
 
 \item{query}{(character) Query string}
 
-\item{year}{(character)}
+\item{year}{(integer/numeric/character) a year}
 
-\item{provider_id}{(character)}
+\item{provider_id}{a provider ID}
 
-\item{software}{(character)}
+\item{software}{no idea what should go here, anyone?}
 
 \item{include}{(character) vector of fields to return}
 
