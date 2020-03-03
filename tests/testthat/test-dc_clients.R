@@ -3,7 +3,7 @@ context("dc_clients")
 test_that("dc_clients works", {
   vcr::use_cassette("dc_clients", {
     aa <- dc_clients(limit = 5)
-  })
+  }, preserve_exact_body_bytes = TRUE)
   expect_is(aa, "dc")
   expect_equal(sort(names(aa)), c("data", "included", "links", "meta"))
   expect_is(aa$data, 'data.frame')

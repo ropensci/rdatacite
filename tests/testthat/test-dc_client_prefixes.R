@@ -3,7 +3,7 @@ context("dc_client_prefixes")
 test_that("dc_client_prefixes works", {
   vcr::use_cassette("dc_client_prefixes", {
     aa <- dc_client_prefixes(limit = 5)
-  })
+  }, preserve_exact_body_bytes = TRUE)
   expect_is(aa, "dc")
   expect_equal(sort(names(aa)), c("data", "included", "links", "meta"))
   expect_is(aa$data, 'data.frame')
