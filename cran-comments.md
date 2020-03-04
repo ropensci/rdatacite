@@ -1,6 +1,6 @@
 ## Test environments
 
-* local OS X install, R 3.6.2
+* local OS X install, R 3.6.3 RC
 * ubuntu 14.04 (on travis-ci), R 3.6.2
 * win-builder (devel and release)
 
@@ -14,7 +14,7 @@ There are no reverse dependencies.
 
 ---
 
-This version refactor's the package for a new version of the DataCite API - fixes examples so they only run if the remote resource is operational.
+This version fixes a problem in the test suite causing a R CMD CHECK failure on R devel linux.
 
 Thanks!
 Scott Chamberlain

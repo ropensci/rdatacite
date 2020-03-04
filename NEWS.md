@@ -1,3 +1,11 @@
+rdatacite 0.5.2
+===============
+
+### MINOR IMPROVEMENTS
+
+* fix breaking test on one of the cran checks (#30)
+
+
 rdatacite 0.5.0
 ===============
 
