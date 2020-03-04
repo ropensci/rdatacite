@@ -18,11 +18,11 @@ knitr::opts_chunk$set(
 [![cran version](https://www.r-pkg.org/badges/version/rdatacite)](https://cran.r-project.org/package=rdatacite)
 [![DOI](https://zenodo.org/badge/2521192.svg)](https://zenodo.org/badge/latestdoi/2521192)
 
-`rdatacite` provides programmatic accesses to [DataCite](https://datacite.org/) metadata
+`rdatacite` provides programmatic accesses to DataCite (https://datacite.org/) metadata
 
 * REST API. Docs: https://support.datacite.org/docs/api and https://support.datacite.org/reference
 
-`rdatacite` docs: <https://docs.ropensci.org/rdatacite>
+`rdatacite` docs: https://docs.ropensci.org/rdatacite
 
 Package API:
 

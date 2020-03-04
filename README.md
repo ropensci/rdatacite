@@ -11,11 +11,11 @@ rdatacite
 [![cran version](https://www.r-pkg.org/badges/version/rdatacite)](https://cran.r-project.org/package=rdatacite)
 [![DOI](https://zenodo.org/badge/2521192.svg)](https://zenodo.org/badge/latestdoi/2521192)
 
-`rdatacite` provides programmatic accesses to [DataCite](https://datacite.org/) metadata
+`rdatacite` provides programmatic accesses to DataCite (https://datacite.org/) metadata
 
 * REST API. Docs: https://support.datacite.org/docs/api and https://support.datacite.org/reference
 
-`rdatacite` docs: <https://docs.ropensci.org/rdatacite>
+`rdatacite` docs: https://docs.ropensci.org/rdatacite
 
 Package API:
 
@@ -68,46 +68,51 @@ You may want to start with `dc_dois()`.
 ```r
 dc_dois(query = "climate change")
 #> datacite: dois
-#> found: 340596, pages: 400, page: 1
+#> found: 427319, pages: 400, page: 1
 #> slots: data, included, meta, links
 #> $data
 #> # A tibble: 25 x 4
 #>    id    type  attributes$doi $identifiers $creators $titles $publisher
 #>    <chr> <chr> <chr>          <list>       <list>    <list>  <chr>     
-#>  1 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#>  2 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#>  3 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#>  4 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#>  5 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#>  6 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#>  7 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#>  8 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#>  9 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#> 10 10.1… dois  10.17863/cam.… <df[,2] [5 … <df[,6] … <df[,1… Apollo - …
-#> # … with 15 more rows, and 38 more variables: $container$type <chr>,
-#> #   $$title <chr>, $$firstPage <chr>, $$identifier <chr>,
-#> #   $$identifierType <chr>, $publicationYear <int>, $subjects <list>,
-#> #   $contributors <list>, $dates <list>, $language <chr>, $types$ris <chr>,
-#> #   $$bibtex <chr>, $$citeproc <chr>, $$schemaOrg <chr>, $$resourceType <chr>,
-#> #   $$resourceTypeGeneral <chr>, $relatedIdentifiers <list>, $sizes <list>,
-#> #   $formats <list>, $version <chr>, $rightsList <list>, $descriptions <list>,
-#> #   $geoLocations <list>, $fundingReferences <list>, $url <chr>,
-#> #   $contentUrl <lgl>, $metadataVersion <int>, $schemaVersion <chr>,
-#> #   $source <chr>, $isActive <lgl>, $state <chr>, $reason <lgl>,
+#>  1 10.1… dois  10.1101/2020.… <df[,2] [2 … <df[,6] … <df[,1… bioRxiv   
+#>  2 10.1… dois  10.1038/s4156… <df[,2] [1 … <df[,6] … <df[,1… Springer …
+#>  3 10.3… dois  10.3886/e1111… <df[,2] [1 … <df[,6] … <df[,2… ICPSR - I…
+#>  4 10.1… dois  10.1039/d0dt0… <df[,2] [2 … <df[,6] … <df[,1… Royal Soc…
+#>  5 10.4… dois  10.4232/1.134… <df[,2] [3 … <df[,4] … <df[,2… GESIS Dat…
+#>  6 10.1… dois  10.1016/j.cat… <df[,2] [2 … <df[,5] … <df[,1… Elsevier …
+#>  7 10.1… dois  10.15496/publ… <df[,2] [4 … <df[,6] … <df[,1… Universit…
+#>  8 10.1… dois  10.15496/publ… <df[,2] [3 … <df[,6] … <df[,1… Elsevier …
+#>  9 10.5… dois  10.5281/zenod… <df[,2] [2 … <df[,6] … <df[,1… Zenodo    
+#> 10 10.5… dois  10.5281/zenod… <df[,2] [2 … <df[,6] … <df[,1… Zenodo    
+#> # … with 15 more rows, and 44 more variables: $container$type <chr>,
+#> #   $$title <chr>, $$identifier <chr>, $$identifierType <chr>, $$volume <chr>,
+#> #   $$lastPage <chr>, $$firstPage <chr>, $publicationYear <int>,
+#> #   $subjects <list>, $contributors <list>, $dates <list>, $language <chr>,
+#> #   $types$ris <chr>, $$bibtex <chr>, $$citeproc <chr>, $$schemaOrg <chr>,
+#> #   $$resourceType <chr>, $$resourceTypeGeneral <chr>,
+#> #   $relatedIdentifiers <list>, $sizes <list>, $formats <list>, $version <chr>,
+#> #   $rightsList <list>, $descriptions <list>, $geoLocations <list>,
+#> #   $fundingReferences <list>, $url <chr>, $contentUrl <lgl>,
+#> #   $metadataVersion <int>, $schemaVersion <chr>, $source <chr>,
+#> #   $isActive <lgl>, $state <chr>, $reason <lgl>, $viewCount <int>,
+#> #   $downloadCount <int>, $referenceCount <int>, $citationCount <int>,
 #> #   $created <chr>, $registered <chr>, $published <chr>, $updated <chr>,
 #> #   relationships$client$data$id <chr>, $$$type <chr>
 #> 
 #> $included
-#> # A tibble: 7 x 4
-#>   id    type  attributes$name $symbol $year $contactEmail $alternateName
-#>   <chr> <chr> <chr>           <chr>   <int> <chr>         <chr>         
-#> 1 bl.c… clie… University of … BL.CAM   2015 support@repo… <NA>          
-#> 2 usgs… clie… USGS DOI Tool … USGS.P…  2018 gs-css_csas_… USGS Science …
-#> 3 drya… clie… DRYAD           DRYAD.…  2018 admin@datadr… <NA>          
-#> 4 rg.rg clie… ResearchGate    RG.RG    2016 christian.sc… <NA>          
-#> 5 delf… clie… TU Delft BK Bo… DELFT.…  2012 F.D.vanderHo… <NA>          
-#> 6 sage… clie… Data Planet     SAGE.D…  2018 Kari.Hemdal@… <NA>          
-#> 7 cern… clie… Zenodo          CERN.Z…  2013 info@zenodo.… Research. Sha…
+#> # A tibble: 10 x 4
+#>    id    type  attributes$name $symbol $year $contactEmail $alternateName
+#>    <chr> <chr> <chr>           <chr>   <int> <chr>         <chr>         
+#>  1 cros… clie… Crossref Citat… CROSSR…  2019 info@datacit… <NA>          
+#>  2 gesi… clie… ICPSR           GESIS.…  2013 dara@gesis.o… ICPSR data ar…
+#>  3 gesi… clie… GESIS Leibniz … GESIS.…  2011 dara@gesis.o… <NA>          
+#>  4 tib.… clie… Universitätsbi… TIB.UB…  2014 peter.rempis… <NA>          
+#>  5 cern… clie… Zenodo          CERN.Z…  2013 info@zenodo.… Research. Sha…
+#>  6 ethz… clie… ARBOR, Berner … ETHZ.B…  2019 doi@library.… <NA>          
+#>  7 cist… clie… National Resea… CISTI.…  2011 sophie.roy2@… <NA>          
+#>  8 bl.l… clie… University of … BL.LPO…  2015 jkerwin@live… <NA>          
+#>  9 tib.… clie… Thüringer Univ… TIB.DBT  2017 thomas.schef… <NA>          
+#> 10 sage… clie… Data Planet     SAGE.D…  2018 Kari.Hemdal@… <NA>          
 #> # … with 15 more variables: $description <chr>, $language <list>,
 #> #   $clientType <chr>, $domains <chr>, $re3data <chr>, $opendoar <lgl>,
 #> #   $issn <list>, $url <chr>, $created <chr>, $updated <chr>, $isActive <lgl>,
