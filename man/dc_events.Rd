@@ -88,10 +88,6 @@ details on possible values for parameters
 \examples{
 \dontrun{
 if (dc_check()) {
-x <- dc_events()
-x
-dc_events(query = "birds")
-# dc_events(x$data$id[1]) # FIXME: doesn't work
-# dc_events(x$data$id[1:3]) # FIXME: doesn't work
+# dc_events(query = "birds")
 }}
 }
