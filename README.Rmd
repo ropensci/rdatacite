@@ -73,6 +73,58 @@ dc_dois(query = "publicationYear:2016")
 dc_dois(query = "creators.familyName:mil*")
 ```
 
+## Caching
+
+You can cache HTTP responses by leveraging the `webmiddens` package https://github.com/ropenscilabs/webmiddens
+
+Caching is optional. It does slow down the original request slightly because
+we take a bit extra time to cache the data to disk. But all subsequent
+requests for the same function call will be faster.
+
+Toggling caching is done through the environment variable `WEBMIDDENS_TURN_OFF`.
+Environment variables allow for flexibly turning caching on/off in interactive
+as well as non-interactive R sessions.
+
+By default we set `WEBMIDDENS_TURN_OFF = TRUE`, so there's no caching.
+
+To turn on caching, set it to `FALSE` like
+
+```{r eval=FALSE}
+Sys.setenv(WEBMIDDENS_TURN_OFF = FALSE)
+```
+
+Then do requests as normal; you can tell if you're doing a real HTTP request or not
+by using `verbose = TRUE` for verbose curl output. If you don't get the curl
+output you are using a cached response. Here, the first request is a real HTTP request,
+while the second uses the cached response from the first.
+
+```{r eval=FALSE}
+dc_prefixes(limit = 3, verbose = TRUE)
+#> > GET /prefixes?page%5Bsize%5D=3&page%5Bnumber%5D=1 HTTP/2
+#> Host: api.datacite.org
+#> Accept-Encoding: gzip, deflate
+#> Accept: application/vnd.api+json; version=2
+#> User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rdatacite/0.5.2)
+#> X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(rdatacite/0.5.2)
+#> 
+#> < HTTP/2 200
+#> < date: Tue, 10 Mar 2020 23:30:38 GMT
+#> < content-type: application/json; charset=utf-8
+#> < status: 200 OK
+#> < x-anonymous-consumer: true
+#> < cache-control: max-age=0, private, must-revalidate
+#> < vary: Accept-Encoding, Origin
+#> < content-encoding: gzip
+#> < etag: W/"d791baf5c4aa2d98880c67bb889f3d77"
+#> < x-runtime: 3.718953
+#> < x-request-id: fbbe32a6-263b-40dd-ab1b-f67d5fe92dd6
+#> < x-powered-by: Phusion Passenger 6.0.4
+#> < server: nginx/1.14.0 + Phusion Passenger 6.0.4
+
+dc_prefixes(limit = 3, verbose = TRUE)
+```
+
+
 ## Meta
 
 * Please [report any issues or bugs](https://github.com/ropensci/rdatacite/issues).

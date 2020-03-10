@@ -11,7 +11,7 @@ dc_GET <- function(route, args = NULL, discard_xml = TRUE,
       `X-USER-AGENT` = rdatacite_ua()
     )
   )
-  res <- con$get(route, query = args)
+  res <- dc_midden$r(con$get(route, query = args))
   res$raise_for_status()
   res$raise_for_ct_json()
   tmp <- jsonlite::fromJSON(res$parse("UTF-8"))

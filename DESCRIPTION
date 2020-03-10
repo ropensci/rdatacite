@@ -17,12 +17,14 @@ Encoding: UTF-8
 Imports:
     jsonlite,
     crul (>= 0.7.4),
-    tibble
+    tibble,
+    webmiddens
 Suggests:
     knitr,
     testthat,
     webmockr,
     vcr
+Remotes: ropenscilabs/webmiddens
 RoxygenNote: 7.0.2
 X-schema.org-applicationCategory: Data
 X-schema.org-keywords: data, scholarly, dataset, https, API, web-services

@@ -25,6 +25,6 @@ DataCite REST API: prefixes
 if (dc_check()) {
 x <- dc_prefixes()
 x
-dc_prefixes(limit = 3)
+dc_prefixes(limit = 3, verbose = TRUE)
 }}
 }

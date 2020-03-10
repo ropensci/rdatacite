@@ -68,51 +68,47 @@ You may want to start with `dc_dois()`.
 ```r
 dc_dois(query = "climate change")
 #> datacite: dois
-#> found: 427319, pages: 400, page: 1
+#> found: 434105, pages: 400, page: 1
 #> slots: data, included, meta, links
 #> $data
 #> # A tibble: 25 x 4
 #>    id    type  attributes$doi $identifiers $creators $titles $publisher
 #>    <chr> <chr> <chr>          <list>       <list>    <list>  <chr>     
-#>  1 10.1… dois  10.1101/2020.… <df[,2] [2 … <df[,6] … <df[,1… bioRxiv   
-#>  2 10.1… dois  10.1038/s4156… <df[,2] [1 … <df[,6] … <df[,1… Springer …
-#>  3 10.3… dois  10.3886/e1111… <df[,2] [1 … <df[,6] … <df[,2… ICPSR - I…
-#>  4 10.1… dois  10.1039/d0dt0… <df[,2] [2 … <df[,6] … <df[,1… Royal Soc…
-#>  5 10.4… dois  10.4232/1.134… <df[,2] [3 … <df[,4] … <df[,2… GESIS Dat…
-#>  6 10.1… dois  10.1016/j.cat… <df[,2] [2 … <df[,5] … <df[,1… Elsevier …
-#>  7 10.1… dois  10.15496/publ… <df[,2] [4 … <df[,6] … <df[,1… Universit…
-#>  8 10.1… dois  10.15496/publ… <df[,2] [3 … <df[,6] … <df[,1… Elsevier …
-#>  9 10.5… dois  10.5281/zenod… <df[,2] [2 … <df[,6] … <df[,1… Zenodo    
-#> 10 10.5… dois  10.5281/zenod… <df[,2] [2 … <df[,6] … <df[,1… Zenodo    
-#> # … with 15 more rows, and 44 more variables: $container$type <chr>,
-#> #   $$title <chr>, $$identifier <chr>, $$identifierType <chr>, $$volume <chr>,
-#> #   $$lastPage <chr>, $$firstPage <chr>, $publicationYear <int>,
-#> #   $subjects <list>, $contributors <list>, $dates <list>, $language <chr>,
-#> #   $types$ris <chr>, $$bibtex <chr>, $$citeproc <chr>, $$schemaOrg <chr>,
-#> #   $$resourceType <chr>, $$resourceTypeGeneral <chr>,
-#> #   $relatedIdentifiers <list>, $sizes <list>, $formats <list>, $version <chr>,
-#> #   $rightsList <list>, $descriptions <list>, $geoLocations <list>,
-#> #   $fundingReferences <list>, $url <chr>, $contentUrl <lgl>,
-#> #   $metadataVersion <int>, $schemaVersion <chr>, $source <chr>,
-#> #   $isActive <lgl>, $state <chr>, $reason <lgl>, $viewCount <int>,
-#> #   $downloadCount <int>, $referenceCount <int>, $citationCount <int>,
-#> #   $created <chr>, $registered <chr>, $published <chr>, $updated <chr>,
-#> #   relationships$client$data$id <chr>, $$$type <chr>
+#>  1 10.5… dois  10.5063/aa/nc… <df[,2] [1 … <df[,6] … <df[,2… KNB Data …
+#>  2 10.5… dois  10.5281/zenod… <df[,2] [3 … <df[,5] … <df[,1… Zenodo    
+#>  3 10.5… dois  10.5281/zenod… <df[,2] [3 … <df[,5] … <df[,1… Zenodo    
+#>  4 10.1… dois  10.1177/09596… <df[,2] [1 … <df[,6] … <df[,1… SAGE Publ…
+#>  5 10.1… dois  10.15468/dl.k… <df[,2] [2 … <df[,4] … <df[,1… The Globa…
+#>  6 10.1… dois  10.15468/dl.9… <df[,2] [2 … <df[,4] … <df[,1… The Globa…
+#>  7 10.5… dois  10.5281/zenod… <df[,2] [3 … <df[,5] … <df[,1… Zenodo    
+#>  8 10.5… dois  10.5281/zenod… <df[,2] [3 … <df[,5] … <df[,1… Zenodo    
+#>  9 10.5… dois  10.5281/zenod… <df[,2] [3 … <df[,5] … <df[,1… Zenodo    
+#> 10 10.5… dois  10.5281/zenod… <df[,2] [3 … <df[,5] … <df[,1… Zenodo    
+#> # … with 15 more rows, and 45 more variables: $container$type <chr>,
+#> #   $$identifier <chr>, $$identifierType <chr>, $$title <chr>,
+#> #   $$firstPage <chr>, $$issue <chr>, $$volume <chr>, $$lastPage <chr>,
+#> #   $publicationYear <int>, $subjects <list>, $contributors <list>,
+#> #   $dates <list>, $language <chr>, $types$ris <chr>, $$bibtex <chr>,
+#> #   $$citeproc <chr>, $$schemaOrg <chr>, $$resourceTypeGeneral <chr>,
+#> #   $$resourceType <chr>, $relatedIdentifiers <list>, $sizes <list>,
+#> #   $formats <list>, $version <lgl>, $rightsList <list>, $descriptions <list>,
+#> #   $geoLocations <list>, $fundingReferences <list>, $url <chr>,
+#> #   $contentUrl <lgl>, $metadataVersion <int>, $schemaVersion <chr>,
+#> #   $source <chr>, $isActive <lgl>, $state <chr>, $reason <lgl>,
+#> #   $viewCount <int>, $downloadCount <int>, $referenceCount <int>,
+#> #   $citationCount <int>, $created <chr>, $registered <chr>, $published <chr>,
+#> #   $updated <chr>, relationships$client$data$id <chr>, $$$type <chr>
 #> 
 #> $included
-#> # A tibble: 10 x 4
-#>    id    type  attributes$name $symbol $year $contactEmail $alternateName
-#>    <chr> <chr> <chr>           <chr>   <int> <chr>         <chr>         
-#>  1 cros… clie… Crossref Citat… CROSSR…  2019 info@datacit… <NA>          
-#>  2 gesi… clie… ICPSR           GESIS.…  2013 dara@gesis.o… ICPSR data ar…
-#>  3 gesi… clie… GESIS Leibniz … GESIS.…  2011 dara@gesis.o… <NA>          
-#>  4 tib.… clie… Universitätsbi… TIB.UB…  2014 peter.rempis… <NA>          
-#>  5 cern… clie… Zenodo          CERN.Z…  2013 info@zenodo.… Research. Sha…
-#>  6 ethz… clie… ARBOR, Berner … ETHZ.B…  2019 doi@library.… <NA>          
-#>  7 cist… clie… National Resea… CISTI.…  2011 sophie.roy2@… <NA>          
-#>  8 bl.l… clie… University of … BL.LPO…  2015 jkerwin@live… <NA>          
-#>  9 tib.… clie… Thüringer Univ… TIB.DBT  2017 thomas.schef… <NA>          
-#> 10 sage… clie… Data Planet     SAGE.D…  2018 Kari.Hemdal@… <NA>          
+#> # A tibble: 6 x 4
+#>   id    type  attributes$name $symbol $year $contactEmail $alternateName
+#>   <chr> <chr> <chr>           <chr>   <int> <chr>         <chr>         
+#> 1 cdl.… clie… UC Santa Barba… CDL.UC…  2011 ezid@ucop.edu <NA>          
+#> 2 cern… clie… Zenodo          CERN.Z…  2013 info@zenodo.… Research. Sha…
+#> 3 cros… clie… Crossref Citat… CROSSR…  2019 info@datacit… <NA>          
+#> 4 gbif… clie… Global Biodive… GBIF.G…  2018 dnoesgaard@g… <NA>          
+#> 5 bl.c… clie… University of … BL.CAM   2015 support@repo… <NA>          
+#> 6 ieee… clie… IEEE DataPort   IEEE.D…  2018 melissa.hand… <NA>          
 #> # … with 15 more variables: $description <chr>, $language <list>,
 #> #   $clientType <chr>, $domains <chr>, $re3data <chr>, $opendoar <lgl>,
 #> #   $issn <list>, $url <chr>, $created <chr>, $updated <chr>, $isActive <lgl>,
@@ -129,6 +125,60 @@ dc_dois(query = "publicationYear:2016")
 # fuzzy search (via *) on a nested field
 dc_dois(query = "creators.familyName:mil*")
 ```
+
+## Caching
+
+You can cache HTTP responses by leveraging the `webmiddens` package https://github.com/ropenscilabs/webmiddens
+
+Caching is optional. It does slow down the original request slightly because
+we take a bit extra time to cache the data to disk. But all subsequent
+requests for the same function call will be faster.
+
+Toggling caching is done through the environment variable `WEBMIDDENS_TURN_OFF`.
+Environment variables allow for flexibly turning caching on/off in interactive
+as well as non-interactive R sessions.
+
+By default we set `WEBMIDDENS_TURN_OFF = TRUE`, so there's no caching.
+
+To turn on caching, set it to `FALSE` like
+
+
+```r
+Sys.setenv(WEBMIDDENS_TURN_OFF = FALSE)
+```
+
+Then do requests as normal; you can tell if you're doing a real HTTP request or not
+by using `verbose = TRUE` for verbose curl output. If you don't get the curl
+output you are using a cached response. Here, the first request is a real HTTP request,
+while the second uses the cached response from the first.
+
+
+```r
+dc_prefixes(limit = 3, verbose = TRUE)
+#> > GET /prefixes?page%5Bsize%5D=3&page%5Bnumber%5D=1 HTTP/2
+#> Host: api.datacite.org
+#> Accept-Encoding: gzip, deflate
+#> Accept: application/vnd.api+json; version=2
+#> User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rdatacite/0.5.2)
+#> X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(rdatacite/0.5.2)
+#> 
+#> < HTTP/2 200
+#> < date: Tue, 10 Mar 2020 23:30:38 GMT
+#> < content-type: application/json; charset=utf-8
+#> < status: 200 OK
+#> < x-anonymous-consumer: true
+#> < cache-control: max-age=0, private, must-revalidate
+#> < vary: Accept-Encoding, Origin
+#> < content-encoding: gzip
+#> < etag: W/"d791baf5c4aa2d98880c67bb889f3d77"
+#> < x-runtime: 3.718953
+#> < x-request-id: fbbe32a6-263b-40dd-ab1b-f67d5fe92dd6
+#> < x-powered-by: Phusion Passenger 6.0.4
+#> < server: nginx/1.14.0 + Phusion Passenger 6.0.4
+
+dc_prefixes(limit = 3, verbose = TRUE)
+```
+
 
 ## Meta
 
