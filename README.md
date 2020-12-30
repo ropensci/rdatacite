@@ -5,7 +5,7 @@ rdatacite
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![cran checks](https://cranchecks.info/badges/worst/rdatacite)](https://cranchecks.info/pkgs/rdatacite)
-[![Build Status](https://travis-ci.org/ropensci/rdatacite.svg?branch=master)](https://travis-ci.org/ropensci/rdatacite)
+[![R-CMD-check](https://github.com/ropensci/rdatacite/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/rdatacite/actions?query=workflow%3AR-CMD-check)
 [![codecov.io](https://codecov.io/github/ropensci/rdatacite/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdatacite?branch=master)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rdatacite)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rdatacite)](https://cran.r-project.org/package=rdatacite)
