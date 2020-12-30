@@ -3,7 +3,7 @@
 .travis.yml
 man-roxygen
 README.Rmd
-^CODE_OF_CONDUCT\.md$
+README.md
 cran-comments\.md$
 ^codemeta\.json$
 .github

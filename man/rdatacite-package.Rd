@@ -4,7 +4,7 @@
 \name{rdatacite-package}
 \alias{rdatacite-package}
 \alias{rdatacite}
-\title{DataCite R client}
+\title{rdatacite}
 \description{
 DataCite R client
 }

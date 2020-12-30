@@ -1,4 +1,5 @@
-#' DataCite R client
+#' @title rdatacite
+#' @description DataCite R client
 #'
 #' @section HTTP Requests:
 #' All HTTP requests are GET requests, and are sent with the following
