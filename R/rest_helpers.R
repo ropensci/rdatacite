@@ -31,3 +31,26 @@ rdatacite_ua <- function() {
     sprintf("rOpenSci(rdatacite/%s)", utils::packageVersion("rdatacite")))
   paste0(versions, collapse = " ")
 }
+
+warn_stat <- function(x) {
+  if (x$status_code > 202) {
+    mssg <- x$parse("UTF-8")
+    if (!is.character(mssg)) {
+      mssg <- if (x$status_code == 406) {
+        "(406) - probably bad format type"
+      } else {
+        x$status_http()$message
+      }
+    } else {
+      mssg <- paste(sprintf("(%s)", x$status_code), "-", mssg)
+    }
+    warning(
+      sprintf(
+        "%s w/ %s",
+        gsub("%2F", "/", crul::url_parse(x$url)$path),
+        mssg
+      ),
+      call. = FALSE
+    )
+  }
+}

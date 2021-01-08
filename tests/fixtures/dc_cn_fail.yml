@@ -1,0 +1,36 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://data.crosscite.org/adsfs
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/x-bibtex
+      User-Agent: r-curl/4.3 crul/1.0.0 rOpenSci(rdatacite/0.5.3.91)
+      X-USER-AGENT: r-curl/4.3 crul/1.0.0 rOpenSci(rdatacite/0.5.3.91)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      cache-control: no-cache
+      content-encoding: gzip
+      content-type: text/plain; charset=utf-8
+      date: Fri, 08 Jan 2021 19:33:19 GMT
+      server: nginx/1.14.0 + Phusion Passenger 6.0.6
+      status:
+      - 'HTTP/2 404 '
+      - 404 Not Found
+      vary: Accept-Encoding, Origin
+      x-powered-by: Phusion Passenger 6.0.6
+      x-request-id: 0d671d46-cbbe-4969-920f-197734aeff30
+      x-runtime: '0.001173'
+    body:
+      encoding: UTF-8
+      file: no
+      string: The resource you are looking for doesn't exist.
+  recorded_at: 2021-01-08 19:33:19 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.7.4

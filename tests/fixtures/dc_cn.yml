@@ -1,0 +1,78 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281/zenodo.50213
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: text/x-bibliography
+      User-Agent: r-curl/4.3 crul/1.0.0 rOpenSci(rdatacite/0.5.3.91)
+      X-USER-AGENT: r-curl/4.3 crul/1.0.0 rOpenSci(rdatacite/0.5.3.91)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      content-type: text/x-bibliography; charset=utf-8
+      date: Fri, 08 Jan 2021 19:33:17 GMT
+      etag: W/"bb8664aaccb3a4810b17d2d980a17555"
+      server: nginx/1.14.0 + Phusion Passenger 6.0.6
+      status:
+      - 'HTTP/2 200 '
+      - 200 OK
+      vary: Accept-Encoding, Origin
+      x-powered-by: Phusion Passenger 6.0.6
+      x-request-id: fba07505-3d8d-4d23-93b1-8f76b46cde14
+      x-runtime: '0.364607'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: |-
+        UGV0Y2hleSwgTy4sIFBsZWJhbmksIE0uLCAmYW1wOyBQZW5uZWthbXAsIEYuICgyMDE2KS4gW1JlXSBD
+        aGFvcyBJbiBBIExvbmctVGVybSBFeHBlcmltZW50IFdpdGggQSBQbGFua3RvbiBDb21tdW5pdHkuIDxp
+        Plplbm9kbzwvaT4uIGh0dHBzOi8vZG9pLm9yZy8xMC41MjgxL1pFTk9ETy41MDIxMw==
+  recorded_at: 2021-01-08 19:33:18 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.7.4
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281/zenodo.57081
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: text/x-bibliography
+      User-Agent: r-curl/4.3 crul/1.0.0 rOpenSci(rdatacite/0.5.3.91)
+      X-USER-AGENT: r-curl/4.3 crul/1.0.0 rOpenSci(rdatacite/0.5.3.91)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      content-type: text/x-bibliography; charset=utf-8
+      date: Fri, 08 Jan 2021 19:33:18 GMT
+      etag: W/"7da63beb73732431a51e089d5dc22531"
+      server: nginx/1.14.0 + Phusion Passenger 6.0.6
+      status:
+      - 'HTTP/2 200 '
+      - 200 OK
+      vary: Accept-Encoding, Origin
+      x-powered-by: Phusion Passenger 6.0.6
+      x-request-id: c94468c8-0af6-473d-a6fc-2d9b63708cc7
+      x-runtime: '0.722362'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: |-
+        UGV0Y2hleSwgTy4gTC4gKDIwMTYpLiA8aT5TaW1wbGV4IFByb2plY3Rpb24gV2Fsa3Rocm91Z2g8L2k+
+        LiBaZW5vZG8uIGh0dHBzOi8vZG9pLm9yZy8xMC41MjgxL1pFTk9ETy41NzA4MQ==
+  recorded_at: 2021-01-08 19:33:18 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.7.4

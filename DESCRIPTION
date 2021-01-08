@@ -5,7 +5,7 @@ Description: Client for the web service methods provided
     by 'DataCite' (<https://www.datacite.org/>), including functions to interface with
     their 'RESTful' search API. The API is backed by 'Elasticsearch', allowing
     expressive queries, including faceting.
-Version: 0.5.2.91
+Version: 0.5.3.91
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com",
