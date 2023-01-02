@@ -41,18 +41,6 @@
   "softwareSuggestions": [
     {
       "@type": "SoftwareApplication",
-      "identifier": "knitr",
-      "name": "knitr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=knitr"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
       "provider": {
@@ -62,18 +50,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=testthat"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "webmockr",
-      "name": "webmockr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=webmockr"
     },
     {
       "@type": "SoftwareApplication",
@@ -91,18 +67,6 @@
   "softwareRequirements": {
     "1": {
       "@type": "SoftwareApplication",
-      "identifier": "jsonlite",
-      "name": "jsonlite",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
-    },
-    "2": {
-      "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
       "version": ">= 0.7.4",
@@ -113,6 +77,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=crul"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "jsonlite",
+      "name": "jsonlite",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
     "3": {
       "@type": "SoftwareApplication",
@@ -126,12 +102,17 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
     },
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "utils",
+      "name": "utils"
+    },
     "SystemRequirements": null
   },
   "applicationCategory": "Data",
   "isPartOf": "https://ropensci.org",
   "keywords": ["data", "scholarly", "dataset", "https", "API", "web-services", "datacite", "oai-pmh", "metadata", "api-wrapper", "rstats", "r", "solr", "identifier", "r-package"],
-  "fileSize": "719.642KB",
+  "fileSize": "719.584KB",
   "releaseNotes": "https://github.com/ropensci/rdatacite/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rdatacite/blob/master/README.md",
   "contIntegration": ["https://github.com/ropensci/rdatacite/actions?query=workflow%3AR-CMD-check", "https://codecov.io/github/ropensci/rdatacite?branch=master"],
