@@ -14,7 +14,7 @@ There are no reverse dependencies.
 
 ---
 
-This version fixes a problem in the test suite causing a R CMD CHECK failure on R devel linux.
+This version changes maintainers from Scott Chamberlain to Bianca Kramer
 
 Thanks!
-Scott Chamberlain
+Bianca Kramer

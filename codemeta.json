@@ -1,24 +1,20 @@
 {
-  "@context": [
-    "https://doi.org/10.5063/schema/codemeta-2.0",
-    "http://schema.org"
-  ],
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "rdatacite",
-  "description": "Client for the web service methods provided\n    by 'DataCite' (<https://www.datacite.org/>), including functions to interface with\n    their 'RESTful' search API. The API is backed by 'Elasticsearch', allowing\n    expressive queries, including faceting.",
+  "description": "Client for the web service methods provided by 'DataCite' (<https://www.datacite.org/>), including functions to interface with their 'RESTful' search API. The API is backed by 'Elasticsearch', allowing expressive queries, including faceting.",
   "name": "rdatacite: Client for the 'DataCite' API",
+  "relatedLink": "https://docs.ropensci.org/rdatacite/",
   "codeRepository": "https://github.com/ropensci/rdatacite",
-  "relatedLink": "https://docs.ropensci.org/rdatacite",
   "issueTracker": "https://github.com/ropensci/rdatacite/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.5.0",
+  "version": "0.5.4",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 Patched (2019-12-12 r77564)",
+  "runtimePlatform": "R version 4.2.1 (2022-06-23 ucrt)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -30,20 +26,25 @@
       "@type": "Person",
       "givenName": "Scott",
       "familyName": "Chamberlain",
-      "email": "myrmecocystus@gmail.com",
       "@id": "https://orcid.org/0000-0003-1444-9135"
     }
   ],
-  "contributor": {},
-  "copyrightHolder": {},
-  "funder": {},
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Bianca",
+      "familyName": "Kramer",
+      "email": "bianca.kramer@gmail.com",
+      "@id": "https://orcid.org/0000-0002-5965-6560"
+    }
+  ],
   "maintainer": [
     {
       "@type": "Person",
-      "givenName": "Scott",
-      "familyName": "Chamberlain",
-      "email": "myrmecocystus@gmail.com",
-      "@id": "https://orcid.org/0000-0003-1444-9135"
+      "givenName": "Bianca",
+      "familyName": "Kramer",
+      "email": "bianca.kramer@gmail.com",
+      "@id": "https://orcid.org/0000-0002-5965-6560"
     }
   ],
   "softwareSuggestions": [
@@ -96,8 +97,8 @@
       "sameAs": "https://CRAN.R-project.org/package=vcr"
     }
   ],
-  "softwareRequirements": [
-    {
+  "softwareRequirements": {
+    "1": {
       "@type": "SoftwareApplication",
       "identifier": "jsonlite",
       "name": "jsonlite",
@@ -109,7 +110,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=jsonlite"
     },
-    {
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
@@ -122,7 +123,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=crul"
     },
-    {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "tibble",
       "name": "tibble",
@@ -133,14 +134,15 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
-    }
-  ],
+    },
+    "SystemRequirements": null
+  },
   "applicationCategory": "Data",
   "isPartOf": "https://ropensci.org",
   "keywords": ["data", "scholarly", "dataset", "https", "API", "web-services", "datacite", "oai-pmh", "metadata", "api-wrapper", "rstats", "r", "solr", "identifier", "r-package"],
+  "fileSize": "729.462KB",
   "releaseNotes": "https://github.com/ropensci/rdatacite/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rdatacite/blob/master/README.md",
-  "fileSize": "111.704KB",
-  "contIntegration": ["https://travis-ci.org/ropensci/rdatacite", "https://codecov.io/github/ropensci/rdatacite?branch=master"],
+  "contIntegration": ["https://github.com/ropensci/rdatacite/actions?query=workflow%3AR-CMD-check", "https://codecov.io/github/ropensci/rdatacite?branch=master"],
   "developmentStatus": "http://www.repostatus.org/#active"
 }

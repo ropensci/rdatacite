@@ -1,3 +1,11 @@
+rdatacite 0.5.4
+===============
+
+### MAINTAINER CHANGE
+
+* maintainer changed from Scott Chamberlain to Bianca Kramer (#32)
+
+
 rdatacite 0.5.2
 ===============
 
