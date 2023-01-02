@@ -29,15 +29,6 @@
       "@id": "https://orcid.org/0000-0003-1444-9135"
     }
   ],
-  "contributor": [
-    {
-      "@type": "Person",
-      "givenName": "Bianca",
-      "familyName": "Kramer",
-      "email": "bianca.kramer@gmail.com",
-      "@id": "https://orcid.org/0000-0002-5965-6560"
-    }
-  ],
   "maintainer": [
     {
       "@type": "Person",
@@ -140,7 +131,7 @@
   "applicationCategory": "Data",
   "isPartOf": "https://ropensci.org",
   "keywords": ["data", "scholarly", "dataset", "https", "API", "web-services", "datacite", "oai-pmh", "metadata", "api-wrapper", "rstats", "r", "solr", "identifier", "r-package"],
-  "fileSize": "729.462KB",
+  "fileSize": "719.642KB",
   "releaseNotes": "https://github.com/ropensci/rdatacite/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rdatacite/blob/master/README.md",
   "contIntegration": ["https://github.com/ropensci/rdatacite/actions?query=workflow%3AR-CMD-check", "https://codecov.io/github/ropensci/rdatacite?branch=master"],
