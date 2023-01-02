@@ -1,32 +1,32 @@
-Package: rdatacite
 Type: Package
+Package: rdatacite
 Title: Client for the 'DataCite' API
-Description: Client for the web service methods provided
-    by 'DataCite' (<https://www.datacite.org/>), including functions to interface with
-    their 'RESTful' search API. The API is backed by 'Elasticsearch', allowing
-    expressive queries, including faceting.
 Version: 0.5.4
-License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = "aut",
-            comment = c(ORCID="0000-0003-1444-9135")),
-    person("Bianca", "Kramer", role = c("cre"),
-            email = "bianca.kramer@gmail.com",
-            comment = c(ORCID="0000-0002-5965-6560")))
-URL: https://docs.ropensci.org/rdatacite/, https://github.com/ropensci/rdatacite
+           comment = c(ORCID = "0000-0003-1444-9135")),
+    person("Bianca", "Kramer", , "bianca.kramer@gmail.com", role = "cre",
+           comment = c(ORCID = "0000-0002-5965-6560"))
+  )
+Description: Client for the web service methods provided by 'DataCite'
+    (<https://www.datacite.org/>), including functions to interface with
+    their 'RESTful' search API. The API is backed by 'Elasticsearch',
+    allowing expressive queries, including faceting.
+License: MIT + file LICENSE
+URL: https://docs.ropensci.org/rdatacite/,
+    https://github.com/ropensci/rdatacite
 BugReports: https://github.com/ropensci/rdatacite/issues
-Roxygen: list(markdown = TRUE)
-Encoding: UTF-8
 Imports:
-    jsonlite,
     crul (>= 0.7.4),
-    tibble
+    jsonlite,
+    tibble,
+    utils
 Suggests:
-    knitr,
     testthat,
-    webmockr,
     vcr
-RoxygenNote: 7.1.1
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.2
 X-schema.org-applicationCategory: Data
-X-schema.org-keywords: data, scholarly, dataset, https, API, web-services
 X-schema.org-isPartOf: https://ropensci.org
+X-schema.org-keywords: data, scholarly, dataset, https, API, web-services
